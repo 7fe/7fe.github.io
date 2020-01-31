@@ -1,0 +1,35 @@
+<!doctype html><html lang="en"><head>
+<style>body,html{height:100%;width:100%}</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Time Machine</title>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+    $("#datepicker").change(function(){
+      alert($("#datepicker").datepicker( "getDate" ));
+    });
+    $("#range").slider();
+    $("#range").change(function(){
+      alert($("#range").val());
+    });
+  } );
+  </script>
+</head>
+<body>
+Foofle Search - do google searches in the past<input type=text value="http://"> Date: <input type="text" id="datepicker">
+<script>
+var start = 1996;
+var end = new Date().getFullYear();
+var months = (end - start)*12;
+//var monthNames = ["January", "February", "March", "April", "May", "June",, "July", "August", "September", "October", "November", "December" ];
+var d = new Date();
+d.getMonth();
+//document.write('<input id=range type="range" min="0" max="'+d.getMonth()+'" value="1" id="fader">');
+</script><input type=button value=submit>
+<!doctype html><div style="position:absolute;top:50px;bottom:0;right:0;left:0;"><iframe src="http://bing.com" style="width:100%;height:100%">
+</iframe></div></body></html>

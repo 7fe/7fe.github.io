@@ -1,0 +1,235 @@
+<!doctype html><html><head><meta charset="utf-8">
+<title>Mist</title>
+<style>body{font-size:12px;}
+table td, table td * {
+    vertical-align: top;
+    margin:0;
+}
+table{border-collapse:collapse}</style>
+</head><body>
+		<h1>Mist - Mathematica, CLisp(Cygwin on Windows)</h1>
+		<p>Lisp is a great language but it appears it not truely self modifying because macros can't be modified by other macros.  (a . b) has (cons a b) as FullForm.  <a href="">90minSchemetoCCompiler</a></p>
+    <p>The best idea I have come up with is to create a part of the code that exports to lisp code and a part that exports to Mathematica code.  For example I could potentially prefix mathematica code with $ sign.  Mathematica's editor is really nice.  Another possibility is maybe using matics.net with the Mathematica FrontEnd.  ClojureScript is another possibility.  The goal is to essentially have the ideal of editor of Mathematica but with the code in an open source language.  Mathematica Editor -> Lisp/JSON/XML -> JS/Java  The problem is anything that involves pattern matching needs to call back to Mathematica/Mathics.net.</p>
+    <pre>
+    $Replace[Import["a.txt"],"a.txt"->"b.txt"]                (Import "b.txt")                                         Import/Require("test")
+    $ReplaceAll[Import["c.txt"]],"c.txt"->"d.txt"]            (ReplaceAll[Import["abc.txt"]],"abc.txt"->"test2.txt"])  ReplaceAll(`Import["test"]`,{"abc.txt":"test2.txt"})
+    $Replace[Import["test.txt"]]                              ()
+</pre><pre>
+(load "quicklisp.lisp")
+(quicklisp-quickstart:install)
+(load "C:/Users/a/quicklisp/setup.lisp")
+(json:encode-json '( ((foo . (1 2 3)) (bar . t) (baz . #\!)) "quux" 4/17 4.25))
+(ql:quickload :cl-json)
+(with-input-from-string (s "[1, 2, 3]") (json:decode-json s) )
+</pre>
+		<p>
+		There is no FullForm of the following <code>(defmacro add ( &amp;rest args ) `(+ ,@args))</code>.<br>
+				Intersection, FileNameJoin, StringDrop, Run <a href="./new.zip">new.zip</a> <a href="./other.zip">other.zip</a></p>
+		<pre>(setf (readtable-case *readtable*) :invert)
+(load 'init.lisp)
+(compile-mma)
+(load-mma)
+(|ReplaceAll| '(f 2 2) '(|Rule| (|Pattern| a (|BlankSequence|)) (f1 a) ) )
+ &gt; (F1 ((F1 F) (F1 2) (F1 2)))
+(elt '(F1 ((F1 F) (F1 2) (F1 2))))
+(|ReplaceAll| '(f 2) '(|Rule| (f (|Pattern| a (|Blank|))) (f1 a) ) )
+ &gt; (f1 a)
+(|ReplaceAll| '(f a b) '(|Rule| (|Pattern| a (|Blank|))) (f 1 2) )))
+&gt; (f a b)
+</pre>
+		<p><a href="./mathematicaexcel.html">Mathematica & Excel</a><a href="http://berlinbrowndev.blogspot.com/2008/07/simple-lisp-implementation-in-java-ode.html">Lisp Implementation Java</a></p>
+		<pre>(defmacro IFF (condition &amp;rest body)
+  `(if ,condition (progn ,@body)))
+(IFF (&gt; x 10) (print 0))
+&amp;rest &amp;optional gensym 
+
+IFF[condition_,body___]:=If[condition,body];
+SetAttributes[IFF,HoldAll];
+IFF[x&lt;10,Print@0];
+</pre>
+		<table width="100%" border="1">
+			<tbody>
+				<tr>
+					<td width="10%"></td>
+					<td width="45%"><b>Mathematica</b></td>
+					<td width="45%"><b>Lisp</b></td>
+				</tr>
+				<tr>
+					<td>HoldForm/quote<br></td>
+					<td><pre><code>Hold[1 + 1*1] === Hold[1 + 1*1]</code></pre></td>
+					<td><pre><code>(equal '(+ 1 (* 1))  (list '+ 1 (list '* 1))) ; ' is a list escaped
+(equal '(+ 1) (quote (+ 1)) ;quote escapes all heads infinitely </code></pre></td>
+				</tr>
+				<tr>
+					<td>ReleaseHold</td>
+					<td>
+						<pre><code>ReleaseHold[HoldComplete[1 + 2]]
+ReleaseHold@HoldComplete[HoldComplete[1 + 2]]
+
+ReleaseHold[Hold[1+2]]
+ReleaseHold[HoldForm[1+2]]</code></pre>
+					</td>
+					<td>
+						<pre>; Technically Hold doesn't exist but when fns are
+; unevaluated they are a list with symbol as 1st elements
+<code>(eval '('(+ 1 2)))
+(eval '(list '+ 1 '(+ 1 2) (* 2 3)))
+</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>List</td>
+					<td>
+						<pre><code>{1+2,2,3}
+Hold@{1,2}</code></pre>
+					</td>
+					<td>
+						<pre><code>(vector (+ 1 2) 2 3)
+'(vector 1 2)</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>Take</td>
+					<td>
+						<pre><code>Take[{a, b, c, d, e, f}, 4]<br>
+							</code></pre>
+					</td>
+					<td>
+						<pre><code>(elt #(1 2 3) 1) ;works on both lists and vectors<br>(nth 0 '(1 2)) ; lists only<br>(aref #(1 2 3) 0)</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>Sequence</td>
+					<td>f[a, Sequence[b, c], d]</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Prepend</td>
+					<td>
+						<pre><code>Prepend[{1, 2}, 0]</code></pre>
+					</td>
+					<td>
+						<pre><code>(cons 0 '(1 2))</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>Append</td>
+					<td>
+						<pre><code>Append[{1, 2}, 3]</code></pre>
+					</td>
+					<td>
+						<pre><code>(append '(1 2 3) '(4)) </code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>Join</td>
+					<td>
+						<pre><code>Join[{1,2},{3,4}] </code></pre>
+					</td>
+					<td>
+						<pre><code>(append '(1 2 3) '(4 5 6)) </code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>listp<br>
+						vectorp</td>
+					<td>IntegerQ[1]</td>
+					<td>(numberp 1) (integerp 1)<br>
+						(rationalp 1) (realp 1)<br>
+						floatp complexp<br>
+						(listp '(1))<br>
+						(vectorp #(1))<br>
+					</td>
+				</tr>
+				<tr>
+					<td>Pattern Matching</td>
+					<td>f[x, 1, 2] /. f[x_, y__] :&gt; f[1, x, y]</td>
+					<td>(|ReplaceAll| '(f 1 2) '(|Rule| (f (|Pattern| a (|BlankSequence|))) (f1 a)))<br>
+						(ReplaceAll '(f x 1 2) ' (<br>
+						(f (_ x) (__ y)) (f 1 x y)<br>
+						))</td>
+				</tr>
+				<tr>
+					<td>Apply</td>
+					<td></td>
+					<td>(coerce #(1 2 3) 'list)</td>
+				</tr>
+				<tr>
+					<td>Atoms</td>
+					<td>AtomQ</td>
+					<td>(cons '(1 . 2))<br>
+						(not (atom '(1 . 2)))</td>
+				</tr>
+				<tr>
+					<td>Drop</td>
+					<td>Drop[{a, b, c, d, e, f}, 2] (* Drop first 2 elements supports negative *)</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<pre>(select [email] :from [users] :where [= ["lower(name)"] (string-downcase customer)])</pre>
+		<p>lisp FullForm(like mathematica's FullForm) would probably appear like the following but there is no FullForm  for macros<br></p>
+		<pre>(list '+ (vector '* 1))</pre>
+		<p>
+		The problem is that technically they won't work for output because VECTORs and LISTs are automatically converted to '() and #()<br>
+			therefore there is now way to distinguish between <br>
+			
+			I don't like lisp b/c the folllowing returns<br>
+			 '(f '(+ 1))<br>
+			&gt;  (f '(+ 1))<br>
+			and notice how it doesn't print the 1st quote ' but it does in the second quote<br>
+			Dotted Pair Notation<br>
+			for example (rose . (violet)) equals (rose violet)<br>
+			(rose . violet . buttercup) is invalid<br>
+			</p>
+		<h3><a href="http://stackoverflow.com/questions/26007496/lisp-finding-the-max-depth-in-a-list-of-nested-lists">Depth</a></h3>
+		<pre><code>(defun Depth (tree)
+  (if (atom tree)
+      0
+      (1+ (reduce #'max (mapcar #'max-depth tree)))))</code></pre>
+		<h3><a href="http://rosettacode.org/wiki/Flatten_a_list#Common_Lisp">Flatten</a></h3>
+		<pre>(defun Flatten (structure)
+  cond ((null structure) nil)
+    ((atom structure) (list structure))
+     (t (mapcan #'flatten structure))))</pre>
+     <h3><a href="https://letoverlambda.com/index.cl/guest/chap1.html#sec_1">SymbolName</a></h3>
+		<pre>(defun mkstr (&rest args)
+  (with-output-to-string (s)
+    (dolist (a args) (princ a s))))
+
+(defun SymbolName (&rest args)
+  (values (intern (apply #'mkstr args))))
+  
+(defun Symbol (a) (intern a)))
+(defun Symbol (a_String) (intern a)))</pre>
+
+<pre>(apply #’(lambda (x y) (+ x y)) ’(1 2))
+
+
+(mapcar #’(lambda (x) (+ x 10))
+   ’(1 2 3))
+
+(mapcar #’+
+   ’(1 2 3)
+   ’(10 100 1000))
+
+(sort ’(1 4 2 5 6 7 3) #’&lt;)
+
+(remove-if #’evenp ’(1 2 3 4 5 6 7))
+
+(let ((s (make-string-input-stream "(1 2 3)"))) (read s))
+
+OO Lisp
+
+(defun behave (animal)
+  (funcall (get animal ’behavior)))
+  
+(setf (get ’dog ’behavior)
+  #’(lambda ()
+      (print 'wag-tail)
+      (print 'bark)))
+ 
+</pre>
+		<p>The following is a short docs of lisp http://jtra.cz/stuff/lisp/sclr/index.html</p>
+	</body>
+</html>

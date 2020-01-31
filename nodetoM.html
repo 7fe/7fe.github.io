@@ -1,0 +1,51 @@
+<!doctype html><head><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>ste.vet</title>
+<style>body > div{width:600px;border:1px dotted;padding:10px;}
+pre{white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;}
+
+.logo{padding:20px}
+.logo b,.logo span{font-size:12px;font-family:"Corbel", Gill Sans;font-weight:bold;}
+.logo b{font-size:2em;}
+.logo span{font-size:2.3em;}
+
+.logo2{padding:10px;font-size:1.7em;font-family:"Arial"}
+.logo2 a{text-decoration:none;color:black;}
+.logo2 b,.logo2 span{font-size:1.2em;font-weight:bold;}
+/* .logo2 b{border-right:1px solid gray;} */
+.logo2{font-size:2.3em;}
+</style></head>
+<script>document.write("<style>div{margin:0 auto;}</style>")</script>
+<body><div><p>
+This is how you create an interface between Mathematica and Node.js.
+Run node.js with the <code>sudo node server.js</code> with <a href="http://limeblack.github.io/server.js">server.js</a> or <a href="http://limeblack.github.io/serverslow.js">serverslow.js</a> and <a href="http://limeblack.github.io/autorun.nb">autorun.nb</a>.  Basically when the node.js file server page loads it launches Mathematica and runs the code sent to Mathematica.  <a href="http://limeblack.github.io/ToggleAutorun.nb">ToggleAutorun.nb</a> does exactly what it is called.  It toggles autorunning of Mathematica files when they open.  If the file isn't green when open autorun.nb it won't work.  
+</p><p>
+Now gathering search results is interesting.  There are 2 possible solutions that I can see doing. 1) Use the built in Mathematica documentation search functionality which involves using the applications `app` and `ApplicationMaker`. 2) <a href="https://mathematica.stackexchange.com/questions/125013/basic-search-functionality">Construct my own ranking system for search.</a>  I have built my own system for analyzing <a href="./ConvertSearchResultsToHTML.nb">ConvertSearchResultsToHTML</a> but it only runs on Windows at the current time because the picture taking function is only for Mathematica.</p><p>
+</p><p>
+I wanted to experiment with saving mathematica notebooks as a .bat script.  Basically the you drag an existing mathematica notebook onto <a href="./m/create.nb.bat">create.nb.bat</a> to convert.  On to <a href="./m/edit.nb.bat">edit.nb.bat</a>.  The <a href="./m/nb.nb">nb.nb</a>.</p>
+<p>
+Right now I think it would be good to make all the Mathematica functions global functions in JavaScript.
+
+Then I could do something like this.</p>
+<pre>
+Sum`i^2,{i,0,10}`
+Print`i^2,{i,0,10}`
+
+function storeVars(target) {
+  return new Proxy(target, {
+    has(target, prop) { return true; },
+    get(target, prop) { return (prop in target ? target : window)[prop]; }
+  });
+}
+var vars = {c:3};
+with(storeVars(vars)) {
+  var a = 1;
+  var b = 2; 
+  console.log(c);
+  (function() {
+    var c = 4; // Inner variable, not stored.
+  })();
+}
+
+The above should help with making a console that supports tab for JavaScript variables for a local scope.
+</pre>
+</div></body>

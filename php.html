@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>php</title>
+<style>body{font-size: 12px}code,pre{margin:0;padding:0;}
+table{border-collapse:collapse}
+table td{padding:4px}
+body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap:break-word;}
+</style>
+</head>
+<body>
+		<h1>php, php Smybolic, php AST</h1>
+		<p>PHP is an interesting language because it is very similar JSX in many ways.  I would like to create a table comparing php 5 to php 7.  <a href="https://www.tutorialspoint.com/php7/php7_closure_call.htm">tutorialspoint PHP7</a>. PHP7 is pretty straight forwardish. I want to create a simple library that is both valid JS and allows of pasting of HTML code. PHP7 library that lets you use the most common javascript functions.   php has special functions for utf-8 support.  <a href="https://security.stackexchange.com/q/117131">Detecting PHP</a>
+		<p>There is no operator overloading in php., but you can sort of extend the functions by making a class with __invoke.   Arrays and Srings can not be subclassed effectively because gettype with no technique will return the correct value.  To deal with utf-8 in php you use the <a href="http://www.php.net/manual/en/ref.mbstring.php">mbstring</a> functions.</p>
+		<pre>function sr_length($a){return count($a);}
+function s_indexOf($a){return strpos();}
+function s_split(){str_split("abcd");}
+    
+    a`!doctype html><title>test</title>`;
+  
+  console.log("test");
+  
+a`
+
+`;
+php -S localhost:80 index.php
+echo r(&quot;1234&quot;)-&gt;split('')-&gt;join(',')();
+echo r([1,2,3])-&gt;indexOf(2);
+</pre>
+		<div>
+			<pre>echo x()-&gt;split(....)-&gt;join(....)-&gt;x([1,2,3]);</pre>
+		</div>
+		</p>
+		<table width="100%" border="1" cellspacing="2" cellpadding="0">
+			<tr>
+				<td>JS</td>
+				<td>PHP 7</td>
+			</tr>
+			<tr>
+				<td><pre>JSObject=function(i){
+  this.me=i;
+};
+JSObject.prototype={
+  hi:function(a){
+    return a;
+  }
+};
+$f = new JSObject(&quot;AJ&quot;);
+$f->hi();
+</pre></td>
+				<td>
+					<pre>
+class JSObject {
+  function __construct($members = array()) {
+    foreach ($members as $name =&gt; $value) {
+      $this-&gt;$name = $value;
+    }
+  }
+  function __call($name, $args) {
+    if (is_callable($this-&gt;$name)) {
+      array_unshift($args, $this);
+      return call_user_func_array($this-&gt;$name, $args);
+    }
+  }
+}
+$f = new JSObject(array(
+  'me' =&gt; &quot;me&quot;,
+  'hi'  =&gt; function($s) {
+    return $s;
+  }
+));
+echo $f-&gt;hi();</pre>
+				</td>
+			</tr>
+			<tr>
+				<td><pre>class SubArray extends Array {
+    constructor(...args) { 
+        super(...args); 
+    }
+}
+Array.isArray(new SubArray); //true</pre></td>
+				<td><pre>//can't really effectively sub class an error 
+class CaseInsensitiveArray extends ArrayObject {
+    public function __construct($input = array(), $flags = 0, $iterator_class =     'ArrayIterator') {
+        if (isset($input) && is_array($input)) {
+            $tmpargs = func_get_args();
+            $tmpargs[0] = array_change_key_case($tmpargs[0], CASE_LOWER);
+            return call_user_func_array(array('parent', __FUNCTION__), $tmp    args);
+        }
+        return call_user_func_array(array('parent', __FUNCTION__), func_get_args());
+    }
+}
+</pre>
+					<pre><code>$b = new CaseInsensitiveArray(array());</code></pre>
+					<pre>echo &quot;is array: &quot;.is_array($b);  // false</pre>
+				</td>
+			</tr>
+		</table>
+		<p>Symbolic PHP was me experimenting making it similar to mathematica which failed miserably.</p>
+		<table style="width:100%" border="1"><tbody>
+				<tr>
+					<td width="33%"><pre>php -v</pre></td>
+					<td width="33%">Symbolic php</td>
+					<td width="33%">php JSON AST</td>
+				</tr>
+				<tr>
+					<td>
+						<pre>&lt;?php
+echo 'Hi', 'World';
+hello\world('foo', 'bar' . 'baz');</pre>
+					</td>
+					<td><pre>array(
+    0: Stmt_Echo(
+        exprs: array(
+            0: Scalar_String(
+                value: Hi
+            )
+            1: Scalar_String(
+                value: World
+            )
+        )
+    )
+    1: Expr_FuncCall(
+        name: Name(
+            parts: array(
+                0: hello
+                1: world
+            )
+        )
+        args: array(
+            0: Arg(
+                value: Scalar_String(
+                    value: foo
+                )
+                byRef: false
+            )
+            1: Arg(
+                value: Expr_Concat(
+                    left: Scalar_String(
+                        value: bar
+                    )
+                    right: Scalar_String(
+                        value: baz
+                    )
+                )
+                byRef: false
+            )
+        )
+    )
+)</pre></td>
+					<td width="33%"><pre>[
+    {
+        "nodeType": "Stmt_Echo",
+        "exprs": [
+            {
+                "nodeType": "Scalar_String",
+                "value": "Hello ",
+                "attributes": {
+                    "startLine": 1,
+                    "endLine": 1,
+                    "kind": 1
+                }
+            },
+            {
+                "nodeType": "Expr_FuncCall",
+                "name": {
+                    "nodeType": "Name",
+                    "parts": [
+                        "hi",
+                        "getTarget"
+                    ],
+                    "attributes": {
+                        "startLine": 1,
+                        "endLine": 1
+                    }
+                },
+                "args": [],
+                "attributes": {
+                    "startLine": 1,
+                    "endLine": 1
+                }
+            }
+        ],
+        "attributes": {
+            "startLine": 1,
+            "endLine": 1
+        }
+    }
+]</pre>
+					</td>
+				</tr>
+				<tr>
+					<td>o.Method(args);</td>
+					<td>o\[Dot]Method[args];</td>
+					<td width="33%">o@Method[args];</td>
+				</tr>
+				<tr>
+					<td>
+						<div>
+							<pre>//Inner Class
+Box.Filler f = new Box.Filler(args);</pre>
+						</div>
+					</td>
+					<td>
+						<pre id="i_15_out_text">Box$Filler@f = new[&quot;java.swing.Box$Filler&quot;, args]</pre>
+					</td>
+					<td width="33%">
+						<pre id="i_15_out_text">f = JavaNew[&quot;java.swing.Box$Filler&quot;, args]</pre>
+					</td>
+				</tr>
+				<tr>
+					<td><pre>o.prop = 1; val = obj.prop;</pre></td>
+					<td>o\[Dot]prop = 1;
+					val = obj\[Dot]prop;</td>
+					<td width="33%"><pre>o@prop = 1;val = o@prop;</pre></td>
+				</tr>
+				<tr>
+					<td>
+						<pre></pre>
+					</td>
+					<td></td>
+					<td width="33%">MyClass`StaticMethod[args];</td>
+				</tr>
+				<tr>
+					<td>MyClass.StaticPropertyOrField = 1;<br>
+						value = MyClass.StaticPropertyOrField;</td>
+					<td></td>
+					<td width="33%">MyClass`StaticPropertyOrField = 1;<br>
+						value = MyClass`StaticPropertyOrField;</td>
+				</tr>
+				<tr>
+					<td><pre>int i = 1;
+double d = 2;
+int[] anArray;
+anArray = new int[10][20];</pre>
+					</td>
+					<td>
+						<pre>int \[CircleDot] i = 23;
+double \[CircleDot] d = double \[CircleDot] 2;
+anArray = int \[Colon] 10;</pre>
+					</td>
+					<td width="33%">i = 23;</td>
+				</tr>
+				<tr>
+					<td>
+						<pre>public class MyClass {
+  public static void main(String[] args) {
+    System.out.println(&quot;Hello, World!&quot;);
+  }
+  public void Method(){<br>
+	System.out.println(&quot;Method&quot;)}
+  public static void staticMethod(){
+    System.out.println(&quot;Static method&quot;);
+  }
+  public MyClass(){<br>System.out.println(&quot;Test&quot;);}
+}</pre>
+					</td>
+					<td>
+						<pre>public@class@MyClass[
+  public@static@void@main[String@args[]][
+    System@out@println[&quot;Hello, World&quot;);
+  ],
+  public@MyClass[][
+    System@out@println[&quot;&quot;];
+  ]
+]
+public class MyClass[
+  public static void main[String args[]][
+    System:out:println[&quot;Hello, World&quot;);
+  ],
+  public@MyClass[][
+    System@out@println[&quot;&quot;];
+  ]
+]
+</pre>
+					</td>
+					<td width="33%"><pre></pre></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>For, If, Else, </td>
+					<td width="33%"></td>
+				</tr>
+			</tbody>
+</table>
+	</body>
+</html>

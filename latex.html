@@ -1,0 +1,138 @@
+<!doctype html><body>
+	<table width="757" border="1" cellspacing="2" cellpadding="0">
+			<tbody><tr>
+				<td></td>
+				<td>latex</td>
+				<td>html</td>
+			</tr>
+			<tr>
+				<td>hyperlink</td>
+				<td>
+					<pre><code>\href{http://google.com}{testing}</code></pre>
+				</td>
+				<td>&lt;a href =&quot;#&quot;&gt;testing&lt;/a&gt;</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tbody></table>
+	<p>CSS stylesheet</p>
+<p></p><pre style="width:100%;white-space:pre-wrap">MathML support exists in some browsers https://github.com/mathjax/MathJax/wiki/MathML-Support-In-Browsers</p>
+https://tex.stackexchange.com/q/43052
+
+Latex supports \footnote{}
+
+<a href="https://www.w3.org/TR/html5/common-idioms.html#footnotes">HTML can't agree how to support footnotes unfortunately.</a>
+  
+zeroclipboard
+{\fontspec{Arial}t}
+\newfontfamily
+
+Anyway, back to your earlier question. Most math fonts probably don’t come with Chinese characters, but if you’ve set them up so they work in text, you can get them in math mode by writing $\text{传}$ or perhaps $\text{\textchinese{传}}$. You might also try \setmathfont[range=传, Scale=MatchUppercase]{Source Han Sans SC} or something like that, although I haven't always had success with it.
+  
+  mathjax supported fonts http://www.stixfonts.org/allGlyphs.html
+  
+  \unicode and latex https://github.com/mathjax/MathJax/issues/142
+  
+  \unicode support http://docs.mathjax.org/en/latest/tex.html
+  
+  https://mathematica.stackexchange.com/q/27840 mathjax with color
+  
+`test-{
+  a:b
+}`
+
+f(1,2,3)
+f-[1,3,3]
+
+convert eps to 
+
+scope=(y)=>{try{return eval(y)}catch(x){return x}};
+
+
+callfunction=(x)->{return eval(x)};
+
+if variable isn't defined don't get value
+
+Sum___test-[x^2+y,[x,0,10]]  -> [Sum,x^2,[Array,x,0,10]]
+
+Sum = $(function(){
+  ;
+})((x)=>{try{return eval(y)}catch(x){alert(x)}});
+
+Sum-[x^2,[x,0,10]]  -> [Sum,x^2,[Array,x,0,10]]
+
+Print=function(){
+  alert(arguments[0][0]);
+  try{
+    return eval(arguments[0][0]);
+  }catch(e){
+    alert(e);
+    return (arguments[0]);
+  }
+};
+x=10;
+y=2;
+Print`x/y`
+Sum`x^2,[x,0,10]`
+Equal`Sin(x) == Cos(x) * Cos(y)`
+
+Sum`${x}^2,[x,0,10]`
+
+Print`
+  testing'23,25',[x,0,10]
+`
+
+3 ways to call every function
+Print(x/y)
+Print[x/y] // I need this form because 
+Print`x/y`
+
+I can use strings to compare the different values
+
+<script>onload=function(){
+var iframe = document.createElement("iframe");
+iframe.style.display = "none";
+top.document.body.appendChild(iframe);
+
+frames[frames.length - 1].document.write(
+`<title>MathmaScript</title><\script>(function(){
+
+a = 23;
+top.MathmaScript = window;
+
+})();<\/script>`);
+
+
+};</script>
+
+Pattern matching is the most important part
+
+Sum[x_Integer^2,{x,0,10}]
+
+StandardForm -> InputForm
+  
+MathJS
+
+http://camdenre.github.io/src/app/html/EquationEditor
+
+https://github.com/mathjax/MathJax-docs/wiki/List-of-web-based-math-editors
+
+http://camdenre.github.io/src/app/html/EquationEditor
+
+https://jxxcarlson.github.io/app/minilatex/src/index.html
+
+<div style="height:1px;width:1px;overflow:hidden;position:absolute;">pineapple</div>
+
+https://github.com/niebert/PanDocElectron
+
+\textit{words in italics} words in italics
+\textsl{words slanted} words slanted
+\textsc{words in smallcaps} words in smallcaps
+\textbf{words in bold} words in bold
+\texttt{words in teletype} words in teletype
+\textsf{sans serif words} sans serif words
+\textrm{roman words} roman words
+\underline{underlined words} underlined words

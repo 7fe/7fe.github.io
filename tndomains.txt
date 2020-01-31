@@ -1,0 +1,505 @@
+Registrant Organization:
+Registrant Street1:15A Kemeys Street
+Registrant Street2:Hackney
+Registrant Street3:
+Registrant City:London
+Registrant State/Province:Greater London
+Registrant Postal Code:E9 5RQ
+Registrant Country:GB
+Registrant Phone:+44.7776022870
+Registrant Phone Ext.:
+Registrant FAX:
+Registrant FAX Ext.:
+Registrant Email:limmer11@googlemail.com
+Admin ID:dde4a5a474606df5
+Admin Name:Austin Limmer
+Admin Organization:
+Admin Street1:15A Kemeys Street
+Admin Street2:Hackney
+Admin Street3:
+Admin City:London
+Admin State/Province:Greater London
+Admin Postal Code:E9 5RQ
+Admin Country:GB
+Admin Phone:+44.7776022870
+Admin Phone Ext.:
+Admin FAX:
+Admin FAX Ext.:
+Admin Email:limmer11@googlemail.com
+Tech ID:dde4a5a474606df5
+Tech Name:Austin Limmer
+Tech Organization:
+Tech Street1:15A Kemeys Street
+Tech Street2:Hackney
+Tech Street3:
+Tech City:London
+Tech State/Province:Greater London
+Tech Postal Code:E9 5RQ
+Tech Country:GB
+Tech Phone:+44.7776022870
+Tech Phone Ext.:
+Tech FAX:
+Tech FAX Ext.:
+Tech Email:limmer11@googlemail.com
+Name Server:DNS1.REGISTRAR-SERVERS.COM
+Name Server:DNS2.REGISTRAR-SERVERS.COM
+Name Server:DNS3.REGISTRAR-SERVERS.COM
+Name Server:DNS4.REGISTRAR-SERVERS.COM
+Name Server:DNS5.REGISTRAR-SERVERS.COM
+Name Server:
+Name Server:
+Name Server:
+Name Server:
+Name Server:
+Name Server:
+Name Server:
+Name Server:
+DNSSEC:Unsigned
+
+
+
+a@pc ~
+$ whois jus.tn
+This is JWhoisServer serving ccTLD tn;تونس
+Java Whois Server 0.4.1.3    (c) 2006 - 2015 Klaus Zerwes zero-sys.net
+All rights reserved.
+Copyright "Tunisian Internet Agency - http://whois.tn"
+This is JWhoisServer serving ccTLD tn;تونس
+Java Whois Server 0.4.1.3    (c) 2006 - 2015 Klaus Zerwes zero-sys.net
+All rights reserved.
+Copyright "Tunisian Internet Agency - http://whois.tn"
+
+Domain:.............dus.tn
+Registrar:..........LOCALHOST.TN
+Activation:.........2016-02-09 19:45:03.0
+Status:.............ACTIVE
+Contact Type:.......administrative
+Last Name:..........Me
+First Name:.........Austin
+Address:............3795 Guinevere Ln
+Tel:................7062558306
+Fax:................
+e-mail:.............austinrobertwilliams@gmail.com
+Address 2:..........
+State/Province:.....NC
+Zip Code:...........27104
+City:...............Winston Salem
+County:.............US
+Name Server (DB):...ns1.tunitech.net
+Name Server (DB):...ns2.tunitech.net
+
+----------------------------------------
+
+Domain:.............dus.tn
+Registrar:..........LOCALHOST.TN
+Activation:.........2016-02-09 19:45:03.0
+Status:.............ACTIVE
+Contact Type:.......technical
+Last Name:..........Me
+First Name:.........Austin
+Address:............3795 Guinevere Ln
+Tel:................7062558306
+Fax:................
+e-mail:.............austinrobertwilliams@gmail.com
+Address 2:..........
+State/Province:.....NC
+Zip Code:...........27104
+City:...............Winston Salem
+County:.............US
+Name Server (DB):...ns1.tunitech.net
+Name Server (DB):...ns2.tunitech.net
+
+----------------------------------------
+
+Domain:.............dus.tn
+Registrar:..........LOCALHOST.TN
+Activation:.........2016-02-09 19:45:03.0
+Status:.............ACTIVE
+Contact Type:.......owner
+Last Name:..........Me
+First Name:.........Austin
+Address:............3795 Guinevere Ln
+Tel:................7062558306
+Fax:................
+e-mail:.............austinrobertwilliams@gmail.com
+Address 2:..........
+State/Province:.....NC
+Zip Code:...........27104
+City:...............Winston Salem
+County:.............US
+Name Server (DB):...ns1.tunitech.net
+Name Server (DB):...ns2.tunitech.net
+
+Domain:.............jus.tn
+Registrar:..........LOCALHOST.TN
+Activation:.........2013-06-12 15:20:21.0
+Status:.............ACTIVE
+Contact Type:.......owner
+Last Name:..........Travis
+First Name:.........Justin
+Address:............129 Mulberry St. #4B
+New York 10013
+USA
+Tel:................2032414783
+Fax:................
+e-mail:.............jus@marcaria.com
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...dns1.stabletransit.com.
+Name Server (DB):...dns2.stabletransit.com.
+
+----------------------------------------
+
+Domain:.............jus.tn
+Registrar:..........LOCALHOST.TN
+Activation:.........2013-06-12 15:20:21.0
+Status:.............ACTIVE
+Contact Type:.......administrative
+Last Name:..........LocalHost.TN
+First Name:.........
+Address:............Res Errabiie A18
+Ben Arous 2074
+Tunisia
+Tel:................+21698704460
+Fax:................
+e-mail:.............contact@jus.tn
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...dns1.stabletransit.com.
+Name Server (DB):...dns2.stabletransit.com.
+
+----------------------------------------
+
+Domain:.............jus.tn
+Registrar:..........LOCALHOST.TN
+Activation:.........2013-06-12 15:20:21.0
+Status:.............ACTIVE
+Contact Type:.......technical
+Last Name:..........Travis
+First Name:.........Justin
+Address:............129 Mulberry St. #4B
+New York 10013
+USA
+Tel:................2032414783
+Fax:................
+e-mail:.............jus@marcaria.com
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...dns1.stabletransit.com.
+Name Server (DB):...dns2.stabletransit.com.
+
+
+a@pc ~
+$ whois met.tn
+This is JWhoisServer serving ccTLD tn;تونس
+Java Whois Server 0.4.1.3    (c) 2006 - 2015 Klaus Zerwes zero-sys.net
+All rights reserved.
+Copyright "Tunisian Internet Agency - http://whois.tn"
+
+NO OBJECT FOUND!
+object:.............met.tn
+type:...............domain
+
+
+a@pc ~
+$ whois mar.tn
+This is JWhoisServer serving ccTLD tn;تونس
+Java Whois Server 0.4.1.3    (c) 2006 - 2015 Klaus Zerwes zero-sys.net
+All rights reserved.
+Copyright "Tunisian Internet Agency - http://whois.tn"
+
+Domain:.............mar.tn
+Registrar:..........Orange Tunisie
+Activation:.........2015-09-01 10:45:08.0
+Status:.............ACTIVE
+Contact Type:.......owner
+Last Name:..........HACHAICHI & CO.
+First Name:.........
+Address:............TANIT CENTER - BLOC B2
+2046 SIDI DAOUD - LA MARSA
+TUNIS - TUNISIE
+
+Tel:................70938585
+Fax:................70938484
+e-mail:.............info@hachaichi.com
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...ns5.101domain.com.
+Name Server (DB):...ns2.101domain.com.
+Name Server (DB):...ns1.101domain.com.
+
+----------------------------------------
+
+Domain:.............mar.tn
+Registrar:..........Orange Tunisie
+Activation:.........2015-09-01 10:45:08.0
+Status:.............ACTIVE
+Contact Type:.......administrative
+Last Name:..........HACHAICHI & CO.
+First Name:.........
+Address:............TANIT CENTER - BLOC B2
+2046 SIDI DAOUD - LA MARSA
+TUNIS - TUNISIE
+
+Tel:................70938585
+Fax:................70938484
+e-mail:.............info@hachaichi.com
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...ns5.101domain.com.
+Name Server (DB):...ns2.101domain.com.
+Name Server (DB):...ns1.101domain.com.
+
+----------------------------------------
+
+Domain:.............mar.tn
+Registrar:..........Orange Tunisie
+Activation:.........2015-09-01 10:45:08.0
+Status:.............ACTIVE
+Contact Type:.......technical
+Last Name:..........101 Domain Inc.
+First Name:.........
+Address:............Domain Admin
+5858 Edison Pl
+Carlsbad, CA
+92008, US
+
+Tel:................+1 7604448674
+Fax:................+1.7605794996
+e-mail:.............tech1@101domain.com
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...ns5.101domain.com.
+Name Server (DB):...ns2.101domain.com.
+Name Server (DB):...ns1.101domain.com.
+
+
+a@pc ~
+$ whois us.tn
+This is JWhoisServer serving ccTLD tn;تونس
+Java Whois Server 0.4.1.3    (c) 2006 - 2015 Klaus Zerwes zero-sys.net
+All rights reserved.
+Copyright "Tunisian Internet Agency - http://whois.tn"
+
+Domain:.............us.tn
+Registrar:..........OVH
+Activation:.........2015-02-23 10:01:02.0
+Status:.............ACTIVE
+Contact Type:.......owner
+Last Name:..........Hamrouni
+First Name:.........Ahmed Fakhr
+Address:............18 rue 10558 cite municipale el mourouj 2,2053,Tunis
+Tel:................25356882
+Fax:................
+e-mail:.............fakhri.tpm@gmail.com
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...dns111.ovh.net
+Name Server (DB):...ns111.ovh.net
+
+----------------------------------------
+
+Domain:.............us.tn
+Registrar:..........OVH
+Activation:.........2015-02-23 10:01:02.0
+Status:.............ACTIVE
+Contact Type:.......administrative
+Last Name:..........Hamrouni
+First Name:.........Ahmed Fakhr
+Address:............18 rue 10558 cite municipale el mourouj 2,2053,Tunis
+Tel:................25356882
+Fax:................
+e-mail:.............fakhri.tpm@gmail.com
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...dns111.ovh.net
+Name Server (DB):...ns111.ovh.net
+
+----------------------------------------
+
+Domain:.............us.tn
+Registrar:..........OVH
+Activation:.........2015-02-23 10:01:02.0
+Status:.............ACTIVE
+Contact Type:.......technical
+Last Name:..........Hamrouni
+First Name:.........Ahmed Fakhr
+Address:............18 rue 10558 cite municipale el mourouj 2,2053,Tunis
+Tel:................25356882
+Fax:................
+e-mail:.............fakhri.tpm@gmail.com
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...dns111.ovh.net
+Name Server (DB):...ns111.ovh.net
+
+This is JWhoisServer serving ccTLD tn;تونس
+Java Whois Server 0.4.1.3    (c) 2006 - 2015 Klaus Zerwes zero-sys.net
+All rights reserved.
+Copyright "Tunisian Internet Agency - http://whois.tn"
+
+Domain:.............aus.tn
+Registrar:..........OVH
+Activation:.........2016-01-05 15:15:13.0
+Status:.............ACTIVE
+Contact Type:.......owner
+Last Name:..........DIV
+First Name:.........
+Address:............9, Rue Thyna, PIC VILLE
+3000
+Sfax
+Tel:................50502080
+Fax:................
+e-mail:.............nizar.bouzid@gmail.com
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...dns200.anycast.me
+Name Server (DB):...ns200.anycast.me
+
+----------------------------------------
+
+Domain:.............aus.tn
+Registrar:..........OVH
+Activation:.........2016-01-05 15:15:13.0
+Status:.............ACTIVE
+Contact Type:.......administrative
+Last Name:..........DIV
+First Name:.........
+Address:............9, Rue Thyna, PIC VILLE
+3000
+Sfax
+Tel:................50502080
+Fax:................
+e-mail:.............nizar.bouzid@gmail.com
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...dns200.anycast.me
+Name Server (DB):...ns200.anycast.me
+
+----------------------------------------
+
+Domain:.............aus.tn
+Registrar:..........OVH
+Activation:.........2016-01-05 15:15:13.0
+Status:.............ACTIVE
+Contact Type:.......technical
+Last Name:..........DIV
+First Name:.........
+Address:............9, Rue Thyna, PIC VILLE
+3000
+Sfax
+Tel:................50502080
+Fax:................
+e-mail:.............nizar.bouzid@gmail.com
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...dns200.anycast.me
+Name Server (DB):...ns200.anycast.me
+
+This is JWhoisServer serving ccTLD tn;تونس
+Java Whois Server 0.4.1.3    (c) 2006 - 2015 Klaus Zerwes zero-sys.net
+All rights reserved.
+Copyright "Tunisian Internet Agency - http://whois.tn"
+
+Domain:.............for.tn
+Registrar:..........ELB
+Activation:.........2014-02-10 15:15:03.0
+Status:.............ACTIVE
+Contact Type:.......owner
+Last Name:..........Time Inc.
+First Name:.........
+Address:............225 Liberty Street New York, NY 10281 US
+Tel:................0012125229565
+Fax:................0012125229514
+e-mail:.............domain_admin@timeinc.net
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...ns1.p07.dynect.net.
+Name Server (DB):...ns2.p07.dynect.net.
+Name Server (DB):...ns3.p07.dynect.net.
+Name Server (DB):...ns4.p07.dynect.net.
+
+----------------------------------------
+
+Domain:.............for.tn
+Registrar:..........ELB
+Activation:.........2014-02-10 15:15:03.0
+Status:.............ACTIVE
+Contact Type:.......administrative
+Last Name:..........Time Inc.
+First Name:.........
+Address:............225 Liberty Street New York, NY 10281 US
+Tel:................0012125229565
+Fax:................0012125229514
+e-mail:.............domain_admin@timeinc.net
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...ns1.p07.dynect.net.
+Name Server (DB):...ns2.p07.dynect.net.
+Name Server (DB):...ns3.p07.dynect.net.
+Name Server (DB):...ns4.p07.dynect.net.
+
+----------------------------------------
+
+Domain:.............for.tn
+Registrar:..........ELB
+Activation:.........2014-02-10 15:15:03.0
+Status:.............ACTIVE
+Contact Type:.......technical
+Last Name:..........CCOPS Billing MarkMonitor Inc
+First Name:.........
+Address:............391 N. Ancestor Pl., Boise, ID 83704 US
+Tel:................0012083895740
+Fax:................0012083895771
+e-mail:.............ccops@markmonitor.com
+Address 2:..........
+State/Province:.....
+Zip Code:...........
+City:...............
+County:.............
+Name Server (DB):...ns1.p07.dynect.net.
+Name Server (DB):...ns2.p07.dynect.net.
+Name Server (DB):...ns3.p07.dynect.net.
+Name Server (DB):...ns4.p07.dynect.net.

@@ -1,0 +1,399 @@
+<!doctype html><html><head>
+<meta charset="utf-8">
+<title>Shells</title>
+<style>body{font-size: 12px}code,pre{margin:0;padding:0;}
+body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap:break-word;}
+table{border:1px solid black;border-collapse:collapse;}
+</style>
+</head>
+<body>
+		<h1>Cmd.exe, powershell, bash</h1>
+    <a href="https://www.lemoda.net/windows/windows2unix/windows2unix.html">Unix to DOS</a> https://superuser.com/questions/1111591/how-can-i-ssh-into-bash-on-ubuntu-on-windows-10
+		<p>TextMate vs Notepad++ </p>
+		<table border="1" width="1000">
+			<tbody>
+				<tr>
+					<th>powershell</th>
+					<th>command prompt</th>
+					<th>bash linux</th>
+					<th>bash mac</th>
+				</tr>
+				<tr>
+					<td>Remove-Item alias:ls<br>
+						Remove-Item alias:cat<br>
+						Remove-Item alias:echo<br>
+						New-Alias ls &quot;C:\Users\a\scoop\shims\ls.exe&quot;<br>
+						function cat {cmd /c &quot;type $args&quot;}<br>
+						function echo {cmd /c &quot;echo $args&quot;}</td>
+					<td><pre>doskey node="C:\Program Files\nodejs\node.exe" $*
+doskey npm="C:\Program Files\nodejs\npm.cmd" $*
+doskey adb="%localappdata%\Android\sdk\platform-tools\adb.exe" $*
+doskey fastboot="%localappdata%\Android\sdk\platform-tools\fastboot.exe" $*
+doskey csc=C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\csc.exe $*</pre></td>
+					<td><pre>					</pre></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>doskey open=start $*<br>
+						% open http:///ste.vet</td>
+					<td>xdg-open</td>
+					<td>open</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>doskey whois="C:\cygwin64\bin\whois.exe" $*<br>
+						doskey php=(if $1. equ . (&quot;C:\php\php.exe&quot; -a) else &quot;C:\php\php.exe&quot; $*)<br>
+						doskey less=&quot;C:\cygwin64\bin\less.exe&quot; $*<br>
+							doskey rm="C:\cygwin64\bin\rm.exe" $*<br>
+							doskey cat=type $*<br>
+							doskey clear=cls<br>
+							doskey history= doskey /history<br>
+							doskey kill= taskkill /PID $*<br>
+							doskey man= help $*<br>
+						doskey sudo= runas /user:a "cmd /k cd \"%cd%\" &amp; $*"<br>
+							doskey exit=doskey /history $g$g C:\Users\a\Desktop\history.log.txt $T exit</td>
+					<td><pre>php(){
+if [ $# -eq 0 ]; then
+    /usr/bin/php -a
+else
+    /usr/bin/php $@
+fi
+}</pre></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<div itemprop="text">
+							<pre><code>doskey /MACROS:ALL
+</code></pre>
+						</div>
+					</td>
+					<td>
+						<pre><code>alias</code></pre>
+					</td>
+					<td>
+						<pre><code>alias</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><pre>@echo off
+
+if '%*' == '' cd %HOMEPATH%
+if '%*' == '-' (
+    cd /d %OLDPWD%
+    set OLDPWD=%cd%
+) else (
+    cd /d %*
+    if not errorlevel 1 set OLDPWD=%cd%
+)</pre>
+						
+					</td>
+					<td>cd -</td>
+					<td>cd -</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>tasklist | find "chrome.exe"</td>
+					<td>ps | grep "chrome"</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code>While(1) {
+ps | sort -des cpu | select -f 15 | ft -a; sleep 1; cls}
+</code></pre>
+					</td>
+					<td></td>
+					<td>top</td>
+					<td>top</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code>function bg() {Start-Process -NoNewWindow @args}</code></pre>
+					</td>
+					<td>https://stackoverflow.com/q/19017825<br>
+						start /B "" program &gt;&nbsp;pipefile.txt</td>
+					<td>cmd &amp;</td>
+					<td>cmd &amp;</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><pre>https://superuser.com/q/959567
+set VBoxManageEXE="%ProgramFiles%\Oracle\VirtualBox\VBoxManage.exe"
+set ListRunningVMS=%VboxManageEXE% list runningvms
+for /f tokens^=2^,4^ delims^=^" %%p in ('%ListRunningVMS%') do %VBoxManageEXE% controlvm %%p savestate
+
+echo all vms saved, you can shutdown now.
+
+rem shutdown /s /t 10</pre></td>
+					<td><pre>#!/bin/bash
+vboxmanage list runningvms | while read line; do
+  #echo "VBoxManage controlvm $uuid savestate;"
+  echo $line
+  if [[ $line =~ \{(.*)\} ]]
+  then
+    vboxmanage controlvm ${BASH_REMATCH[1]} savestate
+  fi
+done</pre></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><pre>title=random13413256
+for /f "tokens=2 USEBACKQ" %f IN (`tasklist /NH /FI "WINDOWTITLE eq random13413256*"`) Do set PID=%f
+title=Command Prompt
+
+
+powershell (Get-WmiObject Win32_Process -Filter ProcessId=$PID).ParentProcessId</pre></td>
+					<td>
+						<pre><code>echo $$</code></pre>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>title=Command Prompt</td>
+					<td>
+						<pre><code>PROMPT_COMMAND='echo -ne &quot;\033]0;Terminal | mplayer\007&quot;'</code></pre>
+						<pre><code>trap 'printf &quot;\033]0;%s\007&quot; &quot;${BASH_COMMAND//[^[:print:]]/}&quot;' DEBUG</code></pre>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code>Measure-Command { .\do_something.ps1 }</code></pre>
+					</td>
+					<td>// https://stackoverflow.com/q/673523
+						<p>cmd /v:on /c &quot;echo !TIME! &amp; dir &amp; echo !TIME!&quot;</p>
+						<p>echo %time% &amp; echo test &amp; call echo %^time%<br>
+						</p>
+					</td>
+					<td>
+						<div itemprop="text">
+							<pre><code>time yourscript.sh</code></pre>
+						</div>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<pre>powershell (Get-WmiObject Win32_Process -Filter ProcessId=$PID).ParentProcessId
+cscript login.js "ssh austn@tty.sdf.org" "f4wdTLZtsXw39g"
+(function () {
+          var w= WScript.CreateObject("WScript.Shell");
+          for (var i = 0, n = WScript.Arguments.Length, args = []; i &lt; n; ++i)
+          args.push(WScript.Arguments(i));
+          w.SendKeys(args[0]+"{ENTER}"); 
+          WScript.Sleep(1000);
+          //setTimeout(function(){
+            w.SendKeys(args[1]+"{ENTER}");   ;
+          //},2000);
+})();</pre>
+					</td>
+					<td><pre>#!/usr/bin/expect
+eval spawn ssh -oStrictHostKeyChecking=no -oCheckHostIP=no usr@$myhost.example.com
+#use correct prompt
+set prompt ":|#|\\\$"
+interact -o -nobuffer -re $prompt return
+send "my_password\r"
+interact -o -nobuffer -re $prompt return
+send "my_command1\r"
+interact -o -nobuffer -re $prompt return
+send "my_command2\r"
+interact</pre></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						
+					</td>
+					<td><pre>
+cat > ~/.tmux.conf &lt;&lt; EOL
+bind-key -n C-e next-window
+bind-key -n C-o previous-window
+set-option -g status-position
+#set -g status-right "#H"
+set -g status-right ""
+EOL 
+
+set -g default-terminal "screen-256color"
+
+set -g status-bg black
+set -g status-fg white</pre></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<pre>od -tx1 -c
+						
+Control+letter
+Enter
+</pre>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<pre>https://gist.github.com/PierreMage/6874814
+    
+wmic diskdrive list brief
+lsblk
+
+cd /D %HOMEDRIVE%%HOMEPATH%
+cd ~
+
+registry files
+$data=@" 
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
+\"NoDriveTypeAutoRun\"=dword:00000091
+"@
+%data > $HOME\AppData\Local\Temp\test.txt
+regedit /add $HOME\AppData\Local\Temp\test.txt
+
+<a href="https://stackoverflow.com/questions/3466166/how-to-check-if-running-in-cygwin-mac-or-linux">Detect Cygwin, Mac or Linux</a>
+
+https://stackoverflow.com/q/51830588
+
+https://stackoverflow.com/q/34994033
+
+https://stackoverflow.com/questions/16071864/how-to-create-tables-from-column-data-instead-of-row-data-in-html
+
+https://stackoverflow.com/questions/2006468/copy-paste-from-excel-to-a-web-page
+
+winpty run windovs packages in WSL
+
+<a href="https://stackoverflow.com/questions/3466166/how-to-check-if-running-in-cygwin-mac-or-linux">Cygwin, Mac or Linux</a>
+
+https://blog.ropnop.com/configuring-a-pretty-and-usable-terminal-emulator-for-wsl/
+
+http://mintty.github.io/
+
+tomparary
+     set PATH=%PATH%;C:\xampp\php
+
+perminant
+     setx PATH "%path%;C:\Program Files (x86)\Git\bin\"
+     
+permanently set path 1024 characters https://superuser.com/questions/387619/overcoming-the-1024-character-limit-with-setx
+
+$PATH = [Environment]::GetEnvironmentVariable("PATH")
+$xampp_path = "C:\xampp\php"
+if( $PATH -notlike "*"+$xampp_path+"*" ){
+    [Environment]::SetEnvironmentVariable("PATH", "$PATH;$xampp_path", "Machine")
+}
+
+Crosh Window
+
+https://github.com/dnschneid/crouton/wiki/Sharing-files-and-folders
+
+https://gist.github.com/u01jmg3/a9fdc69cf6d09efcc80a7ef2aca3f81e
+
+Chrome OS crouton and chroot are virtualized https://en.wikipedia.org/wiki/Chroot
+
+https://superuser.com/questions/129969/navigate-to-previous-directory-in-windows-command-prompt 
+ 
+<a href="https://stackoverflow.com/questions/22725938/sublime-text-3-increase-tab-height">Change tab height sublime</a>
+
+dual pain file managers
+ 
+function echo(strings) {
+  return  require('child_process').spawnSync('echo', [`${strings[0]}`], { stdio: 'inherit' })
+}
+function vi(strings) {
+  return  require('child_process').spawnSync('vi', [`${strings[0]}`], { stdio: 'inherit' })
+}
+function cd(strings) {
+  var str0 = strings[0]; 
+  return require('process').chdir(str0);
+}
+function pwd(strings) {
+  var str0 = strings[0]; 
+  return require('process').cwd();
+}
+
+p.cat`testing`.echo`testing`
+
+
+if( x === 23){
+  console.log(23);
+}
+
+@echo off
+
+if '%*' == '' (
+  cd /D %HOMEDRIVE%%HOMEPATH%
+) else (
+  cd /D %*
+)
+
+(function () {
+          var w= WScript.CreateObject("WScript.Shell");
+          for (var i = 0, n = WScript.Arguments.Length, args = []; i < n; ++i)
+          args.push(WScript.Arguments(i));
+          w.SendKeys(args[0]+"{ENTER}"); 
+          WScript.Sleep(1000);
+          //setTimeout(function(){
+            w.SendKeys(args[1]+"{ENTER}");   ;
+          //},2000);
+})();
+
+/*
+set oShell= Wscript.CreateObject("WScript.Shell")
+oShell.SendKeys "ssh -p 314 127.0.0.1{ENTER}"
+WScript.Sleep 1000 
+oShell.SendKeys " {ENTER}"
+'WScript.CreateObject("WScript.Shell").SendKeys("password{ENTER}")';
+*/
+
+Add-Type -AssemblyName Microsoft.VisualBasic
+[Microsoft.VisualBasic.FileIO.FileSystem]::DeleteFile('d:\foo.txt','OnlyErrorDialogs','SendToRecycleBin')
+
+https://stackoverflow.com/q/502002
+</pre>
+		<pre></pre>
+<pre>
+@echo off
+rem cmd.exe /k "%HOMEDRIVE%\%HOMEPATH%\cmd-startup.bat"
+rem "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" startvm "Your VM name" --type headless
+doskey node="C:\Program Files\nodejs\node.exe" $*
+doskey npm="C:\Program Files\nodejs\npm.cmd" $*
+doskey adb="%localappdata%\Android\sdk\platform-tools\adb.exe" $*
+doskey fastboot="%localappdata%\Android\sdk\platform-tools\fastboot.exe" $*
+doskey csc=C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\csc.exe $*
+
+doskey php=(if $1. equ . ("C:\php\php.exe" -a) else "C:\php\php.exe" $*)
+doskey vi="C:\Program Files (x86)\Notepad++\notepad++.exe" $*
+rem doskey vi="%windir%\system32\notepad.exe" $*
+doskey ebookviewer="C:\Users\a\Desktop\last supper\frank\art\si fi\Calibre\ebook-viewer.exe" $*
+doskey search="C:\cygwin64\bin\grep.exe" -rnw '.' -e '$1'
+doskey header="C:\cygwin64\bin\curl.exe" -I $*
+
+doskey open=start $*
+
+doskey ls=busybox ls $*
+doskey basename=busybox basename $*
+doskey ps=busybox ps $*
+doskey whois="C:\cygwin64\bin\whois.exe" $*
+doskey less="C:\cygwin64\bin\less.exe" $*
+doskey rm="C:\cygwin64\bin\rm.exe" $*
+doskey cat=type $*
+doskey clear=cls
+doskey history= doskey /history
+doskey kill= taskkill /PID $*
+doskey man= help $*
+doskey sudo= runas /user:a "cmd /k cd \"%cd%" & $*"
+doskey exit=doskey /history $g$g C:\Users\a\Desktop\history.log.txt $T exit
+doskey ssh="C:/Program Files/Git/usr/bin/ssh.exe" $*
+rem select choose default program command prompt
+rem explorer command
+rem https://gist.github.com/PierreMage/6874814
+</pre></body></html>

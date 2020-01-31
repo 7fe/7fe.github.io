@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head>
+  <meta charset="utf-8">
+  <title>Email</title>
+</head><body>
+<h1>Email</h1>
+<p>
+ <a href="mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&subject=Big%20News&body=Body-goes-here">email</a>
+
+mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&subject=Big%20News&body=Body-goes-here
+  
+How to set up Outlook to work and look like Gmail
+Minimized lines
+
+<a href="https://www.linkedin.com/pulse/make-outlook-work-like-gmail-joshua-forman">Make Outlook work like Gmail</a>
+</p>
+
+email <input type=text id=email value="john.doe@example.com"><br>
+cc <input type=text id=cc value="cc"><br>
+bcc <input type=text id=bcc value="bcc"><br>
+subject <input type=text id=s value="subject"><br>
+body <input type=text id=body value="body"><br>
+<script>
+var s = document.getElementById('email').getAttribute('value');
+var cc = document.getElementById('cc').getAttribute('value');
+var bcc = document.getElementById('bcc').getAttribute('value');
+var body = document.getElementById('body').getAttribute('value');
+
+document.write("<a href='mailto:"+s+"?cc="+cc+"&bcc="+bcc+"&subject="+s+"&body="+body+"'>email</a>");
+</script>

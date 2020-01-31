@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>c</title>
+</head>
+
+<body>
+<h1>C vs C++</h1>
+<table class="boxed"><tbody><tr><th>Member function</th><th>typical form for class <code>C</code>:</th></tr>
+<tr><td><a href="#default_constructor">Default constructor</a></td><td><code>C::C();</code></td></tr>
+<tr><td><a href="#destructor">Destructor</a></td><td><code>C::~C();</code></td></tr>
+<tr><td><a href="#copy_constructor">Copy constructor</a></td><td><code>C::C (const C&amp;);</code></td></tr>
+<tr><td><a href="#copy_assignment">Copy assignment</a></td><td><code>C&amp; operator= (const C&amp;);</code></td></tr>
+<tr><td><a href="#move">Move constructor</a></td><td><code>C::C (C&amp;&amp;);</code></td></tr>
+<tr><td><a href="#move">Move assignment</a></td><td><code>C&amp; operator= (C&amp;&amp;);</code></td></tr>
+</tbody></table>
+<table width="100%" border="1">
+  <tbody>
+    <tr>
+      <td width="50%"><pre><code>Private Sub Form_Load()
+  ' Execute a simple message box that says "Hello, World!"
+  MsgBox "Hello, World!"
+End Sub<br></code></pre></td>
+      <td width="50%"><pre><code>namespace Add_Function  {
+     
+     }//END      Program
+  }//END         Add_Function</code></pre></td>
+    </tr>
+    <tr>
+      <td><pre><code>Option Explicit On<br>Dim a, b, c, d, m, n As Integer<br>Dim x, y As Double</code></pre></td>
+      <td><pre><code>// all types of variables must be declared
+int a,b,c,d,m;
+double x,y;</code></pre></td>
+    </tr>
+    <tr>
+      <td><pre><code>result = IIf(5 < 10, "Yes it is", "No it isn't")</code></pre></td>
+      <td><pre><code>result = (5 < 10) ? "Yes it is" : "No it isn't";</code></pre></td>
+    </tr>
+    <tr>
+      <td><pre><code>Dim count As Integer = 0
+Dim message As String
+If count = 0 Then
+    message = "There are no items." 
+ElseIf count = 1 Then
+    message = "There is 1 item." 
+Else
+    message = "There are " & count & " items." 
+End If)</code></pre></td>
+      <td><pre><code>result = (5 < 10) ? "Yes it is" : "No it isn't";</code></pre></td>
+    </tr>
+    <tr>
+      <td><pre><code>And Or Xor Not &lt;&gt; = AndAlso OrElse object.ReferenceEquals(a, b) 
+!object.ReferenceEquals(a, b) typeof(a) a is b(type comparison)</code></pre></td>
+      <td><pre><code>&amp; |  Xor != == &amp;&amp; Is a Is b</code></pre></td>
+    </tr>
+    <tr>
+      <td><pre><code>For i As Integer = 0 To number - 1
+    ' loop from zero up to one less than number
+Next
+For i As Integer = number To 0 Step -1
+    ' loops from number down to zero
+Next
+For i As Integer = 0 To 20 Step 2
+    ' loops from 0 to 20 by 2's
+Next
+Exit For 'breaks out of a for loop
+Exit While 'breaks out of a while loop
+Exit Do 'breaks out of a do loop</code></pre></td>
+      <td><pre><code>for (int i = 0; i < number; ++i) {
+    // loop from zero up to one less than number
+}
+for (int i = number; i >= 0; --i) {
+    // loops from number down to zero
+}
+for (int i = 0; i <= 20; i += 2) {
+    // loops from 0 to 20 by 2's
+}</code></pre></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

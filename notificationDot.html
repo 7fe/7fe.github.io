@@ -1,0 +1,39 @@
+<!doctype html><body style="font-family:monospace">
+<br>
+The easiest solution is to simply create a 1by1 widget that displays notification dot until you open the application. 
+Another easier solution would be to tie into the badge icon.
+<br>
+<form>
+<input type=checkbox> Notification Dot Count<br>
+<input type=checkbox> Unread Count<br>
+<input type=checkbox> Hide on Notification Tray<br>
+<input type=checkbox> Display Notification Icon After Dismissed<br>
+<!--input type=checkbox> Sounds<br-->
+
+Facebook &nbsp;<input type=checkbox> <input type=checkbox> <input type=checkbox><br>
+Messenger <input type=checkbox> <input type=checkbox> <input type=checkbox><br>
+Gmail &nbsp;&nbsp;&nbsp;&nbsp;<input type=checkbox> <input type=checkbox> <input type=checkbox><br>
+
+<br>
+<input type="radio" id="contactChoice1"
+ name="contact" value="email">
+<label for="contactChoice1">None</label>
+
+<input type="radio" id="contactChoice2"
+ name="contact" value="phone">
+<label for="contactChoice2">Alert</label>
+
+<br>
+<a href="https://developer.android.com/reference/android/service/notification/NotificationListenerService.html#getActiveNotifications()">Active Notifications</a>
+<button type="submit">Submit</button>
+<br>
+Dump all apps to lockscreen option.
+<!--select name="cars">
+  <option value="a">Volvo</option>
+  <option value="b">Saab</option>
+</select-->
+</form>
+
+<img src="https://i.stack.imgur.com/JZB0Y.png">
+
+The much simpler solution is to simple create an application that works as a 1by1 widget that works like notifiyer in that it mutes the application and simple displays a badge icon.

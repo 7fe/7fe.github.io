@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta charset="utf-8">
+<title>JASON</title>
+<style>body{font-size: 12px;background:linen;}code,pre{margin:0;padding:0;}
+body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap:break-word;}
+table{vertical-align: top;}
+td{vertical-align: top;}
+</style>
+</head>
+
+<body>
+		<h1>JASON vs ES5 vs ES6</h1>
+		<pre>JASON = (x)=>{
+  x = x.raw[0].split('\\`').join('`').split('\\{').join('{');
+  if(x[x.length-1] == '\\\\'){
+    x.slice(0,1);
+  }
+  return x;
+}
+
+ - multiline strings convert to JASON
+ - strings with 3+ escaped characters
+</pre>
+		<p>JASON is a template function that 100% valid JavaScript.  There are 2 functions JASON.parse &amp; JASON.stringify to convert to and from JASON.   json is JSON with one expection you must escape values like ${ so $\{ in both strings and template strings.  And that is the only difference.</p>
+		<table style="width:100%" border="1">
+			<tbody>
+				<tr>
+					<td width="33%">
+						<pre>JASON</pre>
+					</td>
+					<td width="33%">ES5</td>
+					<td width="33%">ES6</td>
+				</tr>
+				<tr>
+					<td>
+						<pre>{&quot;batick&quot;:JASON`
+paste in blocks of code 
+in any way you want
+`,&quot;b&quot;:`JASON`1\
+2`\
+3`
+&quot;desktop&quot;:JASON`C:\Users\a\Desktop\\`}</pre>
+					</td>
+					<td>
+						<pre>{&quot;backtick&quot;:&quot;\
+paste in blocks of code\
+in any way you want
+&quot;,&quot;b&quot;:&quot;1\
+2`\
+3&quot;,
+&quot;desktop&quot;:&quot;C:\\Users\\a\\Desktop\\&quot;}</pre>
+					</td>
+					<td width="25%"><pre>{backtick:`
+paste in blocks of code
+in any way you want
+`,
+&quot;desktop&quot;:String.raw`C:\Users\a\Desktop${'\\'}`}</pre>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<pre>
+
+</pre>
+	</body>
+</html>

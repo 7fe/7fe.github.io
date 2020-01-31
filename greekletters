@@ -1,0 +1,238 @@
+#SingleInstance Force
+#NoEnv    
+#Hotstring EndChars `t ; tab is the only endchar for hotstrings
+#exit
+
+;*SC021::Send {blind}{u}
+;*SC022::Send {blind}{i}
+
+:o:alpha::α
+:o:beta::β
+:o:delta::Δ
+:o:epsilon::ε
+:o:gamma::γ
+:o:Gamma::Γ
+:o:zeta::ζ
+:o:eta::η
+:o:theta::θ
+:o:iota::Ι
+:o:kappa::κ
+:o:lambda::λ
+:o:mu::μ
+:o:nu::ν
+:o:xi::ξ
+:o:Xi::Ξ
+:o:pi::π
+:o:rho::ρ
+:o:sigma::σ
+:o:tua::τ
+:o:upsilon::Y
+:o:phi::φ
+:o:chi::χ
+:o:psi::ψ
+:o:omega::ω
+
+;*^SC010::Send {blind}{'}
+;*^SC011::Send ^{c}
+;*^SC012::Send ^{v}
+
+;Tab::Send, {Ctrl Up}{Tab}{Ctrl Down}
+;SC163::Send, "test"
+;SC163::Send, z
+#p::Send p
+#x::Send x
+Ctrl & Space::LWin
+;Return::
+;  WinGetClass, class, A  
+;FileAppend, ( %class% ), C:\Users\a\Desktop\class.txt
+;return
+
+; I really want to create a way to assign alt keyboard shortcuts to windows so that 
+
+#+Tab::Send, {Ctrl Down}{Shift Down}{Tab}{Shift Up}{Ctrl Up}
+#Tab::Send, {Ctrl Down}{Tab}{Ctrl Up}
+;*#+SC026::Send, {Ctrl Down}{Shift Down}{n}{Shift Up}{Ctrl Up}
+;*#+SC025::Send, {Ctrl Down}{Shift Down}{t}{Shift Up}{Ctrl Up}
+
+;CapsLock::F1
+CapsLock::]
+
+; https://stackoverflow.com/questions/2970683/disable-windows-and-alt-tab-key-combos
+;LAlt::LWin
+;Ctrl::LWin
+;SC070::LShift
+;SC079::Ctrl
+;SC07B::Ctrl
+;RWin::RCtrl
+;LCtrl::LWin
+;LWin::RCtrl
+;PgDn::LCtrl
+;MButton::PgDn
+;CapsLock::LCtrl
+;^SC033::^w
+
+RAlt & SC02f::Send, ^v
+RAlt & SC02e::Send, ^c
+RAlt & SC01f::Send, ^s
+RAlt & SC021::Send, ^f
+RAlt & SC02d::Send, ^z
+#IfWinActive ahk_class ConsoleWindowClass
+  ;AppsKey::Send {Alt Down}{Space}{e}{l}{Alt Up}{PgDn}{Esc}
+  ;RAlt::Send {Alt Down}{Space}{e}{l}{Alt Up}{PgUp}{Esc}
+  ;LAlt::Send {Alt Down}{Space}{Alt Up}
+  ;RAlt & 
+  ^+Tab::Send, ^o
+  ^Tab::Send, ^e
+#IfWinActive
+;SC07B & LShift::Send, ^z
+
+
+;SC07B & SC017::Send {blind}{9}
+;SC07B & SC018::Send {blind}{0}
+;SC07B & SC01F::`
+
+;Shift & SC030::<
+;Shift & SC02c::>
+;Shift & SC02d::`
+
+
+;https://www.maketecheasier.com/disable-lock-screen-shortcut-key-windows/
+
+
+;SC163 Up::Send, {Ctrl Up}{Ctrl Down}
+;SC163 Up::Send, {Ctrl Up}{Ctrl Down}
+;SC163 Up::Send, {Ctrl Up}{Ctrl Down}
+; echo "? (10.0.0.14) at 10:b:a9:74:4f:1c on en1 ifscope [ethernet]" | awk ' { gsub(/[()]/,""); print $2 } '
+
+;*SC02c::Shift
+
+; Windows Alt Ctrl Windows    ctrl
+; Mac     Ctl Cmd  Alt        cmds
+
+;https://autohotkey.com/board/topic/103174-dual-function-control-key/
+;$RAlt::
+;If GetKeyState("Alt", "P")
+;{
+;While GetKeyState("Alt", "P")
+;  Send {Alt Down}
+;Send {Alt Up}
+;}
+;Else
+;  Send {LWin}
+;return
+
+$RWin::
+If GetKeyState("Win", "P")
+{
+While GetKeyState("Win", "P")
+  Send {RWin Down}
+Send {RWin Up}
+}
+Else
+  Send {Pause}
+return
+
+
+;$^SC027::
+;If GetKeyState("RCtrl", "P")
+;{
+;  Send {blind}{Ctrl Down}{SC027}{Ctrl Up}
+;}
+;Else
+;  Send {0}
+;return
+
+;*SC02c::Send {blind}{/}
+;*SC035::Send {blind}{z}
+
+
+;#If GetKeyState("RCtrl", "P")=3
+;  $^SC01e::Send {blind}{Ctrl Down}{SC01e}{Ctrl Up}
+;  $^SC01f::Send {blind}{Ctrl Down}{SC01f}{Ctrl Up}
+;  $^SC020::Send {blind}{Ctrl Down}{SC020}{Ctrl Up}
+;  $^SC021::Send {blind}{Ctrl Down}{SC021}{Ctrl Up}
+;  $^SC022::Send {blind}{Ctrl Down}{SC022}{Ctrl Up}
+;  $^SC023::Send {blind}{Ctrl Down}{SC023}{Ctrl Up}
+;  $^SC024::Send {blind}{Ctrl Down}{SC024}{Ctrl Up}
+;  $^SC025::Send {blind}{Ctrl Down}{SC025}{Ctrl Up}
+;  $^SC026::Send {blind}{Ctrl Down}{SC026}{Ctrl Up}
+;  $^SC027::Send {blind}{Ctrl Down}{SC027}{Ctrl Up}
+;#If
+;#If GetKeyState("LCtrl", "P")=1
+;  ;$^SC01e::Send {1}
+;  ;$^SC01f::Send {2}
+;  ;$^SC020::Send {3}
+;  ;$^SC021::Send {4}
+;  $^SC022::Send {5}
+;  $^SC023::Send {6} 
+;  ;$^SC024::Send {7}
+;  ;$^SC025::Send {8}
+  ;$^SC026::Send {9}
+  ;$^SC027::Send {0}
+;#If
+
+;~mbutton::
+;  sendinput ^{v}
+;  return
+
+;~^mbutton::
+;  sendinput ^{c}
+;  return
+  
+;^WheelDown::return
+;^WheelUp::return 
+
+
+;SC07B::Ctrl
+;SC079::`
+;SC079::Ctrl
+
+;#If GetKeyState("SC07B", "P")=3
+;*SC010::Send {blind}{l}
+;*SC011::Send {blind}{r}
+;*SC012::Send {blind}{c}
+;*SC013::Send {blind}{g}
+;*SC014::Send {blind}{f}
+
+;*SC015::Send {blind}f
+;*SC016::Send {blind}g
+;*SC017::Send {blind}c
+;*SC018::Send {blind}r
+;*SC019::Send {blind}l
+;*SC01a::Send {blind}y
+;*SC01b::Send {blind}y
+;SC01c::Send {blind}p           ; 
+
+;*SC01e::Send {blind}{s}
+;*SC01f::Send {blind}{n}
+;*SC020::Send {blind}{t}
+;*SC021::Send {blind}{h}
+;*SC022::Send {blind}{d}
+
+;*SC023::Send {blind}{d} 
+;*SC024::Send {blind}{h}
+;*SC025::Send {blind}{t}
+;*SC026::Send {blind}{n}
+;*SC027::Send {blind}{s}
+;*SC028::Send {blind}{-}  ;
+
+;*SC02c::Send {blind}{z}
+;*SC02d::Send {blind}{v}
+;*SC02e::Send {blind}{w}
+;*SC02f::Send {blind}{b}
+;#If
+
+;70
+;79
+;7B
+;*SC002::Send ^{v}
+;*SC003::Send ^{c}
+;*SC004::Send ^{l}
+;*SC005::Send ^{r}
+;*SC006::Send ^{z}
+;*SC007::Send ^{n}
+;*SC008::Send ^{t}
+;*SC009::Send ^{w}
+;*SC00a::Send ^{s}
+;*SC00b::Send ^{f}
+;*SC00c::Send ^{s}

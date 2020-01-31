@@ -1,0 +1,54 @@
+﻿<!doctype html><head><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>dus.tn</title>
+<meta name="viewport" content="width=device-width">
+
+<style>
+*{margin:0;padding:0;}
+body{font-family:Roboto;font-size:40px;padding-top:50px;}
+ul li{position:relative;list-style: none;padding-left:10px;z-index:0}
+.up,.down,.del{float:right;color:black;text-decoration:none;font-size:30px}
+.up{right:20px}
+.del{right:50px}
+#artist{display:none;}
+</style></head>
+
+<a href="https://github.com/google/material-design-icons">icons</a>
+
+<div style="position:fixed;height:40px;top:0;right:0;background:LightBlue;left:0;z-index:10;">
+<a href="#context"><img src="http://icdn9.digitaltrends.com/image/menu-three-horizontal-lines-symbol-2-10x10.png" height=18 style="float:left;padding:10px"></a>
+<img src=http://imageog.flaticon.com/icons/png/512/61/61022.png?size=20x20f&pad=10,10,10,10&ext=png style="float:left;padding:10px">
+<img src="https://cdn3.iconfinder.com/data/icons/virtual-notebook/128/button_switch_vertical-128.png" height=30 style="float:right;padding: 4px;">
+<a href="#" onclick='prompt("Name of new playlist", "")'>
+<img src=https://raw.githubusercontent.com/google/material-design-icons/master/content/1x_web/ic_add_black_18dp.png style="float:right;padding:10px">
+</a>
+<img height=20 src="https://cdn4.iconfinder.com/data/icons/miu/24/common-search-lookup-glyph-128.png" style="float:right;padding: 9px;">
+</div>
+<a href="javascript:location.reload()">reload</a>
+<ul id=artist>
+  <li>Bob Marley</li>
+  <li>Angels & Airwaves</li>
+</ul>
+<ul id=playlist>
+  <li><a href="#play" onclick="play.call(this)">Call To Arms</a></li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li><li>Call To Arms</li><li>Hallucinations</li>
+</ul>
+<script src=https://code.jquery.com/jquery-3.1.1.js></script>
+<script>
+$(function(){
+  $("#playlist li").append('<a class=del href="#del" onclick="del.call(this,this);return false">X&nbsp;</a><a href="#up" class=up onclick="up.call(this)">▲</a><a class=down href="#down" onclick="down.call(this)">▼</a>');
+});
+function down(){
+  $(this).parent().before($(this).parent().next());
+}
+function up(){
+  $(this).parent().after($(this).parent().prev());
+}
+function del(a){
+  if(this == window)return;
+  if (window.confirm("Delete?")) { 
+    $(this).parent().remove();
+  }
+}
+function play(){
+  alert("play");
+}
+</script>

@@ -1,0 +1,482 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15513,        473]
+NotebookOptionsPosition[     14518,        435]
+NotebookOutlinePosition[     14854,        450]
+CellTagsIndexPosition[     14811,        447]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<NETLink`\>\"", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"InstallNET", "[", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"myform", "=", 
+   RowBox[{"f", "=", 
+    RowBox[{"NETNew", "[", "\"\<System.Windows.Forms.Form\>\"", "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ShowNETWindow", "[", "f", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"myform", "@", "Width"}], "=", "500"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"myform", "@", "Height"}], "=", "400"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"myform", "@", "Text"}], " ", "=", " ", 
+   "\"\<Rich Text Processor\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"myrichtextbox", "=", 
+   RowBox[{"NETNew", "[", "\"\<System.Windows.Forms.RichTextBox\>\"", "]"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"myrichtextbox", "@", "Font"}], "=", 
+   RowBox[{"NETNew", "[", 
+    RowBox[{
+    "\"\<System.Drawing.Font\>\"", ",", " ", "\"\<Verdana\>\"", ",", " ", 
+     "12"}], "]"}]}], ";"}], "\[IndentingNewLine]"}], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Replace", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Hold", "[", 
+    RowBox[{"f", "=", 
+     RowBox[{"NETNew", "[", "\"\<System.Windows.Forms.Form\>\"", "]"}]}], 
+    "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"HoldPattern", "[", 
+     RowBox[{"Set", "[", 
+      RowBox[{"x_", ",", 
+       RowBox[{"NETNew", "[", 
+        RowBox[{"class_", ",", "args___"}], "]"}]}], "]"}], "]"}], " ", 
+    "\[RuleDelayed]", " ", 
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{"class", ",", "\"\< \>\"", ",", 
+       RowBox[{"ToBoxes", "[", 
+        RowBox[{"Unevaluated", "@", "x"}], "]"}], ",", "\"\< = new \>\"", ",",
+        "class", ",", "\"\<(\>\"", ",", "args", ",", "\"\<)\>\""}], "}"}], 
+     "]"}]}], "\[IndentingNewLine]", ",", "Infinity"}], "\[IndentingNewLine]",
+   "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Hold", "[", 
+  RowBox[{"StringJoin", "[", 
+   RowBox[{"{", 
+    RowBox[{"\<\"System.Windows.Forms.Form\"\>", ",", "\<\" \"\>", ",", 
+     RowBox[{"ToBoxes", "[", 
+      RowBox[{"Unevaluated", "[", "f", "]"}], "]"}], ",", "\<\" = new \"\>", 
+     ",", "\<\"System.Windows.Forms.Form\"\>", ",", "\<\"(\"\>", 
+     ",", "\<\")\"\>"}], "}"}], "]"}], "]"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Replace", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Hold", "[", 
+    RowBox[{"f", "=", 
+     RowBox[{"NETNew", "[", "\"\<System.Windows.Forms.Form\>\"", "]"}]}], 
+    "]"}], ",", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"HoldPattern", "[", 
+     RowBox[{"Set", "[", 
+      RowBox[{"x_", ",", 
+       RowBox[{"NETNew", "[", 
+        RowBox[{"class_", ",", "args___"}], "]"}]}], "]"}], "]"}], " ", 
+    "\[RuleDelayed]", " ", 
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{"class", ",", "\"\< \>\"", ",", 
+       RowBox[{"ToBoxes", "[", 
+        RowBox[{"Unevaluated", "@", "x"}], "]"}], ",", "\"\< = new \>\"", ",",
+        "class", ",", "\"\<(\>\"", ",", "args", ",", "\"\<)\>\""}], "}"}], 
+     "]"}]}], "\[IndentingNewLine]", ",", "Infinity"}], "\[IndentingNewLine]",
+   "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Replace", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Hold", "[", 
+     RowBox[{"f", "=", 
+      RowBox[{"NETNew", "[", "\"\<System.Windows.Forms.Form\>\"", "]"}]}], 
+     "]"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"HoldPattern", "[", 
+      RowBox[{"Set", "[", 
+       RowBox[{"x_", ",", 
+        RowBox[{"NETNew", "[", 
+         RowBox[{"class_", ",", "args___"}], "]"}]}], "]"}], "]"}], " ", 
+     "\[RuleDelayed]", " ", 
+     RowBox[{"StringJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{"class", ",", "\"\< \>\"", ",", 
+        RowBox[{"ToBoxes", "[", 
+         RowBox[{"Unevaluated", "@", "x"}], "]"}], ",", "\"\< = new \>\"", 
+        ",", "class", ",", "\"\<(\>\"", ",", "args", ",", "\"\<)\>\""}], 
+       "}"}], "]"}]}], "\[IndentingNewLine]", ",", "Infinity"}], 
+   "\[IndentingNewLine]", "]"}], ";"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullForm", "@", 
+  RowBox[{"HoldForm", "@", 
+   RowBox[{"obj", "@", 
+    RowBox[{"MethodName", "[", "args", "]"}]}]}]}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   RowBox[{"HoldForm", "[", 
+    RowBox[{"obj", "[", 
+     RowBox[{"MethodName", "[", "args", "]"}], "]"}], "]"}],
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Replace", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Hold", "[", 
+    RowBox[{"NETBlock", "[", 
+     RowBox[{
+      RowBox[{"s", "=", "2"}], ";"}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"HoldPattern", "[", 
+     RowBox[{"NETBlock", "[", "x_", "]"}], "]"}], " ", "\[RuleDelayed]", " ", 
+    RowBox[{"StringJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{"\"\<{\>\"", ",", "x", ",", "\"\<}\>\""}], "}"}], "]"}]}], 
+   "\[IndentingNewLine]", ",", "Infinity"}], "\[IndentingNewLine]", 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Hold", "[", 
+  RowBox[{"StringJoin", "[", 
+   RowBox[{"{", 
+    RowBox[{"\<\"{\"\>", ",", 
+     RowBox[{
+      RowBox[{"s", "=", "2"}], ";"}], ",", "\<\"}\"\>"}], "}"}], "]"}], 
+  "]"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MyOtherFunc", "[", "args__", "]"}], ":=", 
+  RowBox[{"NETBlock", "[", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "obj", "}"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"...", " ", "obj"}], "=", 
+         RowBox[{"NETNew", "[", "\"\<System.Windows.Forms.Form\>\"", "]"}]}], 
+        ";"}], "..."}], " ", 
+      RowBox[{"Return", "[", "obj", "]"}]}]}], "  ", 
+    RowBox[{"(*", 
+     RowBox[{"OK", ":", 
+      RowBox[{
+      "obj", " ", "will", " ", "not", " ", "be", " ", "released", " ", "when",
+        " ", "NETBlock", " ", 
+       RowBox[{"finishes", "."}]}]}], "*)"}], "]"}], "]"}]}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"SetAttributes", "[", 
+    RowBox[{"Rep", ",", "HoldAll"}], "]"}], ";"}], 
+  "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Rep", "[", 
+    RowBox[{"defs_", ",", "code_"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"symsTrans", ",", "downVals"}], "}"}], ",", 
+     RowBox[{
+      RowBox[{"symsTrans", "=", 
+       RowBox[{"Union", "[", 
+        RowBox[{"Cases", "[", 
+         RowBox[{
+          RowBox[{"Hold", "[", "defs", "]"}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"HoldPattern", "[", "SetDelayed", "]"}], "[", 
+            RowBox[{
+             RowBox[{"f_", "[", "___", "]"}], ",", "_"}], "]"}], 
+           "\[RuleDelayed]", 
+           RowBox[{"(", 
+            RowBox[{"f", "\[Rule]", 
+             RowBox[{"\"\<changeMe\>\"", "[", "f", "]"}]}], ")"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "\[Infinity]"}], "}"}]}], "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"downVals", "=", 
+       RowBox[{"Union", "[", 
+        RowBox[{"Cases", "[", 
+         RowBox[{
+          RowBox[{"Hold", "[", "defs", "]"}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"HoldPattern", "[", "SetDelayed", "]"}], "[", 
+            RowBox[{
+             RowBox[{"f_", "[", "a___", "]"}], ",", "b_"}], "]"}], 
+           "\[RuleDelayed]", 
+           RowBox[{"RuleDelayed", "[", 
+            RowBox[{
+             RowBox[{"HoldPattern", "[", 
+              RowBox[{
+               RowBox[{"\"\<changeMe\>\"", "[", "f", "]"}], "[", "a", "]"}], 
+              "]"}], ",", "b"}], "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "\[Infinity]"}], "}"}]}], "]"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"ReleaseHold", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Hold", "[", "code", "]"}], "/.", "symsTrans"}], "//.", 
+        "downVals"}], "]"}]}]}], "]"}]}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"flatten", " ", "all", " ", "graphics", " ", "into", " ", "one"}], 
+   "*)"}]}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"graphic", "[", "obj_", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", "ops", "}"}], ",", 
+      RowBox[{
+       RowBox[{"ops", "=", 
+        RowBox[{"Sequence", "@@", 
+         RowBox[{"Flatten", "[", 
+          RowBox[{"Cases", "[", 
+           RowBox[{"obj", ",", 
+            RowBox[{
+             RowBox[{"Graphics", "[", 
+              RowBox[{"l_", ",", "op___"}], "]"}], "\[RuleDelayed]", 
+             RowBox[{"{", "op", "}"}]}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "\[Infinity]"}], "}"}]}], "]"}], "]"}]}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Graphics", "[", 
+         RowBox[{
+          RowBox[{"{", "obj", "}"}], ",", "ops"}], "]"}], "//.", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Graphics", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"a___", ",", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"l_", ",", "___"}], "]"}], ",", "b___"}], "}"}], ",", 
+            "o___"}], "]"}], "\[RuleDelayed]", 
+          RowBox[{"Graphics", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"a", ",", "l", ",", "b"}], "}"}], ",", "o"}], "]"}]}], 
+         "}"}]}]}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"show", "[", "o_", "]"}], ":=", "o"}], ";"}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+   "not", " ", "sure", " ", "what", " ", "this", " ", "should", " ", "be"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"display", "[", "expr_", "]"}], ":=", 
+  RowBox[{"Text", "[", "expr", "]"}]}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$ops", "=", 
+   RowBox[{"Alternatives", "@@", 
+    RowBox[{"{", 
+     RowBox[{
+     "Minus", ",", "PreDecrement", ",", "Decrement", ",", "PreIncrement", ",",
+       "Increment", ",", "Greater", ",", "Less", ",", "GreaterEqual", ",", 
+      "LessEqual", ",", "Equal", ",", "Unequal", ",", "Mod", ",", "Divide", 
+      ",", "Times", ",", "Subtract", ",", "Plus", ",", "BitShiftLeft", ",", 
+      "BitShiftRight", ",", "BitAnd", ",", "BitXor", ",", "BitOr", ",", "And",
+       ",", "Or", ",", "Not"}], "}"}]}]}], ";"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"FullForm", "@", 
+   RowBox[{"ReleaseHold", "[", "\[IndentingNewLine]", 
+    RowBox[{"Rep", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Rational", "[", 
+         RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
+        RowBox[{
+         RowBox[{"ToString", "@", "a"}], "<>", "\"\</\>\"", "<>", 
+         RowBox[{"ToString", "@", "b"}]}]}], ";", "\[IndentingNewLine]", 
+       StyleBox[
+        RowBox[{
+         RowBox[{"Times", "[", 
+          RowBox[{"a_", ",", 
+           RowBox[{"Power", "[", 
+            RowBox[{"b_", ",", 
+             RowBox[{"-", "1"}]}], "]"}]}], "]"}], ":=", 
+         RowBox[{
+          RowBox[{"ToString", "@", "a"}], "<>", "\"\</\>\"", "<>", 
+          RowBox[{"ToString", "@", "b"}]}]}],
+        ShowSpecialCharacters->False,
+        ShowStringCharacters->True,
+        NumberMarks->True], 
+       StyleBox[";",
+        ShowSpecialCharacters->False,
+        ShowStringCharacters->True,
+        NumberMarks->True], "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Set", "[", 
+         RowBox[{"a_", ",", 
+          RowBox[{"int", "@", "b_"}]}], "]"}], ":=", 
+        RowBox[{"\"\<int \>\"", "<>", 
+         RowBox[{"ToString", "@", "a"}], "<>", "\"\< = \>\"", "<>", 
+         RowBox[{"show", "[", "b", "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Set", "[", 
+         RowBox[{"a_", ",", 
+          RowBox[{"object", "@", "b_"}]}], "]"}], ":=", 
+        RowBox[{"\"\<object \>\"", "<>", 
+         RowBox[{"ToString", "@", "a"}], "<>", "\"\< = \>\"", "<>", 
+         RowBox[{"ToString", "@", "b"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CompoundExpression", "[", "x___", "]"}], ":=", 
+        RowBox[{
+         RowBox[{"StringJoin", "@", 
+          RowBox[{"Riffle", "[", 
+           RowBox[{
+            RowBox[{"Drop", "[", 
+             RowBox[{
+              RowBox[{"{", "x", "}"}], ",", 
+              RowBox[{"-", "1"}]}], "]"}], ",", "\"\<;\n\>\""}], "]"}]}], 
+         "<>", "\"\<;\>\""}]}], ";"}], "\[IndentingNewLine]", ",", 
+      RowBox[{"show", "@", 
+       RowBox[{"Hold", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Set", "[", 
+          RowBox[{"i", ",", 
+           RowBox[{"int", "[", 
+            RowBox[{"Rational", "[", 
+             RowBox[{"4", ",", "5"}], "]"}], "]"}]}], "]"}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Set", "[", 
+          RowBox[{"b", ",", 
+           RowBox[{"object", "@", "f"}]}], "]"}], ";"}], 
+        "\[IndentingNewLine]", "]"}]}]}], "]"}], "\[IndentingNewLine]", 
+    "]"}]}]}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox["\"\<int i = 4/5;\\nobject b = f;\>\"",
+   ShowSpecialCharacters->False,
+   ShowStringCharacters->True,
+   NumberMarks->True],
+  FullForm]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringDrop", "[", 
+  RowBox[{
+   RowBox[{"ToString", "@", 
+    RowBox[{"InputForm", "@", 
+     RowBox[{"Hold", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"4", "/", "6"}], "*", "20"}], "+", 
+       RowBox[{"4", "^", "4"}]}], "]"}]}]}], ",", 
+   RowBox[{"-", "1"}]}], "]"}]], "Input"],
+
+Cell[BoxData["\<\"Hold[(4/6)*20 + 4^4\"\>"], "Output"]
+}, Open  ]]
+},
+WindowSize->{667, 670},
+WindowMargins->{{Automatic, -10}, {Automatic, -10}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1195, 35, 275, "Input"],
+Cell[CellGroupData[{
+Cell[1778, 59, 849, 21, 165, "Input"],
+Cell[2630, 82, 387, 8, 77, "Output"]
+}, Open  ]],
+Cell[3032, 93, 849, 21, 165, "Input"],
+Cell[3884, 116, 888, 22, 165, "Input"],
+Cell[CellGroupData[{
+Cell[4797, 142, 154, 4, 32, "Input"],
+Cell[4954, 148, 260, 9, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5251, 162, 564, 15, 121, "Input"],
+Cell[5818, 179, 221, 7, 32, "Output"]
+}, Open  ]],
+Cell[6054, 189, 693, 20, 165, "Input"],
+Cell[6750, 211, 3899, 111, 627, "Input"],
+Cell[10652, 324, 561, 11, 121, "Input"],
+Cell[CellGroupData[{
+Cell[11238, 339, 2667, 68, 407, "Input"],
+Cell[13908, 409, 184, 6, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14129, 420, 316, 10, 55, "Input"],
+Cell[14448, 432, 54, 0, 32, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

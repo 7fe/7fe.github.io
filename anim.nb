@@ -1,0 +1,259 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8967,        250]
+NotebookOptionsPosition[      8400,        225]
+NotebookOutlinePosition[      8733,        240]
+CellTagsIndexPosition[      8690,        237]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.714705053422123*^9, 3.714705061529106*^9}, {
+   3.7147051029744062`*^9, 3.714705103395606*^9}, {3.714705133518566*^9, 
+   3.714705206998111*^9}, {3.714705237507846*^9, 3.714705260594767*^9}, {
+   3.7147053202411537`*^9, 3.714705320365534*^9}, {3.7147053688946457`*^9, 
+   3.714705395330329*^9}, {3.714705807073454*^9, 3.7147058075801764`*^9}, 
+   3.714705839755198*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Graphics", "[", 
+       RowBox[{"{", 
+        RowBox[{"Circle", "[", "]"}], "}"}], "]"}], ",", "\"\<a\>\""}], "}"}],
+     ",", 
+    RowBox[{"{", 
+     RowBox[{"Manipulate", "[", 
+      RowBox[{"scruber", ",", 
+       RowBox[{"{", 
+        RowBox[{"scruber", ",", "0", ",", "10"}], "}"}]}], "]"}], "}"}], ",", 
+    
+    RowBox[{"{", 
+     RowBox[{"Pane", "[", 
+      RowBox[{
+       RowBox[{"Grid", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+           "{", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\
+aaaaaaaaaaaaaa", "}"}], ",", 
+           RowBox[{"{", "}"}]}], "}"}], ",", 
+         RowBox[{"Frame", "\[Rule]", "All"}]}], "]"}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"Automatic", ",", "Automatic"}], "}"}]}], ",", 
+       RowBox[{"Scrollbars", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"True", ",", "False"}], "}"}]}]}], "]"}], "}"}]}], "}"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7147058108670483`*^9, 3.7147058417925262`*^9}, {
+  3.7147059145978928`*^9, 3.714705938368581*^9}, {3.714706010614603*^9, 
+  3.714706034768538*^9}, {3.714706086948394*^9, 3.714706097351584*^9}, {
+  3.714706162039776*^9, 3.714706162731134*^9}, {3.71470659864743*^9, 
+  3.71470659989079*^9}, {3.714744581130728*^9, 3.714744594864107*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     GraphicsBox[CircleBox[{0, 0}]], "\<\"a\"\>"},
+    {
+     TagBox[
+      StyleBox[
+       DynamicModuleBox[{$CellContext`scruber$$ = 0, Typeset`show$$ = True, 
+        Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+        Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+        "\"untitled\"", Typeset`specs$$ = {{
+          Hold[$CellContext`scruber$$], 0, 10}}, Typeset`size$$ = {
+        9., {0., 10.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        Typeset`skipInitDone$$ = True, $CellContext`scruber$523$$ = 0}, 
+        DynamicBox[Manipulate`ManipulateBoxes[
+         1, StandardForm, "Variables" :> {$CellContext`scruber$$ = 0}, 
+          "ControllerVariables" :> {
+            Hold[$CellContext`scruber$$, $CellContext`scruber$523$$, 0]}, 
+          "OtherVariables" :> {
+           Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+            Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+            Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+            Typeset`initDone$$, Typeset`skipInitDone$$}, 
+          "Body" :> $CellContext`scruber$$, 
+          "Specifications" :> {{$CellContext`scruber$$, 0, 10}}, 
+          "Options" :> {}, "DefaultOptions" :> {}],
+         ImageSizeCache->{284., {50., 57.}},
+         SingleEvaluation->True],
+        Deinitialization:>None,
+        DynamicModuleValues:>{},
+        SynchronousInitialization->True,
+        UnsavedVariables:>{Typeset`initDone$$},
+        UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+       Deployed->True,
+       StripOnInput->False],
+      Manipulate`InterpretManipulate[1]], ""},
+    {
+     PaneBox[
+      TagBox[GridBox[{
+         {
+          "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\
+aaaaaaaa"},
+         {""}
+        },
+        AutoDelete->False,
+        GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+        GridBoxItemSize->{
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+       "Grid"],
+      ImageSize->{Automatic, Automatic},
+      Scrollbars->{True, False}], ""}
+   },
+   AutoDelete->False,
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{{3.714705814886263*^9, 3.71470584224857*^9}, {
+   3.7147059152593317`*^9, 3.7147059388062363`*^9}, {3.7147060174836407`*^9, 
+   3.714706035284727*^9}, {3.714706090398196*^9, 3.714706097970602*^9}, {
+   3.714706144619529*^9, 3.7147061631960993`*^9}, 3.714706600482476*^9, {
+   3.714744581603168*^9, 3.714744595240162*^9}, 3.726541881520852*^9, 
+   3.726777580298437*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Grid", "[", 
+  RowBox[{
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Pane", "[", 
+       RowBox[{
+        RowBox[{"Times", "[", 
+         RowBox[{
+          RowBox[{"Pane", "[", 
+           RowBox[{"\"\<a\>\"", ",", 
+            RowBox[{"ImageSize", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"400", ",", "80"}], "}"}]}], ",", 
+            RowBox[{"Scrollbars", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"False", ",", "True"}], "}"}]}]}], "]"}], ",", 
+          RowBox[{"Pane", "[", 
+           RowBox[{"\"\<b\>\"", ",", 
+            RowBox[{"ImageSize", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"400", ",", "80"}], "}"}]}], ",", 
+            RowBox[{"Scrollbars", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"False", ",", "True"}], "}"}]}]}], "]"}], ",", 
+          RowBox[{"Pane", "[", 
+           RowBox[{"\"\<c\>\"", ",", 
+            RowBox[{"ImageSize", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"100", ",", "80"}], "}"}]}], ",", 
+            RowBox[{"Scrollbars", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"False", ",", "True"}], "}"}]}]}], "]"}]}], "]"}], ",", 
+        "1500"}], "]"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", "t", "}"}]}], "\[IndentingNewLine]", "}"}], ",", 
+   RowBox[{"Alignment", "\[Rule]", "Left"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.714744732614669*^9, 3.7147447979844513`*^9}, 
+   3.714744836434555*^9, {3.7147450362938843`*^9, 3.714745041450993*^9}, {
+   3.714745208644122*^9, 3.714745289690136*^9}, {3.714745350908853*^9, 
+   3.714745355300561*^9}, {3.714745392951229*^9, 3.7147453984415092`*^9}, {
+   3.714745517219532*^9, 3.714745566909306*^9}, {3.71474566384653*^9, 
+   3.714745720769012*^9}, {3.7147472167814074`*^9, 3.7147472320101833`*^9}, {
+   3.714747290304028*^9, 3.714747342501237*^9}, {3.714747450159944*^9, 
+   3.7147474568872633`*^9}, {3.714747536535429*^9, 3.7147475702076797`*^9}, {
+   3.71474761006104*^9, 3.714747613334509*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     PaneBox[
+      RowBox[{
+       PaneBox["\<\"a\"\>",
+        ImageSize->{272., 80.},
+        Scrollbars->{False, True}], " ", 
+       PaneBox["\<\"b\"\>",
+        ImageSize->{251., 80.},
+        Scrollbars->{False, True}], " ", 
+       PaneBox["\<\"c\"\>",
+        ImageSize->{287., 80.},
+        Scrollbars->{False, True}]}],
+      ImageSize->1500]},
+    {"t"}
+   },
+   AutoDelete->False,
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Grid"]], "Output",
+ CellChangeTimes->{
+  3.726541881646802*^9, {3.726777580327469*^9, 3.726777580457283*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"RGBColor", "[", 
+     RowBox[{"1", ",", " ", "0.843137", ",", " ", "0.694118"}], "]"}], ",", 
+    RowBox[{"Disk", "[", "]"}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7265418593308992`*^9, 3.726541922959907*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  {RGBColor[1, 0.843137, 0.694118], DiskBox[{0, 0}]}]], "Output",
+ CellChangeTimes->{3.726551956337235*^9, 3.726777580395561*^9}]
+}, Open  ]]
+},
+WindowSize->{1309, 744},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Linux x86 (64-bit) (June 27, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 418, 6, 32, "Input"],
+Cell[CellGroupData[{
+Cell[1001, 30, 1454, 39, 77, "Input"],
+Cell[2458, 71, 2644, 60, 369, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5139, 136, 2078, 45, 121, "Input"],
+Cell[7220, 183, 666, 22, 114, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7923, 210, 301, 7, 32, "Input"],
+Cell[8227, 219, 157, 3, 374, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

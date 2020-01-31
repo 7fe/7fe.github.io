@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Java</title>
+<style>body{font-size: 12px}code,pre{margin:0;padding:0;}
+body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap:break-word;}
+</style>
+</head>
+
+<body>
+		<h1>Java, JavaLink, Symbolic Java</h1>
+		<p><a href="https://stackoverflow.com/questions/4732544/why-are-only-final-variables-accessible-in-anonymous-class">Only Final variables accessible</a>
+		<br>Conversion of Types between Java and the Wolfram Language. <a href="http://mathematica.stackexchange.com/questions/89179/how-to-discover-a-java-class-path-used-by-loadjavaclass">Discover Java Class</a> <a href="http://mathematica.stackexchange.com/questions/18349/override-to-mock-java-classes">Mock Java Classes </a><a href="http://mathematica.stackexchange.com/questions/30604/paste-data-into-mathematica-with-formatting">Paste Text With Formatting</a> <a href="http://mathematica.stackexchange.com/questions/138102/define-alternative-symbol-for-java-classes">Define alternative symbol for Java classes </a>.
+    
+    My biggest frustration with sub classing Java is the different types not to mention the classes.  JS is prototype based which is easier to deal with IMO.  <a href="http://limeblack.github.io/JavaInsideMathematica.nb">JaveInsideMathematica</a>.  .NET has the same gripes and therefore isn't really any easier <a href="http://limeblack.github.io/CsharpExport.nb">CsharExport</a>.
+    
+    <br>
+			Array[] \[Colon]<br>
+			JavaMethodCalls\[Dot]<br>
+			int x = 2; \[CircleDot]</p>
+		<table style="width:100%" border="1"><tbody>
+				<tr>
+					<td width="25%"><pre>Java
+javac Hello.java
+java Hello.java</pre></td>
+					<td width="25%">Symbolic Java</td>
+					<td width="25%">Expanded Symbolic Java</td>
+					<td width="25%">Symbolic JavaLink<br>
+JavaLink[] </td>
+				</tr>
+				<tr>
+					<td>MyClass o = new MyClass(args);<br>int[][] ia = new int[10][20];<br>String[] sa = new String[10];</td>
+					<td>o= new[&quot;MyClass&quot;,args]<br>
+						(* Simplified *)<br>
+						o= new MyClass[args]<br>
+						int[][] ia = new int[10][20];<br>
+						int : _:  _  \[CircleDot] ia = new int : 10 : 20;<br>
+						
+						String[] sa = new String[10];</td>
+					<td>o = Times[new,MyClass]<br>
+						Times[int[][] ia] = Times[new int[10][20]];<br>
+						int[][] ia</td>
+					<td width="25%">o = LoadJavaClass[&quot;MyClass&quot;,args];<br>
+					</td>
+				</tr>
+				<tr>
+					<td>o.Method(args);</td>
+					<td>o\[Dot]Method[args];</td>
+					<td></td>
+					<td width="25%">o@Method[args];</td>
+				</tr>
+				<tr>
+					<td>
+						<div>
+							<pre>//Inner Class
+Box.Filler f = new Box.Filler(args);</pre>
+						</div>
+					</td>
+					<td>
+						<pre id="i_15_out_text">Box$Filler@f = new[&quot;java.swing.Box$Filler&quot;, args]</pre>
+					</td>
+					<td></td>
+					<td width="25%">
+						<pre id="i_15_out_text">f = JavaNew[&quot;java.swing.Box$Filler&quot;, args]</pre>
+					</td>
+				</tr>
+				<tr>
+					<td><pre>o.prop = 1; val = obj.prop;</pre></td>
+					<td>o\[Dot]prop = 1;
+					val = obj\[Dot]prop;</td>
+					<td></td>
+					<td width="25%"><pre>o@prop = 1;val = o@prop;</pre></td>
+				</tr>
+				<tr>
+					<td>
+						<pre></pre>
+					</td>
+					<td></td>
+					<td></td>
+					<td width="25%">MyClass`StaticMethod[args];</td>
+				</tr>
+				<tr>
+					<td>MyClass.StaticPropertyOrField = 1;<br>
+						value = MyClass.StaticPropertyOrField;</td>
+					<td></td>
+					<td></td>
+					<td width="25%">MyClass`StaticPropertyOrField = 1;<br>
+						value = MyClass`StaticPropertyOrField;</td>
+				</tr>
+				<tr>
+					<td><pre>int i = 1;
+double d = 2;
+int[] anArray;
+anArray = new int[10][20];</pre>
+					</td>
+					<td>
+						<pre>int \[CircleDot] i = 23;
+double \[CircleDot] d = double \[CircleDot] 2;
+anArray = int \[Colon] 10;</pre>
+					</td>
+					<td></td>
+					<td width="25%">i = 23;</td>
+				</tr>
+				<tr>
+					<td>
+						<pre>public class MyClass {
+  public static void main(String[] args) {
+    System.out.println(&quot;Hello, World!&quot;);
+  }
+  public void Method(){<br>
+	System.out.println(&quot;Method&quot;)}
+  public static void staticMethod(){
+    System.out.println(&quot;Static method&quot;);
+  }
+  public MyClass(){<br>System.out.println(&quot;Test&quot;);}
+}</pre>
+					</td>
+					<td>
+						<pre>public@class@MyClass[
+  public@static@void@main[String@args[]][
+    System@out@println[&quot;Hello, World&quot;);
+  ],
+  public@MyClass[][
+    System@out@println[&quot;&quot;];
+  ]
+]
+public class MyClass[
+  public static void main[String args[]][
+    System:out:println[&quot;Hello, World&quot;);
+  ],
+  public@MyClass[][
+    System@out@println[&quot;&quot;];
+  ]
+]
+</pre>
+					</td>
+					<td></td>
+					<td width="25%"><pre></pre></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>For, If, Else, </td>
+					<td></td>
+					<td width="25%"></td>
+				</tr>
+			</tbody>
+</table>
+	</body>
+</html>

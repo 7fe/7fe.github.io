@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>VBA,M,Excel</title>
+<style>
+body{font-size:12px;}
+table td, table td * {
+    vertical-align: top;
+    margin:0;
+}</style>
+</head>
+
+<body>
+		<h1>VBA, Mathematica, Excel</h1>
+		<p>Intersection, FileNameJoin, StringDrop, Run</p><xmp>
+   http://www.siddharthrout.com/2011/07/14/find-and-findnext-in-excel-vba/ 
+    
+    </xmp>
+		<table width="100%" border="1">
+			<tbody>
+				<tr>
+					<td width="10%"></td>
+					<td width="30%"><b>VBA</b></td>
+					<td width="30%"><b>Mathematica</b></td>
+					<td width="30%"><b>Excel</b></td>
+				</tr>
+				<tr>
+					<td>t</td>
+					<td>
+						
+					</td>
+					<td>Min[]</td>
+					<td>MIN()</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>Statistics</p>
+		<h3><a href="https://support.microsoft.com/en-us/kb/139574">Min Max VBA</a></h3>
+		<pre>Function MaxAddress(The_Range)
+
+      ' Sets variable equal to maximum value in the input range.
+      MaxNum = Application.Max(The_Range)
+      ' Loop to check each cell in the input range to see if equals the
+      ' MaxNum variable.
+      For Each cell In The_Range
+         If cell = MaxNum Then
+            ' If the cell value equals the MaxNum variable it
+            ' returns the address to the function and exits the loop.
+            MaxAddress = cell.Address
+            Exit For
+         End If
+      Next cell
+
+   End Function</pre>
+   
+		<p>Testing</p>
+  <xmp>COUNT() counts #
+COUNTA() counts all characters in range(ignores blank/empty lines)
+DAYS()   calculate time between start date(largerDate,SmallerDate)
+NETWORKDAYS() 
+TRIM  remove excess spaces
+CONCATENATE(E33,” “,F33,”, “,G33)  JOIN sort of
+DATEVALUE("1/1/2012")
+  </xmp>
+	</body>
+</html>

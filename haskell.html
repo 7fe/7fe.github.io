@@ -1,0 +1,81 @@
+<!doctype html><xmp>
+Quick notes it appears Haskell has bugs.
+
+https://wiki.haskell.org/Case#Guards
+
+means it takes a Int and returns a function that takes an Int and returns an Int
+
+:{
+ infixr 6 +++
+ infixr 7 ***
+ (+++) :: Int -> (Int -> (Int))
+ a +++ b = a + 2*b
+ (***) :: Int -> (Int -> (Int))
+ a *** b = a - 4*b
+:}
+print (1 +++ 2 *** 3)
+
+:{
+ square x =
+  x * x
+:}
+
+:{
+import Text.Printf
+printf "foo %s %d %.2f" "bar" 7 3.1415
+}:
+
+"Hello" ++ ", " ++ "World!"
+
+Pattern Matching Haskell
+myButLast :: [a] -> a
+myButLast [] = error "empty list"
+myButLast [x] = error "too few elements"
+myButLast [x, _] = x
+myButLast (x: xs) = myButLast xs
+
+:{
+maximum' :: (Ord a) => [a] -> a  
+maximum' [] = error "maximum of empty list"  
+maximum' [x] = x  
+maximum' (x:xs)   
+    | x > maxTail = x  
+    | otherwise = maxTail  
+    where maxTail = maximum' xs  
+:}
+
+:{
+quicksort :: (Ord a) => [a] -> [a]  
+quicksort [] = []  
+quicksort (x:xs) =   
+    let smallerSorted = quicksort [a | a <- xs, a <= x]  
+        biggerSorted = quicksort [a | a <- xs, a > x]  
+    in  smallerSorted ++ [x] ++ biggerSorted  
+:}
+quicksort [10,2,5,3,1,6,7,4,2,3,4,8,9]
+
+:{
+square2 x = result
+  where { result = x * x; }
+}:
+
+1:2:3:[] == [1,2,3,4]
+
+:{
+lucky :: (Integral a) => a -> String
+lucky 7 = "LUCKY NUMBER SEVEN!"
+lucky x = "Sorry, you're out of luck, pal!"
+:}
+
+
+:{
+ infixr 6 〉
+ infixr 7 ***
+ (〉) :: Int -> (Int -> (Int))
+ a +++ b = a + 2*b
+ (***) :: Int -> (Int -> (Int))
+ a *** b = a - 4*b
+:}
+print (1 〉 2 *** 3)
+
+</xmp>

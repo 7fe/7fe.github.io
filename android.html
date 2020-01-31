@@ -1,0 +1,342 @@
+<!doctype html><html>
+<head>
+<meta charset="utf-8">
+<title>Android</title>
+<style>body{font-size: 12px}code,pre{margin:0;padding:0;}
+body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap:break-word;}
+</style></head><body><h1>Android</h1>
+<p>
+I wish/want for Android is to have a class of phones not in a virtual 
+machine because it works way to poorly on low budget films.
+They need a compiled down version.
+</p>
+    <p>Try ConstraintLayout.  Notification badges have a de facto standard using shortcutbadge app on github, but that doesn't work if you have notifications disabled
+So my plan is to create a nova launcher competitor that displays notification badges for the handful of apps that support it and allows you to display notification badges for apps that don't buy counting the number of notifications and auto dismissing them to essentially duplicate the iphone behavior.  The better idea is to just create 1by1 widgets that block whatever applications selected notifications while still displaying the badge icon.  The notifications should be dismissed when you open the widget.  https://developer.android.com/reference/android/service/notification/NotificationListenerService.html#getActiveNotifications()    
+
+Invoking a Java Method by string name https://stackoverflow.com/questions/160970/how-do-i-invoke-a-java-method-when-given-the-method-name-as-a-string
+    </p>
+		<p><a href="https://www.xda-developers.com/notification-importance-controls-all-apps-android-oreo/">Notification Importance for all apps Oreo</a>
+ Fail to call Google Assistant https://stackoverflow.com/q/46120774</p>
+		<p>Scroll to Top of Page https://stackoverflow.com/q/49042654</p>
+		<p>Android notification system is stupid.  It dismisses all notifications for an application when you open the app.  This can be changed but isn't the default behavior. https://chat.stackoverflow.com/transcript/message/41374472#41374472 
+    Samsung appears to have gotten this right.
+    
+    https://stackoverflow.com/q/46120774
+
+Absolute positioning = FrameLayou<br>
+CoordinatorLayout<br>
+google makes a flexbox layout<br>
+@+/ means
+
+android:id="@+id/activity_main"
+
+http://www.tutorialride.com/android/android-gravity.htm
+https://www.tutorialspoint.com/android/android_user_interface_layouts.htm
+
+</p>
+		<p>&lt;input type=Text&gt; = &lt;TextView&gt;</p>
+		<p>layout_weight for width %<br>
+			always use android:id=&quot;@+id/test&quot;</p>
+		<pre><code>@android:id/mywidget</code> References an id that exists in android.R.java, e.g. resources that are already provided by the framework</pre>
+		<p>PercentRelativeLayout depreciated but allows you to set both height &amp; width as percentage </p>
+		<p><br>
+			android:layout_width=&quot;match_parent&quot; &lt;=&gt; width: 100%;display:block;</p>
+		<p><img src="https://i.stack.imgur.com/TBMwG.png"></p>
+		<div></div>
+		<table style="width:100%" border="1"><tbody>
+				<tr>
+					<td width="25%"><pre>What it looks like</pre></td>
+					<td width="25%">HTML &amp; CSS</td>
+					<td width="25%">Android XML</td>
+					<td width="25%">Symbolic JavaLink<br>
+JavaLink[] </td>
+				</tr>
+				<tr>
+					<td><img src="https://www.tutorialspoint.com/android/images/liner1.jpg"></td>
+					<td><pre>
+
+</pre></td>
+					<td><xmp><?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent"
+   android:orientation="vertical" >
+   
+   <Button android:id="@+id/btnStartService"
+      android:layout_width="270dp"
+      android:layout_height="wrap_content"
+      android:text="start_service"/>
+      
+   <Button android:id="@+id/btnPauseService"
+      android:layout_width="270dp"
+      android:layout_height="wrap_content"
+      android:text="pause_service"/>
+      
+   <Button android:id="@+id/btnStopService"
+      android:layout_width="270dp"
+      android:layout_height="wrap_content"
+      android:text="stop_service"/>
+      
+</LinearLayout></xmp></td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td><xmp><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <TextView
+    	android:text="@string/username"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content" />
+    <EditText
+    	android:width="150px"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content" />
+    <TextView
+    	android:text="@string/password"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content" />
+    <EditText
+    	android:width="150px"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content" />
+</LinearLayout></xmp></td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td>ListView</td>
+					<td><pre>&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre></td>
+					<td><xmp><?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|left"
+        android:orientation="vertical" >
+
+         Here is your layout!
+
+    </LinearLayout>
+
+</ScrollView></xmp><xmp>
+
+</xmp>
+</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Style Stuff
+						<p></p>
+					</td>
+					<td>&lt;style&gt;
+
+&lt;/style&gt
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>&lt;input type=password style=&quot;width:100%;border:0px;outline:1px solid grey;&quot;&gt;</td>
+					<td><pre>&lt;EditText android:id=&quot;@+id/phone&quot; android:layout_width=&quot;fill_parent&quot; android:layout_height=&quot;wrap_content&quot; android:hint=&quot;@string/phone_hint&quot; android:inputType=&quot;phone&quot; /&gt;<br>
+android:inputType=&quot;textCapSentences|textAutoCorrect&quot;</pre>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><p>vertical-align = android:gravity=top
+android:layout_gravity = "center|left"  = float:left;
+					</p>
+					</td>
+					<td><xmp><?xml version = "1.0" encoding = "utf-8"?> 
+<LinearLayoutxmlns:android = "http://schemas.android.com/apk/res/android" 
+xmlns:app = "http://schemas.android.com/apk/res-auto" 
+xmlns:tools = "http://schemas.android.com/tools" 
+android:layout_width = "match_parent" 
+android:layout_height = "match_parent" 
+app:layout_behavior = "@string/appbar_scrolling_view_behavior" 
+tools:context = "com.example.custom.and gravity.MainActivity" 
+tools:showIn = "@layout/activity_main" 
+android:orientation = "vertical" 
+> 
+
+<Button 
+android:layout_width = "130dp" 
+android:layout_height = "130dp" 
+android:text = "Button1" 
+android:id = "@+id/button1" 
+android:gravity = "top" 
+android:textSize = "20dp" 
+android:background = "#FF0000" 
+/> 
+
+<Button 
+android:layout_width = "130dp" 
+android:layout_height = "130dp" 
+android:text = "Button2" 
+android:id = "@+id/button2" 
+android:gravity = "bottom" 
+android:textSize = "20dp" 
+android:background = "#00FF00" 
+/> 
+
+<Button 
+android:layout_width = "130dp" 
+android:layout_height = "130dp" 
+android:text = "Button3" 
+android:id = "@+id/button3" 
+android:textSize = "20dp" 
+android:layout_gravity = "right" 
+android:gravity = "top" 
+android:background = "#FFFF00" 
+/> 
+</LinearLayout></xmp></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td><xmp><Button
+    	android:id="@+id/login"
+    	android:text="@string/login" android:width="200px" android:layout_width="wrap_content" android:layout_height="wrap_content" /></xmp></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><img src="https://images.thoughtbot.com/blog-vellum-image-uploads/wDbiaqGSQyyErtXGSh6w_scaletype.png" width=300></td>
+					<td>&lt;img src=&quot;image.png&quot;&gt;</td>
+					<td><xmp><Button><ImageView 
+      android:src="@drawable/ic_launcher"
+      android:scaleType="fitCenter"
+      android:layout_height="250px"
+      android:layout_width="250px"/></Button>
+      <ImageButton
+    android:id="@+id/ImageButton01"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/album_icon"
+    android:background="@drawable/round_button" /></xmp></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td><xmp><?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="MyTheme" parent="Theme.AppCompat">
+        <item name="android:textViewStyle">@style/MyTextViewStyle</item>
+    </style>
+    <style name="MyTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">#F00</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
+<application […] android:theme="@style/MyTheme">
+http://www.hidroh.com/2015/02/25/support-multiple-themes-android-app-part-2/</xmp></td>
+
+					<td></td>
+				</tr>
+				<tr>
+					<td><xmp><?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1">
+    <TableRow>
+        <TextView
+            android:text="@string/table_layout_4_open"
+            android:padding="3dip" />
+        <TextView
+            android:text="@string/table_layout_4_open_shortcut"
+            android:gravity="right"
+            android:padding="3dip" />
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:text="@string/table_layout_4_save"
+            android:padding="3dip" />
+        <TextView
+            android:text="@string/table_layout_4_save_shortcut"
+            android:gravity="right"
+            android:padding="3dip" />
+    </TableRow>
+</TableLayout></xmp></td>
+					<td><img src="https://developer.android.com/images/table_layout.png"></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+</table>
+  <pre>Upgraded to HTML5 and Wordpress
+Wordpress is intendend to be used as a blogging platform
+
+HTML 
+Creative Commons
+http://en.wikipedia.org/wiki/Permalink
+SEO
+Social Media
+Social Media Monitoring
+TagCloud
+
+Creative Commons vs GNU GPL
+ - one of the terms given in class was GPL
+  </pre>
+<pre>
+Clove.co.uk - Exynos samsung have unlocked bootloader
+
+new NotificationCompat.Builder(context).
+  .setLargeIcon()
+  .setSmallIcon()
+
+getIcon() MEDIA_TRACK_TYPE_METADATA
+
+notification.contentView.setImageViewBitmap(R.id.imageViewAlbumArt, albumArt);
+
+WallpaperManager.getInstance(this).setStream(inputStream,null,true,WallpaperManager.FLAG_LOCK);
+
+maybe I can disable the lockscreen request the lockscreen background and create a custom lockscreen.
+
+startActivity(new Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+
+    Intent sendIntent = new Intent();
+    sendIntent.setAction(Intent.ACTION_SEND);
+    sendIntent.putExtra(Intent.EXTRA_TEXT, "test");
+    sendIntent.setType("text/plain");
+
+    if (sendIntent.resolveActivity(getPackageManager()) != null) {
+      startActivity(sendIntent);
+    }
+
+https://stackoverflow.com/q/22585891
+
+doesn't work
+Intent intent = new Intent(Intent.ACTION_MAIN);
+intent.setClassName("com.google.android.googlequicksearchbox",
+        "com.google.android.googlequicksearchbox.VoiceSearchActivity");
+try {
+    startActivity(intent);
+} catch (ActivityNotFoundException anfe) {
+    Log.d(TAG, "Google Voice Search is not found");
+}  
+
+maybe works?
+
+startActivity(new Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+
+doesn't work
+Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+startActivityForResult(intent, 1234);
+</pre>
+	</body>
+</html>

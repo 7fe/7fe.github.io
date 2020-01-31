@@ -1,0 +1,154 @@
+<!doctype html><head><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>shell</title>
+<style>body > div{width:600px;border:1px dotted;padding:10px;font-size:12px;}
+pre{white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;}
+
+.logo{padding:20px}
+.logo b,.logo span{font-size:12px;font-family:"Corbel", Gill Sans;font-weight:bold;}
+.logo b{font-size:2em;}
+.logo span{font-size:2.3em;}
+
+.logo2{padding:10px;font-size:1.7em;font-family:"Arial"}
+.logo2 a{text-decoration:none;color:black;}
+.logo2 b,.logo2 span{font-size:1.2em;font-weight:bold;}
+/* .logo2 b{border-right:1px solid gray;} */
+.logo2{font-size:2.3em;}
+</style></head>
+<script>document.write("<style>div{margin:0 auto;}</style>")</script>
+<body><div><pre>
+<a href="https://mathematica.stackexchange.com/q/114666">So I experimented with creating my own shell with Mathematica.</a>
+
+It works pretty well except for the fact except for no tab completion.
+Using Autohotkey I might be able to fix something like this but I'm not really that sure.  I would have to remap tab to a key that is catchable by Mathematica which I'm not sure if any exist.  <a href="https://mathematica.stackexchange.com/questions/4574/command-completion">Command Completion</a> might allow me to create some form of auto complete not sure.
+
+Terminals are basically under the same concept.  Some of the elements of an ideal terminal are the following.
+  1) run content and scroll to bottom to change command <a href="./m/term.nb">term.nb</a>
+  2) use arrow keys to go to previous command
+  3) black background which can be done like so https://mathematica.stackexchange.com/q/34237
+  4) 
+
+The Perfect Shell
+Should aliases be in separate namespace? 
+No because that would require 2 ways to set vars.
+  ls='echo test'
+  $ls
+  eval(ls)
+Environment variables like PATH should be in 
+separate namespace maybe J.$.PATH
+
+by default only variables in double quotes are replaced unless it is only variable by itself
+  echo $test
+  
+Integers are passed as integers like
+!fn 1 2
+fn(1,2)
+
+function ls$minus$(){this;arguments;}
+
+a-b $a;  J.a$minus$b(a)(); 
+         J("a-b",a);
+         J(a$minus$b,a);
+$a-b $a; J(a$minus$b,a)();
+(a-b);   a-b;
+
+If a line is a shell command then the line doesn't 
+have to end with a semicolon all other commands must 
+otherwise the following could do multiple things
+
+fn('test');
+1+ 2
+
+fn.test(1,2,3)
+$fn 1 2 3
+
+
+ls -a | function(){this.split('\n')}
+
+ls -a $test | echo;
+$.ls("-a",test).echo()();
+ls -a $test | echo | echo;
+$.ls("-a",test).echo().echo()();
+//undefined is empty string
+a=`ls -a`;
+a=$.ls("-a")();
+a=$("ls -a")()
+
+ls -a | echo test
+$("ls","-a",test)("echo","test")();
+$.ls("-a",test).echo("test")();
+
+!ls 1 2 3
+ls(1,2,3)
+
+!fs.readFile "test.js" &
+fs.readFile("test.js",function(){})
+
+fs\.readFile "test.js"
+fs$period$readFile "test.js"
+
+var fs\.readFile=`test`;
+var fs$period$readFile='test';
+
+$()
+
+Defining and executing a Javascript function 
+in the background still blocks the OS.
+
+
+
+1 problem `yes | head -3 | tail -1` doesn't work as is.
+
+jsh jss jssh dish bush wash mash hash wish push mesh josh rush
+
+ANONYMOUS FUNCTIONS
+
+// can't be /\&^$!`();:=| >< . , ' "
+// can be *%#@~+{}-_?
+g++=`echo g++`
+var g$plus$$plus$ = B("echo g++");
+
+// can't be /\&!`();=| > < '"
+// can be *%#@~+{}-_?.,:^
+alias g++='echo g++'
+var g++=`echo g++`;
+var $test='test';
+var g$plus$$plus$ = J("echo g++");
+
+console.log `fs!readFileSync test`
+
+ - would distingush between -options values int double &amp; floats
+ - would remove all shell shortcuts &lt;,&lt;&lt;,&gt;,|| but |(pipe).
+ - would use \ for directories so / can be used for division(Yes I'm sorry)
+ - would have built in key value storage for distinguishing for example
+ rm -rf --file init.m - would construct {&quot;-rf&quot;,&quot;--help&quot;-&gt;&quot;init.m&quot;,&quot;-&quot;}
+subtraction uses
+ - either ~ would be used for subtration or a trailing &quot;-&quot; would have 
+   to be quoted like  wget  
+ - cd / would be a special case
+  rm -rf \file1\fiel2\file3 / echo -e
+NSSTring ~stringWithFormat a,b,c
+s = &quot;test&quot;
+s ~append s2 
+
+It is really quiet funny the shell in a sense supports optional arguments
+very few modern languages support optional arguments
+
+In addition no dashes should be allowed so you can do subtraction I think.
+English is better then Spanish for programming because you don't have gender
+ and article disagreement.
+
+sudo apt-get_$    sudo@apt`get_$[`install,{lib}]
+sudo apt-get_$    sudo apt`get$underscore$$dollar$ install lib
+#sudo apt-get install; 
+echot test
+rm -rf *
+if( (test=#ls -a;)!=0  ){
+  echo test<br>} 
+
+Use `` to escape `[` `n` `r` `t` `&quot; `Space
+Ti`backtick`imes\[[a, Rational[1, -2], &quot;test&quot;]
+
+Crosh Window
+
+
+</pre></div></body>

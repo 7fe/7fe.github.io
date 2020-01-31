@@ -1,0 +1,30 @@
+#!taco
+<!doctype html><html><title>Hello Strapdown</title>
+<style>xmp,plaintext{width:100%;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap:break-word;}</style>
+<xmp contenteditable theme=united># Markdown text goes in here
+
+## Chapter 1
+
+[Displaying Sample Code](http://dadinck.x10.mx/code_example.html)
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut laboreet dolore magna aliqua. 
+
+    function(){
+      console.log("test");
+    }
+    <div>testing</div>
+
+>  testing a quote
+    
+## Chapter 2
+
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</xmp><script>
+  setTimeout(function() {
+      var markup= document.documentElement.innerHTML;
+      markup= '<!DOCTYPE html><html lang="en">'+markup+''+'</html>';
+      document.open();
+      document.write(markup);
+      document.close();
+  }, 0);
+</script>
+Firefox

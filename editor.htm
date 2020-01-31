@@ -1,0 +1,40 @@
+<!doctype html><html lang=en><body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script> 
+<span id=button>+</span>
+
+<style>
+.box{background:green;top:0;left:0;position:absolute;display:inline;}
+.box textarea{margin-top:20px;height:20px;}
+.terminal{padding-top:10px;position:absolute;display:inline;background:pink;}
+</style>
+
+<script>(function(){
+
+var files = [];
+
+var terminal = function(){
+  var newdiv = $('<div class=terminal><pre></pre><textarea></textarea></div>');
+  $(document.body).append(newdiv);
+  $(newdiv).draggable();
+};
+
+var file = function(){
+  var newdiv = $("<div class='box'><textarea></textarea></div>");
+  $(document.body).append(newdiv);
+  $(newdiv).draggable();
+};
+
+var s = document.getElementsByTagName('script')[0];
+
+$("#button").click(function(){
+  //new file();
+  new terminal();
+});
+
+setTimeout(1000,function(){
+ ;
+});
+
+
+})();</script>

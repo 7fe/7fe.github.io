@@ -1,0 +1,1204 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     52773,       1195]
+NotebookOptionsPosition[     51658,       1155]
+NotebookOutlinePosition[     52205,       1175]
+CellTagsIndexPosition[     52162,       1172]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"n", " ", "=", " ", 
+   RowBox[{"Documentation`HelpLookup", "[", "\"\<Print start:1\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"nG", "=", 
+   RowBox[{"NotebookGet", "[", "n", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"NotebookClose", "[", "n", "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"nG", "=", 
+    RowBox[{"Replace", "[", 
+     RowBox[{"nG", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"HoldPattern", "[", 
+         RowBox[{"Notebook", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"x_", ",", "y___"}], "}"}], ",", "z___"}], "]"}], "]"}], 
+        " ", "\[RuleDelayed]", " ", 
+        RowBox[{"Notebook", "[", 
+         RowBox[{"{", "y", "}"}], "]"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "Infinity"}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"NotebookPut", "@", "nG"}], ";"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{"nG", "=", 
+  RowBox[{"Replace", "[", 
+   RowBox[{"nG", ",", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"HoldPattern", "[", 
+        RowBox[{"Cell", "[", 
+         RowBox[{
+          RowBox[{"TextData", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Cell", "[", 
+              RowBox[{
+               RowBox[{"BoxData", "[", 
+                RowBox[{"TemplateBox", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Cell", "[", 
+                    RowBox[{"TextData", "[", "name_", "]"}], "]"}], ",", 
+                    "link_"}], "}"}], ",", "___"}], "]"}], "]"}], ",", 
+               "\"\<SearchResultTitle\>\""}], "]"}], ",", "___"}], 
+            "\[IndentingNewLine]", "}"}], "]"}], ",", 
+          "\"\<SearchResultCell\>\"", ",", 
+          RowBox[{"CellDingbat", "\[Rule]", "_"}]}], "]"}], "]"}], " ", 
+       "\[IndentingNewLine]", "\[RuleDelayed]", 
+       RowBox[{
+       "\"\<<p class=\\\"SearchResultCell\\\"><a href=\\\"\>\"", "<>", "link",
+         "<>", "\"\<\\\">\>\"", "<>", "name", "<>", "\"\<</a></p>\>\""}]}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"StyleBox", "[", 
+        RowBox[{"\"\<(\>\"", ",", "\"\<SearchResultType\>\""}], "]"}], " ", 
+       "\[RuleDelayed]", " ", "\"\<\>\""}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"StyleBox", "[", 
+        RowBox[{"\"\<)\>\"", ",", "\"\<SearchResultType\>\""}], "]"}], 
+       "\[RuleDelayed]", " ", "\"\<\>\""}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"StyleBox", "[", 
+        RowBox[{"t_", ",", "\"\<SearchResultType\>\""}], "]"}], " ", 
+       "\[RuleDelayed]", " ", "t"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"StyleBox", "[", 
+        RowBox[{"t_", ",", "\"\<SearchResultSummary\>\""}], "]"}], " ", 
+       "\[RuleDelayed]", " ", "t"}]}], "\[IndentingNewLine]", "}"}], ",", 
+    "\[IndentingNewLine]", " ", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "Infinity"}], "}"}]}], "\[IndentingNewLine]", 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"First", "@", 
+    RowBox[{"First", "@", 
+     RowBox[{"First", "@", 
+      RowBox[{"First", "@", 
+       RowBox[{"nG", "[", 
+        RowBox[{"[", 
+         RowBox[{
+          RowBox[{"-", "1"}], ",", 
+          RowBox[{"-", "1"}]}], "]"}], "]"}]}]}]}]}], ")"}], "[", 
+  RowBox[{"[", "2", "]"}], "]"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Notebook", "[", 
+  RowBox[{"{", 
+   RowBox[{"\<\"<p class=\\\"SearchResultCell\\\"><a \
+href=\\\"paclet:ref/Print\\\">Print</a></p>\"\>", 
+    ",", "\<\"<p class=\\\"SearchResultCell\\\"><a \
+href=\\\"paclet:guide/PrintFormats\\\">Print Formats</a></p>\"\>", 
+    ",", "\<\"<p class=\\\"SearchResultCell\\\"><a \
+href=\\\"paclet:ref/$PrePrint\\\">$PrePrint</a></p>\"\>", 
+    ",", "\<\"<p class=\\\"SearchResultCell\\\"><a \
+href=\\\"paclet:ref/menuitem/Print\\\">File > Print...</a></p>\"\>", 
+    ",", "\<\"<p class=\\\"SearchResultCell\\\"><a \
+href=\\\"paclet:ref/CellPrint\\\">CellPrint</a></p>\"\>", 
+    ",", "\<\"<p class=\\\"SearchResultCell\\\"><a \
+href=\\\"paclet:ref/NotebookPrint\\\">NotebookPrint</a></p>\"\>", 
+    ",", "\<\"<p class=\\\"SearchResultCell\\\"><a \
+href=\\\"paclet:ref/PrintingCopies\\\">PrintingCopies</a></p>\"\>", 
+    ",", "\<\"<p class=\\\"SearchResultCell\\\"><a \
+href=\\\"paclet:ref/PrintTemporary\\\">PrintTemporary</a></p>\"\>", 
+    ",", "\<\"<p class=\\\"SearchResultCell\\\"><a \
+href=\\\"paclet:ref/TracePrint\\\">TracePrint</a></p>\"\>", 
+    ",", "\<\"<p class=\\\"SearchResultCell\\\"><a \
+href=\\\"paclet:ref/PrintingStyleEnvironment\\\">PrintingStyleEnvironment</a><\
+/p>\"\>", ",", 
+    RowBox[{"Cell", "[", 
+     RowBox[{
+      RowBox[{"BoxData", "[", 
+       RowBox[{"GridBox", "[", 
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Cell", "[", 
+            RowBox[{
+             RowBox[{"TextData", "[", 
+              RowBox[{"ButtonBox", "[", 
+               RowBox[{"\<\"NEXT \[RightGuillemet]\"\>", ",", 
+                RowBox[{"BaseStyle", "\[Rule]", "\<\"Link\"\>"}], ",", 
+                RowBox[{
+                "ButtonData", 
+                 "\[Rule]", "\<\"Print start:11 limit:10\"\>"}]}], "]"}], 
+              "]"}], ",", "\<\"SearchResultPageLinks\"\>"}], "]"}], ",", 
+           RowBox[{"Cell", "[", 
+            RowBox[{
+             RowBox[{"TextData", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"StyleBox", "[", 
+                 RowBox[{"\<\" 1 \"\>", ",", 
+                  RowBox[{"FontWeight", "\[Rule]", "\<\"Bold\"\>"}], ",", 
+                  RowBox[{"FontColor", "\[Rule]", 
+                   InterpretationBox[
+                    ButtonBox[
+                    TooltipBox[
+                    RowBox[{
+                    GraphicsBox[{
+                    {GrayLevel[0], RectangleBox[{0, 0}]}, 
+                    {GrayLevel[0], RectangleBox[{1, -1}]}, 
+                    {RGBColor[0, 0, 1], RectangleBox[{0, -1}, {2, 1}]}},
+                    AspectRatio->1,
+                    Frame->True,
+                    FrameStyle->RGBColor[0., 0., 0.6666666666666666],
+                    FrameTicks->None,
+                    
+                    ImageSize->
+                    Dynamic[{
+                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}],
+                    PlotRangePadding->None], "\[InvisibleSpace]"}],
+                    "RGBColor[0, 0, 1]"],
+                    Appearance->None,
+                    BaseStyle->{},
+                    BaselinePosition->Baseline,
+                    ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+                    If[
+                    Not[
+                    AbsoluteCurrentValue["Deployed"]], 
+                    SelectionMove[Typeset`box$, All, Expression]; 
+                    FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+                    FrontEnd`Private`$ColorSelectorInitialColor = 
+                    RGBColor[0, 0, 1]; 
+                    FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+                    MathLink`CallFrontEnd[
+                    FrontEnd`AttachCell[Typeset`box$, 
+                    FrontEndResource["RGBColorValueSelector"], {
+                    0, {Left, Bottom}}, {Left, Top}, 
+                    "ClosingActions" -> {
+                    "SelectionDeparture", "ParentChanged", 
+                    "EvaluatorQuit"}]]]],
+                    DefaultBaseStyle->{},
+                    Evaluator->Automatic,
+                    Method->"Preemptive"],
+                    RGBColor[0, 0, 1],
+                    Editable->False,
+                    Selectable->False]}]}], "]"}], ",", "\<\"|\"\>", ",", 
+                RowBox[{"ButtonBox", "[", 
+                 RowBox[{"\<\" 2 \"\>", ",", 
+                  RowBox[{"BaseStyle", "\[Rule]", "\<\"Link\"\>"}], ",", 
+                  RowBox[{
+                  "ButtonData", 
+                   "\[Rule]", "\<\"Print start:11 limit:10\"\>"}]}], "]"}], 
+                ",", "\<\"|\"\>", ",", 
+                RowBox[{"ButtonBox", "[", 
+                 RowBox[{"\<\" 3 \"\>", ",", 
+                  RowBox[{"BaseStyle", "\[Rule]", "\<\"Link\"\>"}], ",", 
+                  RowBox[{
+                  "ButtonData", 
+                   "\[Rule]", "\<\"Print start:21 limit:10\"\>"}]}], "]"}], 
+                ",", "\<\"|\"\>", ",", 
+                RowBox[{"ButtonBox", "[", 
+                 RowBox[{"\<\" 4 \"\>", ",", 
+                  RowBox[{"BaseStyle", "\[Rule]", "\<\"Link\"\>"}], ",", 
+                  RowBox[{
+                  "ButtonData", 
+                   "\[Rule]", "\<\"Print start:31 limit:10\"\>"}]}], "]"}], 
+                ",", "\<\" ... \"\>", ",", 
+                RowBox[{"ButtonBox", "[", 
+                 RowBox[{"\<\"60\"\>", ",", 
+                  RowBox[{"BaseStyle", "\[Rule]", "\<\"Link\"\>"}], ",", 
+                  RowBox[{
+                  "ButtonData", 
+                   "\[Rule]", "\<\"Print start:591 limit:10\"\>"}]}], "]"}]}],
+                "}"}], "]"}], ",", "\<\"SearchResultPageLinks\"\>"}], "]"}]}],
+           "}"}], "}"}], "]"}], "]"}], 
+      ",", "\<\"SearchResultPageLinksGrid\"\>"}], "]"}]}], "}"}], 
+  "]"}]], "Output"],
+
+Cell[BoxData[
+ RowBox[{"Cell", "[", 
+  RowBox[{
+   RowBox[{"TextData", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"StyleBox", "[", 
+       RowBox[{"\<\" 1 \"\>", ",", 
+        RowBox[{"FontWeight", "\[Rule]", "\<\"Bold\"\>"}], ",", 
+        RowBox[{"FontColor", "\[Rule]", 
+         InterpretationBox[
+          ButtonBox[
+           TooltipBox[
+            RowBox[{
+             GraphicsBox[{
+               {GrayLevel[0], RectangleBox[{0, 0}]}, 
+               {GrayLevel[0], RectangleBox[{1, -1}]}, 
+               {RGBColor[0, 0, 1], RectangleBox[{0, -1}, {2, 1}]}},
+              AspectRatio->1,
+              Frame->True,
+              FrameStyle->RGBColor[0., 0., 0.6666666666666666],
+              FrameTicks->None,
+              
+              ImageSize->
+               Dynamic[{
+                Automatic, 1.35 CurrentValue["FontCapHeight"]/
+                 AbsoluteCurrentValue[Magnification]}],
+              PlotRangePadding->None], "\[InvisibleSpace]"}],
+            "RGBColor[0, 0, 1]"],
+           Appearance->None,
+           BaseStyle->{},
+           BaselinePosition->Baseline,
+           ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+             If[
+              Not[
+               AbsoluteCurrentValue["Deployed"]], 
+              SelectionMove[Typeset`box$, All, Expression]; 
+              FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+              FrontEnd`Private`$ColorSelectorInitialColor = RGBColor[0, 0, 1]; 
+              FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+              MathLink`CallFrontEnd[
+                FrontEnd`AttachCell[Typeset`box$, 
+                 FrontEndResource["RGBColorValueSelector"], {
+                 0, {Left, Bottom}}, {Left, Top}, 
+                 "ClosingActions" -> {
+                  "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+           DefaultBaseStyle->{},
+           Evaluator->Automatic,
+           Method->"Preemptive"],
+          RGBColor[0, 0, 1],
+          Editable->False,
+          Selectable->False]}]}], "]"}], ",", "\<\"|\"\>", ",", 
+      RowBox[{"ButtonBox", "[", 
+       RowBox[{"\<\" 2 \"\>", ",", 
+        RowBox[{"BaseStyle", "\[Rule]", "\<\"Link\"\>"}], ",", 
+        RowBox[{
+        "ButtonData", "\[Rule]", "\<\"Print start:11 limit:10\"\>"}]}], "]"}],
+       ",", "\<\"|\"\>", ",", 
+      RowBox[{"ButtonBox", "[", 
+       RowBox[{"\<\" 3 \"\>", ",", 
+        RowBox[{"BaseStyle", "\[Rule]", "\<\"Link\"\>"}], ",", 
+        RowBox[{
+        "ButtonData", "\[Rule]", "\<\"Print start:21 limit:10\"\>"}]}], "]"}],
+       ",", "\<\"|\"\>", ",", 
+      RowBox[{"ButtonBox", "[", 
+       RowBox[{"\<\" 4 \"\>", ",", 
+        RowBox[{"BaseStyle", "\[Rule]", "\<\"Link\"\>"}], ",", 
+        RowBox[{
+        "ButtonData", "\[Rule]", "\<\"Print start:31 limit:10\"\>"}]}], "]"}],
+       ",", "\<\" ... \"\>", ",", 
+      RowBox[{"ButtonBox", "[", 
+       RowBox[{"\<\"60\"\>", ",", 
+        RowBox[{"BaseStyle", "\[Rule]", "\<\"Link\"\>"}], ",", 
+        RowBox[{
+        "ButtonData", "\[Rule]", "\<\"Print start:591 limit:10\"\>"}]}], 
+       "]"}]}], "}"}], "]"}], ",", "\<\"SearchResultPageLinks\"\>"}], 
+  "]"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Replace", "[", 
+   RowBox[{"nG", ",", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"HoldPattern", "[", 
+        RowBox[{"Cell", "[", 
+         RowBox[{
+          RowBox[{"TextData", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Cell", "[", 
+              RowBox[{
+               RowBox[{"BoxData", "[", 
+                RowBox[{"TemplateBox", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Cell", "[", 
+                    RowBox[{"TextData", "[", "name_", "]"}], "]"}], ",", 
+                    "link_"}], "}"}], ",", "___"}], "]"}], "]"}], ",", 
+               "\"\<SearchResultTitle\>\""}], "]"}], ",", "___"}], 
+            "\[IndentingNewLine]", "}"}], "]"}], ",", 
+          "\"\<SearchResultCell\>\"", ",", 
+          RowBox[{"CellDingbat", "\[Rule]", "_"}]}], "]"}], "]"}], " ", 
+       "\[IndentingNewLine]", "\[RuleDelayed]", 
+       RowBox[{
+       "\"\<<a href=\\\"\>\"", "<>", "link", "<>", "\"\<\\\">\>\"", "<>", 
+        "name", "<>", "\"\<</a>\>\""}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"StyleBox", "[", 
+        RowBox[{"\"\<(\>\"", ",", "\"\<SearchResultType\>\""}], "]"}], " ", 
+       "\[RuleDelayed]", " ", "\"\<\>\""}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"StyleBox", "[", 
+        RowBox[{"\"\<)\>\"", ",", "\"\<SearchResultType\>\""}], "]"}], 
+       "\[RuleDelayed]", " ", "\"\<\>\""}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"StyleBox", "[", 
+        RowBox[{"t_", ",", "\"\<SearchResultType\>\""}], "]"}], " ", 
+       "\[RuleDelayed]", " ", "t"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"StyleBox", "[", 
+        RowBox[{"t_", ",", "\"\<SearchResultSummary\>\""}], "]"}], " ", 
+       "\[RuleDelayed]", " ", "t"}]}], "\[IndentingNewLine]", "}"}], ",", 
+    "\[IndentingNewLine]", " ", 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "Infinity"}], "}"}]}], "\[IndentingNewLine]", "]"}], 
+  ";"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"i", "=", 
+   RowBox[{"Cell", "[", 
+    RowBox[{
+     RowBox[{"TextData", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Cell", "[", 
+         RowBox[{
+          RowBox[{"BoxData", "[", 
+           RowBox[{"TemplateBox", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Cell", "[", 
+                RowBox[{"TextData", "[", "\"\<Print\>\"", "]"}], "]"}], ",", 
+               "\"\<paclet:ref/Print\>\""}], "}"}], ",", 
+             "\"\<SearchResultLink\>\"", ",", 
+             RowBox[{"BaseStyle", "\[Rule]", 
+              RowBox[{"{", "\"\<SearchResultTitle\>\"", "}"}]}]}], "]"}], 
+           "]"}], ",", "\"\<SearchResultTitle\>\""}], "]"}], ",", 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", "\"\< \>\"", ",", 
+        RowBox[{"StyleBox", "[", 
+         RowBox[{"\"\<(\>\"", ",", "\"\<SearchResultType\>\""}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"StyleBox", "[", 
+         RowBox[{
+         "\"\<Built-in Wolfram Language Symbol\>\"", ",", 
+          "\"\<SearchResultType\>\""}], "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"StyleBox", "[", 
+         RowBox[{"\"\<)\>\"", ",", "\"\<SearchResultType\>\""}], "]"}], ",", 
+        "\"\<\\n\>\"", ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"StyleBox", "[", 
+         RowBox[{
+         "\"\<Print[expr] prints expr as output. \>\"", ",", 
+          "\"\<SearchResultSummary\>\""}], "]"}]}], "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", "}"}], "]"}], ",", "\"\<SearchResultCell\>\"", 
+     ",", 
+     RowBox[{"CellDingbat", "\[Rule]", 
+      RowBox[{"StyleBox", "[", 
+       RowBox[{"\"\<\[FilledSquare]\>\"", ",", "\"\<SymbolColor\>\""}], 
+       "]"}]}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"i", " ", "=", 
+   RowBox[{"Replace", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"First", "@", 
+      RowBox[{"First", "@", "i"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"HoldPattern", "[", 
+         RowBox[{"Cell", "[", 
+          RowBox[{
+           RowBox[{"BoxData", "[", 
+            RowBox[{"TemplateBox", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Cell", "[", 
+                 RowBox[{"TextData", "[", "name_", "]"}], "]"}], ",", 
+                "link_"}], "}"}], ",", "___"}], "]"}], "]"}], ",", 
+           "\"\<SearchResultTitle\>\""}], "]"}], "]"}], " ", 
+        "\[IndentingNewLine]", "\[RuleDelayed]", 
+        RowBox[{
+        "\"\<<a href=\\\"\>\"", "<>", "link", "<>", "\"\<\\\">\>\"", "<>", 
+         "name", "<>", "\"\<</a>\>\""}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"StyleBox", "[", 
+         RowBox[{"\"\<(\>\"", ",", "\"\<SearchResultType\>\""}], "]"}], " ", 
+        "\[RuleDelayed]", " ", "\"\<\>\""}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"StyleBox", "[", 
+         RowBox[{"\"\<)\>\"", ",", "\"\<SearchResultType\>\""}], "]"}], 
+        "\[RuleDelayed]", " ", "\"\<\>\""}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"StyleBox", "[", 
+         RowBox[{"t_", ",", "\"\<SearchResultType\>\""}], "]"}], " ", 
+        "\[RuleDelayed]", " ", "t"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"StyleBox", "[", 
+         RowBox[{"t_", ",", "\"\<SearchResultSummary\>\""}], "]"}], " ", 
+        "\[RuleDelayed]", " ", "t"}]}], "\[IndentingNewLine]", "}"}], ",", 
+     "\[IndentingNewLine]", " ", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "Infinity"}], "}"}]}], "\[IndentingNewLine]", "]"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"header", "=", 
+   RowBox[{"StringJoin", "[", "\[IndentingNewLine]", 
+    RowBox[{
+    "\"\<<b>Search Results</b><br>\n<a href=\\\"#\\\">Next</a><br>\>\"", "<>",
+      "\[IndentingNewLine]", 
+     RowBox[{"Prepend", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Append", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Insert", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"DeleteCases", "[", 
+            RowBox[{
+             RowBox[{"DeleteCases", "[", 
+              RowBox[{
+               RowBox[{"DeleteCases", "[", 
+                RowBox[{"i", ",", "\"\< \>\""}], "]"}], ",", "\"\<\>\""}], 
+              "]"}], ",", "\"\<\\n\>\""}], "]"}], ",", "\[IndentingNewLine]", 
+           "\"\<<br>\>\"", ",", "3"}], "\[IndentingNewLine]", "]"}], ",", 
+         "\"\<</div>\>\""}], "]"}], ",", "\[IndentingNewLine]", 
+       "\"\<<div>\>\""}], "]"}], " ", "<>", 
+     "\"\<\n<a href=\\\"#\\\">1</a> | <a href=\\\"#\\\">2</a> | <a \
+href=\\\"./test2.htm\\\">Next</a>\n<form action=\\\"./test2.htm\\\">\n<input \
+style=\\\"with:800px;\\\" type=text size=\\\"50\\\" value=\\\"Print\\\">\n\
+<input type=submit value=\\\"Go\\\">\n</form>\n\>\""}], "\[IndentingNewLine]",
+     "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "@", "header"}]}], "Input"],
+
+Cell[BoxData["\<\"<b>Search Results</b><br>\\n<a \
+href=\\\"#\\\">Next</a><br><div><a \
+href=\\\"paclet:ref/Print\\\">Print</a>Built-in Wolfram Language \
+Symbol<br>Print[expr] prints expr as output. </div>\\n<a href=\\\"#\\\">1</a> \
+| <a href=\\\"#\\\">2</a> | <a href=\\\"./test2.htm\\\">Next</a>\\n<form \
+action=\\\"./test2.htm\\\">\\n<input style=\\\"with:800px;\\\" type=text \
+size=\\\"50\\\" value=\\\"Print\\\">\\n<input type=submit \
+value=\\\"Go\\\">\\n</form>\\n\"\>"], "Print"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Cases", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Replace", "[", 
+    RowBox[{"nG", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"StyleBox", "[", 
+        RowBox[{"t_", ",", 
+         RowBox[{"FontWeight", "\[Rule]", "\"\<Bold\>\""}], ",", 
+         RowBox[{"FontColor", "\[Rule]", 
+          InterpretationBox[
+           ButtonBox[
+            TooltipBox[
+             RowBox[{
+              GraphicsBox[{
+                {GrayLevel[0], RectangleBox[{0, 0}]}, 
+                {GrayLevel[0], RectangleBox[{1, -1}]}, 
+                {RGBColor[0, 0, 1], RectangleBox[{0, -1}, {2, 1}]}},
+               AspectRatio->1,
+               Frame->True,
+               FrameStyle->RGBColor[0., 0., 0.6666666666666666],
+               FrameTicks->None,
+               
+               ImageSize->
+                Dynamic[{
+                 Automatic, 
+                  1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                   Magnification])}],
+               PlotRangePadding->None], "\[InvisibleSpace]"}],
+             "RGBColor[0, 0, 1]"],
+            Appearance->None,
+            BaseStyle->{},
+            BaselinePosition->Baseline,
+            ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+              If[
+               Not[
+                AbsoluteCurrentValue["Deployed"]], 
+               SelectionMove[Typeset`box$, All, Expression]; 
+               FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+               FrontEnd`Private`$ColorSelectorInitialColor = 
+                RGBColor[0, 0, 1]; 
+               FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+               MathLink`CallFrontEnd[
+                 FrontEnd`AttachCell[Typeset`box$, 
+                  FrontEndResource["RGBColorValueSelector"], {
+                  0, {Left, Bottom}}, {Left, Top}, 
+                  "ClosingActions" -> {
+                   "SelectionDeparture", "ParentChanged", "EvaluatorQuit"}]]]],
+            DefaultBaseStyle->{},
+            Evaluator->Automatic,
+            Method->"Preemptive"],
+           RGBColor[0, 0, 1],
+           Editable->False,
+           Selectable->False]}]}], "]"}], " ", "\[RuleDelayed]", " ", 
+       RowBox[{"ButtonBox", "[", 
+        RowBox[{"t", ",", 
+         RowBox[{"BaseStyle", "\[Rule]", "\"\<Link\>\""}], ",", 
+         RowBox[{"ButtonData", "\[Rule]", "\"\<\>\""}]}], "]"}]}], "}"}], ",",
+      "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "Infinity"}], "}"}]}], "\[IndentingNewLine]", "]"}], 
+   "\[IndentingNewLine]", ",", 
+   RowBox[{
+    RowBox[{"ButtonBox", "[", 
+     RowBox[{"n_", ",", 
+      RowBox[{"BaseStyle", "\[Rule]", "\"\<Link\>\""}], ",", 
+      RowBox[{"ButtonData", "\[Rule]", "_"}]}], "]"}], " ", "\[RuleDelayed]", 
+    " ", 
+    RowBox[{"\"\<\>\"", "<>", "n", "<>", "\"\<\>\""}]}], 
+   "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "Infinity"}], "}"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"NEXT \[RightGuillemet]\"\>", ",", "\<\" 1 \"\>", 
+   ",", "\<\" 2 \"\>", ",", "\<\" 3 \"\>", ",", "\<\" 4 \"\>", 
+   ",", "\<\"60\"\>"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Needs", "[", "\"\<NETLink`\>\"", "]"}], "\n", 
+ RowBox[{"LoadNETType", "[", 
+  RowBox[{"\"\<System.Drawing.Imaging.ImageFormat\>\"", ",", 
+   RowBox[{"AllowShortContext", "\[Rule]", "False"}]}], "]"}], "\n", 
+ RowBox[{
+  RowBox[{"LoadNETType", "[", 
+   RowBox[{"\"\<System.Windows.Forms.WebBrowserReadyState\>\"", ",", 
+    RowBox[{"AllowShortContext", "\[Rule]", "False"}]}], "]"}], 
+  "\n"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Options", "[", "dotNetBrowserScreenshot", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Width", "\[Rule]", "1024"}], ",", 
+     RowBox[{"Height", "\[Rule]", "Automatic"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"dotNetBrowserScreenshot", "[", 
+    RowBox[{"uri_", ",", 
+     RowBox[{"OptionsPattern", "[", "]"}]}], "]"}], ":=", 
+   RowBox[{"NETBlock", "@", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "browser", ",", "bitmap", ",", "tempFile", ",", "image", ",", 
+        "bounds"}], "}"}], ",", 
+      RowBox[{
+       RowBox[{"browser", "=", 
+        RowBox[{
+        "NETNew", "[", "\"\<System.Windows.Forms.WebBrowser\>\"", "]"}]}], 
+       ";", 
+       RowBox[{
+        RowBox[{"browser", "@", "Width"}], "=", 
+        RowBox[{"OptionValue", "[", "Width", "]"}]}], ";", 
+       RowBox[{
+        RowBox[{"browser", "@", "ScrollBarsEnabled"}], "=", "False"}], ";", 
+       RowBox[{
+        RowBox[{"browser", "@", "ScriptErrorsSuppressed"}], "=", "True"}], 
+       ";", 
+       RowBox[{"browser", "@", 
+        RowBox[{"Navigate", "[", "uri", "]"}]}], ";", 
+       RowBox[{"tempFile", "=", 
+        RowBox[{"Close", "@", 
+         RowBox[{"OpenWrite", "[", "]"}]}]}], ";", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"browser", "@", "ReadyState"}], "=!=", 
+          "System`Windows`Forms`WebBrowserReadyState`Complete"}], ",", 
+         RowBox[{"Pause", "[", "0.05", "]"}]}], "]"}], ";", 
+       RowBox[{"bounds", "=", 
+        RowBox[{"browser", "@", 
+         RowBox[{"Document", "@", 
+          RowBox[{"Body", "@", "ClientRectangle"}]}]}]}], ";", 
+       RowBox[{
+        RowBox[{"browser", "@", "Height"}], "=", 
+        RowBox[{
+         RowBox[{"OptionValue", "[", "Height", "]"}], "/.", 
+         RowBox[{"Automatic", "\[Rule]", 
+          RowBox[{"bounds", "@", "Height"}]}]}]}], ";", 
+       RowBox[{"bitmap", "=", 
+        RowBox[{"NETNew", "[", 
+         RowBox[{"\"\<System.Drawing.Bitmap\>\"", ",", 
+          RowBox[{"browser", "@", "Width"}], ",", 
+          RowBox[{"browser", "@", "Height"}]}], "]"}]}], ";", 
+       RowBox[{"browser", "@", 
+        RowBox[{"DrawToBitmap", "[", 
+         RowBox[{"bitmap", ",", "bounds"}], "]"}]}], ";", 
+       RowBox[{"browser", "@", 
+        RowBox[{"Dispose", "[", "]"}]}], ";", 
+       RowBox[{"bitmap", "@", 
+        RowBox[{"Save", "[", 
+         RowBox[{"tempFile", ",", "System`Drawing`Imaging`ImageFormat`Png"}], 
+         "]"}]}], ";", 
+       RowBox[{"bitmap", "@", 
+        RowBox[{"Dispose", "[", "]"}]}], ";", 
+       RowBox[{"image", "=", 
+        RowBox[{"Import", "[", 
+         RowBox[{"tempFile", ",", "\"\<PNG\>\""}], "]"}]}], ";", 
+       RowBox[{"DeleteFile", "[", "tempFile", "]"}], ";", "image"}]}], 
+     "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"screenshot", "[", "html_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"file", ",", 
+      RowBox[{"w", "=", "1024"}], ","}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"file", "=", 
+      RowBox[{"FileNameJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{"$TemporaryDirectory", ",", "\"\<file.htm\>\""}], "}"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"s", "=", 
+      RowBox[{"OpenWrite", "[", "file", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"WriteString", "[", 
+      RowBox[{"s", ",", 
+       RowBox[{
+       "\"\<\n    <!doctype html>\n    <html lang=\\\"en\\\"><head><meta \
+content=\\\"IE=11.0000\\\" http-equiv=\\\"X-UA-Compatible\\\"></head><body>\n \
+   <style>html,body{background:white;padding:0px;margin:0;}\n    </style><div \
+style=\\\"width:\>\"", "<>", 
+        RowBox[{"ToString", "@", "w"}], "<>", 
+        "\"\<px;overflow:auto;padding:2px;\\\">\n    \>\"", "<>", "html", 
+        "<>", "\"\<\n    </div></body>\n    \>\""}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Close", "[", "s", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"ImageCrop", "@", 
+      RowBox[{"ImageCrop", "@", 
+       RowBox[{"dotNetBrowserScreenshot", "[", 
+        RowBox[{"file", ",", 
+         RowBox[{"Width", "\[Rule]", 
+          RowBox[{"w", "+", "4"}]}]}], "]"}]}]}]}]}], "]"}]}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{"NETType", "[", 
+  RowBox[{"\<\"System.Drawing.Imaging.ImageFormat\"\>", ",", "1"}], 
+  "]"}]], "Output"],
+
+Cell[BoxData[
+ RowBox[{"NETType", "[", 
+  RowBox[{"\<\"System.Windows.Forms.WebBrowserReadyState\"\>", ",", "2"}], 
+  "]"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"nG", " ", "=", 
+   RowBox[{"Replace", "[", 
+    RowBox[{"nG", ",", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"HoldPattern", "[", 
+         RowBox[{"Cell", "[", 
+          RowBox[{
+           RowBox[{"TextData", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Cell", "[", 
+               RowBox[{
+                RowBox[{"BoxData", "[", 
+                 RowBox[{"TemplateBox", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cell", "[", 
+                    RowBox[{"TextData", "[", "name_", "]"}], "]"}], ",", 
+                    "link_"}], "}"}], ",", "___"}], "]"}], "]"}], ",", 
+                "\"\<SearchResultTitle\>\""}], "]"}], ",", "___"}], 
+             "\[IndentingNewLine]", "}"}], "]"}], ",", 
+           "\"\<SearchResultCell\>\"", ",", 
+           RowBox[{"CellDingbat", "\[Rule]", "_"}]}], "]"}], "]"}], " ", 
+        "\[IndentingNewLine]", "\[RuleDelayed]", 
+        RowBox[{
+        "\"\<<a href=\\\"\>\"", "<>", "link", "<>", "\"\<\\\">\>\"", "<>", 
+         "name", "<>", "\"\<</a>\>\""}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"StyleBox", "[", 
+         RowBox[{"\"\<(\>\"", ",", "\"\<SearchResultType\>\""}], "]"}], " ", 
+        "\[RuleDelayed]", " ", "\"\<\>\""}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"StyleBox", "[", 
+         RowBox[{"\"\<)\>\"", ",", "\"\<SearchResultType\>\""}], "]"}], 
+        "\[RuleDelayed]", " ", "\"\<\>\""}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"StyleBox", "[", 
+         RowBox[{"t_", ",", "\"\<SearchResultType\>\""}], "]"}], " ", 
+        "\[RuleDelayed]", " ", "t"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"StyleBox", "[", 
+         RowBox[{"t_", ",", "\"\<SearchResultSummary\>\""}], "]"}], " ", 
+        "\[RuleDelayed]", " ", "t"}]}], "\[IndentingNewLine]", "}"}], ",", 
+     "\[IndentingNewLine]", " ", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "Infinity"}], "}"}]}], "\[IndentingNewLine]", "]"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"list", " ", "=", " ", 
+   RowBox[{"Drop", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Replace", "[", 
+       RowBox[{"nG", ",", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"HoldPattern", "[", 
+            RowBox[{"Cell", "[", 
+             RowBox[{
+              RowBox[{"TextData", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Cell", "[", 
+                  RowBox[{
+                   RowBox[{"BoxData", "[", 
+                    RowBox[{"TemplateBox", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Cell", "[", 
+                    RowBox[{"TextData", "[", "name_", "]"}], "]"}], ",", 
+                    "link_"}], "}"}], ",", "___"}], "]"}], "]"}], ",", 
+                   "\"\<SearchResultTitle\>\""}], "]"}], ",", "___"}], 
+                "\[IndentingNewLine]", "}"}], "]"}], ",", 
+              "\"\<SearchResultCell\>\"", ",", 
+              RowBox[{"CellDingbat", "\[Rule]", "_"}]}], "]"}], "]"}], " ", 
+           "\[IndentingNewLine]", "\[RuleDelayed]", 
+           RowBox[{
+           "\"\<<a href=\\\"\>\"", "<>", "link", "<>", "\"\<\\\">\>\"", "<>", 
+            "name", "<>", "\"\<</a>\>\""}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"StyleBox", "[", 
+            RowBox[{"\"\<(\>\"", ",", "\"\<SearchResultType\>\""}], "]"}], 
+           " ", "\[RuleDelayed]", " ", "\"\<\>\""}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"StyleBox", "[", 
+            RowBox[{"\"\<)\>\"", ",", "\"\<SearchResultType\>\""}], "]"}], 
+           "\[RuleDelayed]", " ", "\"\<\>\""}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"StyleBox", "[", 
+            RowBox[{"t_", ",", "\"\<SearchResultType\>\""}], "]"}], " ", 
+           "\[RuleDelayed]", " ", "t"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"StyleBox", "[", 
+            RowBox[{"t_", ",", "\"\<SearchResultSummary\>\""}], "]"}], " ", 
+           "\[RuleDelayed]", " ", "t"}]}], "\[IndentingNewLine]", "}"}], ",", 
+        "\[IndentingNewLine]", " ", 
+        RowBox[{"{", 
+         RowBox[{"0", ",", "Infinity"}], "}"}]}], "\[IndentingNewLine]", 
+       "]"}], "[", 
+      RowBox[{"[", "1", "]"}], "]"}], " ", ",", " ", 
+     RowBox[{"-", "1"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"links", " ", "=", 
+   RowBox[{"Cases", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Replace", "[", 
+      RowBox[{"nG", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"StyleBox", "[", 
+          RowBox[{"t_", ",", 
+           RowBox[{"FontWeight", "\[Rule]", "\"\<Bold\>\""}], ",", 
+           RowBox[{"FontColor", "\[Rule]", 
+            InterpretationBox[
+             ButtonBox[
+              TooltipBox[
+               RowBox[{
+                GraphicsBox[{
+                  {GrayLevel[0], RectangleBox[{0, 0}]}, 
+                  {GrayLevel[0], RectangleBox[{1, -1}]}, 
+                  {RGBColor[0, 0, 1], RectangleBox[{0, -1}, {2, 1}]}},
+                 AspectRatio->1,
+                 Frame->True,
+                 FrameStyle->RGBColor[0., 0., 0.6666666666666666],
+                 FrameTicks->None,
+                 
+                 ImageSize->
+                  Dynamic[{
+                   Automatic, 
+                    1.35 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}],
+                 PlotRangePadding->None], "\[InvisibleSpace]"}],
+               "RGBColor[0, 0, 1]"],
+              Appearance->None,
+              BaseStyle->{},
+              BaselinePosition->Baseline,
+              ButtonFunction:>With[{Typeset`box$ = EvaluationBox[]}, 
+                If[
+                 Not[
+                  AbsoluteCurrentValue["Deployed"]], 
+                 SelectionMove[Typeset`box$, All, Expression]; 
+                 FrontEnd`Private`$ColorSelectorInitialAlpha = 1; 
+                 FrontEnd`Private`$ColorSelectorInitialColor = 
+                  RGBColor[0, 0, 1]; 
+                 FrontEnd`Private`$ColorSelectorUseMakeBoxes = True; 
+                 MathLink`CallFrontEnd[
+                   FrontEnd`AttachCell[Typeset`box$, 
+                    FrontEndResource["RGBColorValueSelector"], {
+                    0, {Left, Bottom}}, {Left, Top}, 
+                    "ClosingActions" -> {
+                    "SelectionDeparture", "ParentChanged", 
+                    "EvaluatorQuit"}]]]],
+              DefaultBaseStyle->{},
+              Evaluator->Automatic,
+              Method->"Preemptive"],
+             RGBColor[0, 0, 1],
+             Editable->False,
+             Selectable->False]}]}], "]"}], " ", "\[RuleDelayed]", " ", 
+         RowBox[{"ButtonBox", "[", 
+          RowBox[{"t", ",", 
+           RowBox[{"BaseStyle", "\[Rule]", "\"\<Link\>\""}], ",", 
+           RowBox[{"ButtonData", "\[Rule]", "\"\<\>\""}]}], "]"}]}], "}"}], 
+       ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "Infinity"}], "}"}]}], "\[IndentingNewLine]", "]"}],
+      "\[IndentingNewLine]", ",", 
+     RowBox[{
+      RowBox[{"ButtonBox", "[", 
+       RowBox[{"n_", ",", 
+        RowBox[{"BaseStyle", "\[Rule]", "\"\<Link\>\""}], ",", 
+        RowBox[{"ButtonData", "\[Rule]", "_"}]}], "]"}], " ", 
+      "\[RuleDelayed]", " ", 
+      RowBox[{"\"\<\>\"", "<>", "n", "<>", "\"\<\>\""}]}], 
+     "\[IndentingNewLine]", ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "Infinity"}], "}"}]}], "\[IndentingNewLine]", "]"}]}],
+   ";"}], "\[IndentingNewLine]", 
+ RowBox[{"screenshot", "[", "\[IndentingNewLine]", 
+  RowBox[{"header", "\[IndentingNewLine]", "<>", 
+   RowBox[{"StringJoin", "@", 
+    RowBox[{"Append", "[", 
+     RowBox[{"list", ",", "links"}], "]"}]}]}], "]"}]}], "Input"],
+
+Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1:eJzt3T2O+0h373H5JfA2vIsBGPkuwV6BDbiBAQxcwteA4aj3MIkCJs8ClE0u
+oPMBBp0oaDBr4GYCnh2U+VbkqVOniqREqaXu7wfQzF8SWSxSrR9Lh5T4j//2
+f//55W93u93/+4fmP//8r//9T//5n//6P//y982d//M///Xv//Z3zT/+/9/s
+dv/R3NoHXad2VbFz7d3uVh77x6qj+zJ15Qrfn6JqerNklmJaB+u2sJ1rHctp
+meUXbkIA382Q1TLLjqXI7a8z5u+qnD26ssvKwlXjTHJ/VLrbr5XvQ5zXx+o+
++wwA39Awji0qlSJtZn+bvHbTPuguY95EXrd9uNMYH8A3JOoOYY41mfMt81o9
+fhNGXvvtTF4DuIKst6bzbMqg3Ng1qjnI59qsGu9P06SWL/P6ONam5/I2Xw+J
+PkfIOnlQK5HrOz0na+RdW3L9xnBWeR0sQ8yrHyfLAcxSxxuj7PD5IzPLZ1v4
+3Ji9YmweHAdsHpfz++nL/k4wr87G8X523K9zNpHT/QKCMW/Xl+Hffln9fO32
+ifcvvs14nXVe19P+RmzXYN3bechrAEulxnv6+ONw34pNK1PTdY0w65NtqQzN
+j0PD8fU0do/H5WEm+/vDdJl69+q8TvS9XvyZAQBcl0tR7qqsSp0nF45ZrXMC
+h2dSOTvuH26X1+F4O1xOWIeJz8HTnwv0fNfmte6D+RkAALzEOQs+X4K8TuRk
+nzl9Pq4aXyePddrzXZbX4XKs3F1aX9H5vEVeL9kOANAxjv9F52RbedLMFx4z
+a+cXY+xF9RCRdeNzUx33urwOs0+OleU6WMc4/T4qrJOk8tlaZ6MPflnDMdf2
+8badqcREXgOY4XNXH6fTwaFr20Y2dblXqbqvOnck/syvj3UO+w21vKIsw/tG
+7cCs20wn1IXL0bV51W7drEdZFvH0Ud+aXBft+hzeyW2i6zJDn45lu4zMNgcA
+AAAAAAAAAAAAAAAAAAAAAMBq5csfbjfcisM5fPLtND7X3sq3r+kjAMD7HHL7
+3VUf+rmzq15Pd7iGFgBgXpPX+7rJ5TazdTY3ed08t9kvxzVjdsbpAHCpNq8/
+nfuoXdGOs9t/j7bM634cT14DwKWGvG4NNeuplm3kdVDXHsbjPuvHxz5Fbby5
+r2rh8TgeADBP5HXjuJe1bJXXbe6KaevDu9u9+ueHjO7un/v6ihyrD5nO+BoA
+LhXmtfNZ242BZV77x/VNHqecxtVRLpPXAHAlnddO1LLrKK9n89bXPhJtktcA
+cCkjr1s+d1/DvI7O05baTG6nH7I5mJa8BoArJfLaDbXsV1W/VplbH+rpmKOc
+Nsrs6fyQcR4AwCLd8UKzDu3F54eE8wx5LM4P6fNZ1bq7/cH0WHaMDgAAAAAA
+cEPxuXn3uwEAAAAAAAAAAAB4bvbvgRjfJTdd9/uox3LndrvErbzg2zTHspm3
+FN/DObqyaeuypi7sg9PrVbiqrl1VhOs3Nl1XrhgfL5d9hyhazyva2kqw7P5W
+VJv9avqT6v/+5GteV6W75Wbp/vaK6vLfP+5ex+KmfcSVuu8sit83Tf3+xy1Y
+fx/+vX/N3514r1wYu1epq2LIatGjchc9NjzT9HVNVlt5LNvo1/0r8vLqvPg2
+hn20+ONLv/7bGMcJl27/cZ9LXj80nddO/6bqtssKxuOJ/bmVd+sZ4+sm7+6T
+38ayh/dDlKPN4+WaFbXG1+1jD5CT13wu+VaSf9eMr3ElI6/9d863/W0mo36S
++vsYxpHXvfV1Zl5eH7lo6VF2DWMu9X5a/R428rrbv5HXD2T4fHfnbUFe/wCz
+4+s+Z4tDHV6Xt/vNEDEGF7+/188vriOTur6M+fcx/K2Pf3dTbcOPTcfPfuL9
+EGeWyOexjrCkvtvn6jQOFp9tRTuzb8VEPT383NC0Xer3l653G2Pp8bG4Nt5v
+A18TqcJl6u2gP6+384padL8NRB12ZqWX5XVY1w3Wr+ufqvlH+7fCOObRzFOV
+07/rcDl6n53ftvHxFPt4Qz7XZD+jTRIsJ34tu+0+LKv/swunndo2am7N9jqK
+ZevPc/HxlaDT5PWjS9Wvu9/aU9f18tOMv+8ks3vK434M7XP+HMwTj6+XHG+M
+a7IyG8a/31Rei2Xl40S9Z3QeDjMvG8eo5Tfv0aIsw5pIVAtJ7CuiTMuNr2Um
+ZY6/jtmo3sNDO1MmlJl9q1rjBXkdTiNe1yDDhuXo10z0eWzLzHt7nZPLHtdv
+mjaqybXPy9c8ddw3XNl0Nubqdep90U+TGLdENfLpef8a2utv1NTJ68cXjX3V
+b6jq3PUy4+ue+r3sZF4nxtfGuCiV131TmfH1uKwl9ZDM+Dq5rHQ70z6lnMaN
+YyaqWoiVAWZmzdVD8sccrfFZtA/Sy1mw/VbVQ6JxvJvN22g99fQz888vO72+
+qfOZlqxuaqyt1+dY5ra3/ruMX7N4HCH+BjPvtXCfRV4/NKMeErp3Xrfsmsim
+ea3H9uO8W+W1f5+278Gp7mE9Fk8fb4tkrmTWPcrrYbw3fd7+iryWr63a1rN5
+uzK/E/Obyzb7Mq1/u27Lz7k5uio+KKP+pl24TfVnrU3yWrwm0baZ2txNG5S8
+fnQ/Na+TtsvrcZmVeC9aj00rZYzZrDrGBXmtt/Vd87rpTx9KCzIyPz4O69dW
+/Tk1/8yyx/nt+sW6Y6nNco2/D+vvZqo5l0YteZvxtayHh/sc1SZ5/fi6vM6d
+u5fLa5G/c3ltXV/G/PvQNWTxWDAOCGvK8dhUZ9b03q2brJw73ji9N6/I63Fd
+1DHG6DH93LQe82PIJevuZuuzm+V1tF36dZKZqV/HxXndPp/rgLmOvg4xs2xd
+n060HeZ7lcg2Yyyd+szj/5b1el2a1/pvR31GiOtH615jfB39/cb4ui/yeGM8
+Vh6PLx708cb568tkv99o/c3IsU/zN1pZxxvHMVd4HoA+dpj+XKuPL1bR8cbs
++M5q0cj2fN6rPkQZKsd/8fkh0zkhiX2ef3w49hlt+3Z5ejlH6/hXsEJ2W8Z2
+CrZfUTbjUGv6dt2M13DB8Wn5d+W3hZXfwbL7k4jUuSNz2z833h7qIaq/qb+7
+ts/WufrRvkYs1zpGrNff+hsL33dxVq+pywNAUur7Tslx7gqp7y01j1c3zq7g
+OCMAPL3U9518bfwaRi3bPx6dH7+xtd9vxY/F9WXwVMzvs2w0NjVrLbc69iZq
+Lw/wvVQAAAAAAAAAAIBLRb/tNnteqXT975OG5zJ/zfeqkuejbtk+J7MC2IL+
+jpM/Bn+HjLF/L+NrPFJfAMBk/B7Fza5dpL7v8EgZ+Th92eJ84p9t8+u4cI40
+HkXq94M2/05q6rd7HiEjH6cv1E+utPlvFqW+SwN8gdnxdeJaJebvvdnXw0hd
+3yWZkdb1N9Tvh8jroIzfORj7lPg+gv89IX8tEvHcXF6Pv/kh+mH99k4V/Gb8
+mmvVxL9fET4+rNeC3zsKjwfIdvVvjvhppn5Or138u0vR30D2dVP7naPY5nPX
+0VTthL8HZa9b/zte6toz6ndT43WbuXZR9B0afrsOXyxVvxbXlUr/Nkx4HRAr
+Z1LX7+gfMjJS/QZb8NtIwW+ZWb8Lrfoqp5fPG2GRy+vgmKT6jalw/xT/nprO
+bt1O+Btr9nW1zd+2i1cgc/2T8Hf/wmWG+4lgWdFvZ+U+f6SvX9M/F74m6Z9K
+sv8eV/2Gn7mvstZtmib9W71fd715IGJ9x3fx70Da4+vhAeO3defy2rgeoR7X
+6H1FtC6Z3xo1f7M91RfdtN4uYX7mfkt0+W9p23m95DvL89c/yf0+4dzvr67L
+rPj6NUvnt2sPwTZYldeXrRt5jYc1ex26++f1XPnW54F9/RSVx3L9Ns3r8H19
+q7y2axx2/2YzxbcV9dN6jWUOLsyszPVrwt8yTe1/7OXk97kX5PXMupHXeFgP
+mNfZ94avl1jXYkmNr5Njs1xf9GLt8XVQ97xFXk89yNaO549T+prE0E644Wau
+R7Mgs2auXyM6msns8PqWU9O51/DS8XV63chrPKxMhg0TZK+Lkb7els6q+Pou
+yfp1lOvVNLYyjmGF71V7mXPruiivM9fmyOX1mmvVjFkx/O7ysdTZk3itstc/
+EfVjsV10Jpn9EM/P53Xq+jXq+ljttkuNsedew+w1ZFyQxcdKHINJrtvctYvE
+3/EWv7MNXCi+Nold14ye18cXq/nrYVj101RG6uP8/Xslfz7FNE3hyrKI+5y5
+Nl+uL+OW6PJYXg9FXUsr+qx/2bVqxseGdtq8LopdvD52J8P6tb5uiqzdBP0d
+8lhecyZxPHLptXlkW+WxzetiUV3HWg/9sSF3DRnZ36DeYa6bsTx17aJgecGx
+Zs4Vwc+y+TnPs58VLu/L0uN+z+k7f+b/zusG3A95/Si+c6Z953UD7mfT33ua
+qXekZ5M1oQXnX3+7zF5a73hG33ndAAAAAAAAAAAAAABY6+yq1z/c7rWeOfeh
+dlWZOz9iaOelvxWHc7a1Y5k4H2M/tRH36dOVL+L5/Wd2GQDwfYj8uzKvj/t3
+V30Md95Os5mdyuupvXTu14d3V75lOwsA31Kbf1fl9UfznMrPLm8zbc7n9clV
+bb+azNbZXB9O077has0+i3E6gCdxdV5f0OaSvD6ONZZTeM2yDfO626+Q1wCe
+xC3yus3B6+ohPqOHmo3oX5zXVu08fKwdo8vaePmmauHGOB4AHs32ed1m4Smf
+x4vz2kX18DCv21wWtfMh33329hndP9+tZ9CvIdMZXwN4Elvn9ZLjgavy2vdx
+yOEgr4csj24ig8dxdZTL5DWA57JpXjf5OXcuX2ttXjtRy650Xs/23dc+Em2S
+1wCexGZ5/VG7YmH2rc/rls9dfe5grvbi6yXWeebkNYDnMnfuXW8mr9us1m00
+WZqqi1yW127I53dVv9b9/2zG4P6YY37a8fwQ45xEAHgc+hyJ98x5cpm8TtWQ
+M+PeZF63uS/asL8vo88P0eshzwWc8tnXwGXfxsdm91cA8CzWnc83Z258DQC4
+FHkNAF/Brl9Mt1g6r9e3lc7rubZueQOA74HxNQAAAGD59ddf3V/+8hdu3Lhx
++5G3lL/+9a8PdWv76vO6/T83bty4/aTb52f6+3Ffnc9zeQ0APwl5DQDPgbwG
+gOfw/Hl9dOVu53bRbeY3PsqdKyq+xQ3geWya17//qjLzV/f7XfK6cDp666pw
+u2KDc67ryhVG+wBwb1vl9e+/Gvnc5fcv7rc/75/Xm+UseQ3gQWyS13/+5n5J
+jKX//O0Xt/vlN/fnl+T1UBMZ/l2W7T6ln1bWQ/p/V6Ku4mspstZCZgP4Wlvk
+dZfJv/6+fFpZM1mR5Wvyus3gsR7S5fXOlcfweZnXU0bXripEbZvxNYAHsUVe
+t7WQX37784Jx+J/ut18WzpvNa+N4o6xdy7G2nysaX9fmc+Q1gEdxq7zu69nh
+cUdrHL5mbL6qHiJdkNc7PxgnrwE8iJvXQ8SY2pyuPSa5sCZCXgP4yW59vHEu
+rxlfA8AyNz2fr8tq8Xh3X57ft1X9+oZ5PRx/3KnjlQBwb7f9vkybzb+7X0WO
+b39+CAD8DM//fXQA+BnIawB4DuQ1ADyHZ83rtt/cuHHj9tNuz5bXAIDQV19X
+0rqR1wAQ+urrSuZuAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAC5Xvf7hdi/GbZ++dvDk05XNtOXbzbsJAGi9nZqMPrljcH9pZgMA
+7kbndeO4b8fZ76762H5ZjMcB4EJGXteH926MvW22Uj8BgKvMjq/7nC0Odff/
+8fGP2hVyDN7d7/O4n/+PqV1fY3lRjwMAlkvVr19rVw9ZHWXskM1hdk953I+h
+fc6fg3kYXwPAhaKxr89qT+Wulxlf987d+SfkNQBsxKiHhMhrAHgI5DUAPIcu
+r3Pn7uXyWuTvXF6L80PqQ83xRgBYQX+/Mcrk4HhjPFYejy8e9PHGc9h2992b
+6bF4OQAAAAAAAPdh/tbTnW4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+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
+1uybgiWuWoe2HrRk2mPZZuySPg2flxKNdvUntX+wHgPwiIa87v6pP28vyWs9
+TcjXp4uiWJB967Iu6MNsPXZtzfbCvDbGr+lJl2wT170u/TZZ0Cdfb6pEjVxs
+0KAWEsxDTQR4fCKvnR+P+rGondfRMcGZsVnY5kxfrqphTG0sGYPmp7ksr5dl
+sNqO2RWWr898n/y2Lqqj71DwuYm8Bp5ZmNdh3XnJ+LqZP5vXx+k8lNnP3Nfk
+9YJjfYumCaddl9dz2yLVn/S+rK6qRcd7xx4YedxneL/O1vP9ZyDyGnh8Oq+d
+GJNV19Wv5fkdi85tWJ/Xt6thr81rfS7N0tnabZ3q1zE459I6fzKaY2b8TP0a
+eGZGXncPl8aYOJdhcR1bH0ubr4sszGu/P8lNu2Sa/EJW5XV4PuMa7Tovzfml
+9euwvSCPo/r6pcdVAdxfIq/dkK8L8zo8Jyw13dzn/yV15XtZ3pfwHPJW/hhs
+MOXSY46+3dls1ed0x/vA4LWidg08hfC7hYnvy/jcOc59v7GfX39fMfzui5pH
+hEj0Pcev/Hyu1zXZl8Tx10zOT7WZhd/HMZa39Dyb+DWw+k1WA8/gfwFW3He8
+
+    "], {{0, 486}, {364, 0}}, {0, 255},
+    ColorFunction->RGBColor],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  BaseStyle->"ImageGraphics",
+  ImageSizeRaw->{364, 486},
+  PlotRange->{{0, 364}, {0, 486}}]], "Output"]
+}, Open  ]]
+},
+WindowSize->{664, 670},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules->{
+ "KernelA" -> ($CellContext`str = 
+    OpenWrite["C:\\Users\\a\\Desktop\\test.txt"]; 
+   WriteString[$CellContext`str, "test"]; Close[$CellContext`str]), 
+  "ModificationHighlight" -> False},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3549, 94, 512, "Input"],
+Cell[4132, 118, 5898, 124, 666, "Output"],
+Cell[10033, 244, 3171, 76, 178, "Output"]
+}, Open  ]],
+Cell[13219, 323, 2095, 50, 312, "Input"],
+Cell[CellGroupData[{
+Cell[15339, 377, 5067, 115, 1052, "Input"],
+Cell[20409, 494, 491, 7, 176, "Print"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20937, 506, 2981, 73, 205, "Input"],
+Cell[23921, 581, 199, 4, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24157, 590, 4714, 116, 912, "Input"],
+Cell[28874, 708, 128, 3, 31, "Output"],
+Cell[29005, 713, 135, 3, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[29177, 721, 8096, 189, 867, "Input"],
+Cell[37276, 912, 14366, 240, 501, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

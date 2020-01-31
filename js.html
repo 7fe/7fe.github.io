@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta charset="utf-8">
+<title>Java</title>
+<style>body{font-size: 12px}code,pre{margin:0;padding:0;}
+body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap:break-word;}f
+</style>
+</head>
+
+<body>
+<pre>
+.table    { display: table }
+.tr       { display: table-row }
+.thead    { display: table-header-group }
+.tbody    { display: table-row-group }
+.tfoot    { display: table-footer-group }
+.col      { display: table-column }
+.colgroup { display: table-column-group }
+.td, .th   { display: table-cell }
+.caption  { display: table-caption }
+
+alert(await new Promise((r)=> {
+  setTimeout(() => r("d"), 1000)
+}));
+
+new Promise((resolve, reject) => {
+    console.log('Initial');
+    resolve();
+})
+.then(() => {
+    throw new Error('Something failed');
+        
+    console.log('Do this');
+})
+.catch(() => {
+    console.log('Do that');
+})
+.then(() => {
+    console.log('Do this, no matter what happened before');
+});
+
+const w = (ms) => new Promise((fn, reject) => setTimeout(fn, ms));
+
+for (var i = 0; i < 3; i++) {
+  // Log `i` as soon as each promise resolves.
+  w(i * 100).then(() => console.log(i));
+}
+
+        p1.then(
+        // Log the fulfillment value
+        function(val) {
+            log.insertAdjacentHTML('beforeend', val +
+                ') Promise fulfilled (<small>Async code terminated</small>)<br/>');
+        }).catch(
+        // Log the rejection reason
+       (reason) => {
+            console.log('Handle rejected promise ('+reason+') here.');
+        });
+	
+
+
+async function asyncCall() {
+  console.log('calling');
+  var result = await resolveAfter2Seconds();
+  console.log(result);
+  // expected output: "resolved"
+}
+
+asyncCall();
+
+// yield
+function* foo(index) {
+  while (index < 2) {
+    yield index++;
+  }
+}
+
+const iterator = foo(0);
+console.log(iterator.next().value);
+console.log(iterator.next().value);
+</pre>
+</pre>
+<p>
+	
+	
+
+</p>
+		<table width="100%" border="1">
+			<tr>
+				<td>await</td>
+				<td>async</td>
+				<td>Promises</td>
+				<td>regular old javascript</td>
+			</tr>
+			<tr>
+				<td><pre>function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling');
+  var result = await resolveAfter2Seconds();
+  console.log(result);
+  // expected output: "resolved"
+}
+
+asyncCall();
+
+				</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<pre>
+$ = document.querySelectorAll.bind(document);
+NodeList.prototype.__proto__ = Array.prototype;
+
+NodeList.prototype.on = function (name, fn) {this.forEach(function (e, i) {e.addEventListener(name, fn);});}
+NodeList.prototype.attr = function(){this.forEach(function (e, i) {e.addEventListener(name, fn);}
+NodeList.prototype.append;
+NodeList.prototype.prepend;
+
+atom.io is the best text editor for JavaScript
+<a href="https://mathematica.stackexchange.com/questions/152767/support-javascript-subset">JS Subset</a>
+
+  tag = (str)=>{return str.raw[0].replace(/\\\{/g,"{")}
+  tag`$\{a}
+  $\\{b}`
+
+Semicolons are not optional
+https://reactjs.org/docs/jsx-in-depth.html
+
+  function Foo() {}
+
+  Foo.prototype.toString = function() {
+    return 'hello'
+  }
+
+  (function() {
+    console.log('hi')
+  })
+
+I can not find the question but I believe the biggest problem with trying to subset JavaScript inside Mathematica is the fact the nesting of addition and multiplication among others operations.  Nothing nests properly 
+
+An example is the following.
+
+    Function[x,Return[x*23+4];]      function(){return x*23+4}  
+    
+The prototype chain is also interesting.
+
+    x.prototype.test = Function[]    x.prototype.test=function(){};
+    
+The trickest part comes when trying to nest functions of functions and prototypes.
+
+    x.prototype.test = Function[x,
+      Return[23];
+    ];
+    
+ClojureScript might be a solution.</pre>
+		<h1>\JavaScript, Expanded Symbolic JS, Symbolic JS</h1>
+		<p>Conversion of Types between JavaScript and the Wolfram Language.<br>\[Colon] \[CircleDot] Dot[]</p>
+		<table style="width:100%" border="1"><tbody>
+				<tr>
+					<td width="25%"><pre>node Hello.js</pre></td>
+					<td width="25%">Symbolic JavasScript</td>
+					<td width="25%">Expanded Symbolic JavaScript</td>
+					<td width="25%">[</td>
+				</tr>
+				<tr>
+					<td><pre>(function(x,str,y,z){
+  x = new y(z);
+  y.prototype.test = function(){alert(this)};
+  y = Object({});
+  y[test] = 23;
+  y = [];
+  y = Array();
+  y = {y:23};
+  x = function(){};
+  _t_ = $test;
+  _ = require("underscore.js");
+  z = null || undefined;
+  multilineString = "1
+2";
+  return 2*Math.pow(2,3);
+))(1,&quot;test&quot;,2,3);</pre></td>
+					<td><pre>Module[{x=1,str,y=,z=3},
+  x = new[y][z];
+  y.prototype.test = Function[{},alert[this];];
+  y = Object[{}];
+  y\[Colon]str = 23;
+  y = {};
+  y = Array();
+  y = {y-&gt;23};
+  x = function(){};
+  $`t`$ = $test;
+  `$ = require["undescore.js"];
+  z = null || undefined;
+  multilineString = `1
+2`;
+  return[2*(2^3)];
+]</pre></td>
+					<td></td>
+					<td width="25%">
+					</td>
+				</tr>
+				<tr>
+					<td>o.method(args);</td>
+					<td>o.method[args];</td>
+					<td></td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td>MyClass.StaticPropertyOrField = 1;<br>
+						value = MyClass.StaticPropertyOrField;</td>
+					<td></td>
+					<td></td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td><pre>int i = 1;
+double d = 2;
+int[] anArray;
+anArray = new int[10][20];</pre>
+					</td>
+					<td>
+						<pre></pre>
+					</td>
+					<td></td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td>
+						<pre>public class MyClass {
+  public static void main(String[] args) {
+    System.out.println(&quot;Hello, World!&quot;);
+  }
+  public void Method(){<br>
+	System.out.println(&quot;Method&quot;)}
+  public static void staticMethod(){
+    System.out.println(&quot;Static method&quot;);
+  }
+  public MyClass(){<br>System.out.println(&quot;Test&quot;);}
+}</pre>
+					</td>
+					<td>
+						<pre></pre>
+					</td>
+					<td></td>
+					<td width="25%"><pre></pre></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>For, If, Else, </td>
+					<td></td>
+					<td width="25%"></td>
+				</tr>
+			</tbody>
+</table>
+	</body>
+</html>

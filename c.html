@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>c</title>
+<style>{}</style>
+</head><body>
+<h1>SymbolicC Mathematica</h1>
+<p>glibc & `brew install glib` & clib<br>
+check file descriptors `cat /proc/sys/fs/file-nr`
+<img src="./i/POSIXRequired.png">
+<img src="./i/XSIoptionheaders.png">
+<a href="https://softwareengineering.stackexchange.com/questions/288016/how-do-c-c-programs-get-ported-to-different-platforms">Portable c programs</a>
+</p>
+<pre><a href="http://mathematica.stackexchange.com/q/73093">Code Needed</a>
+<code>Needs[&quot;SymbolicC`&quot;]</code><br>~~ &lt;&gt; :&gt; -&gt; {a}.{b} $ @ {} (t)&amp; _blank +-*% 2^100 &amp;&amp; || | {}  == = != !s
+</pre>
+<table width="100%" border="1">
+  <tbody>
+    <tr>
+      <td><b>SymbolicC Simplified</b></td>
+      <td><b>SimbolicC Expanded</b></td>
+      <td><b>c</b></td>
+    </tr>
+    <tr>
+      <td><pre><code></code></pre></td>
+      <td><pre><code>CDeclare[mbool,{x,y}];</code></pre></td>
+      <td><pre><code>mbool x,y;</code></pre></td>
+    </tr>
+    <tr>
+      <td width="33%"><pre><code>enum[data,
+ val1 = -1,
+ val2
+] enum[data,{}]</code></pre></td>
+      <td width="33%"><pre><code>CEnum["data", {<br> CAssign[&quot;val1&quot;, -1], "val2", "val3"<br>}]</code></pre></td>
+      <td width="33%"><pre><code>enum data{
+  val1 = -1, 
+  val2
+};</code></pre></td>
+    </tr>
+    <tr>
+      <td><pre><code>cast[CPointerType[double], x]</code></pre></td>
+      <td><pre><code>CCast[CPointerType[double], x]</code></pre></td>
+      <td><pre><code>(double*) x;</code></pre></td>
+    </tr>
+    <tr>
+      <td><pre><code>struct[point,
+ {double, x},
+ {double, y}
+] 
+Struct[point,{ {double, x} }]</code></pre></td>
+      <td>&nbsp;</td>
+      <td><pre><code>struct point {
+  double x;
+  double y;
+}</code></pre></td>
+    </tr>
+    <tr>
+      <td><pre>union[data, {
+  {int, ival},
+  {double, dval}
+}] </pre></td>
+      <td>&nbsp;</td>
+      <td><pre><code>union data{
+  int ival;
+  double dval;
+}</code></pre></td>
+    </tr>
+    <tr>
+					<td><pre></pre></td>
+					<td>
+						<pre><code>CTypedef[{const, int}, {myint, test2}]</code></pre>
+					</td>
+					<td><pre>typedef const int myint, test2;</pre></td>
+				</tr>
+    <tr>
+					<td><pre>sizeof[x]</pre></td>
+					<td>
+						<pre><code>CSizeOf[t,p]</code></pre>
+					</td>
+					<td><pre><code>sizeof(test)</code></pre></td>
+				</tr>
+    <tr>
+      <td><pre>test-&gt;test2
+Rule[t_,  p_] -&gt; CPointerMember[t,p];
+</pre></td>
+      <td><pre><code>CPointerMember[t,p]</code></pre></td>
+      <td><pre>test-&gt;test2</pre></td>
+    </tr>
+    <tr>
+      <td><pre>(v)&amp;</pre></td>
+      <td><pre><code>CAddress[v]</code></pre></td>
+      <td><pre><code>v&amp;</code></pre></td>
+    </tr>
+    <tr>
+      <td><pre><code>$(x)</code></pre></td>
+      <td><pre><code>CDerefence[x]</code></pre></td>
+      <td><pre><code>*x</code></pre></td>
+    </tr>
+    <tr>
+      <td><pre>CArray</pre></td>
+      <td>&nbsp;</td>
+      <td><pre><code>{}</code></pre></td>
+    </tr>
+    <tr>
+      <td><pre>CString</pre></td>
+      <td>&nbsp;</td>
+      <td><pre><code>String[&quot;test&quot;]</code></pre></td>
+    </tr>
+  </tbody>
+</table>
+  <p>
+  CArary, CInclude, CConstant, CParentheses, CDefine, CError, Cline, CPragma, CUndef
+  
+  </p>
+</body>
+</html>

@@ -1,0 +1,520 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Microsoft</title>
+<style>body{font-size: 12px}code,pre{margin:0;padding:0;}
+body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap:break-word;}
+</style>
+</head>
+
+<body>
+		<h1>VB.NET, VBA, VBScript, C#, VB , C++, F#</h1>
+		<table border="1">
+			<tbody>
+				<tr>
+					<th>Member function</th>
+					<th>typical form for class <code>C</code>:</th>
+				</tr>
+				<tr>
+					<td><a href="#default_constructor">Default constructor</a></td>
+					<td><code>C::C();</code></td>
+				</tr>
+				<tr>
+					<td><a href="#destructor">Destructor</a></td>
+					<td><code>C::~C();</code></td>
+				</tr>
+				<tr>
+					<td><a href="#copy_constructor">Copy constructor</a></td>
+					<td><code>C::C (const C&amp;);</code></td>
+				</tr>
+				<tr>
+					<td><a href="#copy_assignment">Copy assignment</a></td>
+					<td><code>C&amp; operator= (const C&amp;);</code></td>
+				</tr>
+				<tr>
+					<td><a href="#move">Move constructor</a></td>
+					<td><code>C::C (C&amp;&amp;);</code></td>
+				</tr>
+				<tr>
+					<td><a href="#move">Move assignment</a></td>
+					<td><code>C&amp; operator= (C&amp;&amp;);</code></td>
+				</tr>
+			</tbody>
+		</table>
+		<pre>The error occurs because of the As Object clause. Unlike VBA, VBScript has only one data type — Variant, so you don't specify the data type when declaring a variable. Remove the As Object clauses and the script should work fine:
+&lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;IE=10&quot;&gt;
+&lt;script type=&quot;text/vbscript&quot;&gt;
+msgbox &quot;Vbscript&quot;
+&lt;/script&gt;
+
+<a href="./$.xlsm">$.xlsm</a>
+Excel is stupid
+ - you can't put multiple links in the same cell 
+ - you can't put images(only links) in a cell, although you can attach it as a comments background
+ - it is only scriptable with
+   - VBA, VB.NET
+   - Mathematica
+   - http://xlwings.org/
+   - https://datanitro.com/pricing
+
+Sites
+https://tduhameau.wordpress.com
+http://excelmatters.com
+http://www.automateexcel.com/functions
+http://www.cpearson.com/Excel/ListFirstAndLastElements.aspx
+http://businessfunctions.com/index.php?pageno=156
+ - PMT - http://www.techonthenet.com/excel/formulas/pmt.php
+   FV
+
+<a href="https://blogs.harvard.edu/rprasad/2014/06/16/reading-excel-with-python-xlrd/">Reading Excel with Python</a>
+
+python-excel.org
+
+Excel Solver
+Google Docs JS | Microsoft Office VisualBasic | Microsoft Office Online 
+
+Dim 'stands for Dimensions
+
+f2 - Object Browser
+.Cells(0,0) ' -1 -1 cell
+Named Ranges Excel allows for stuff like Sum(Students)
+
+https://msdn.microsoft.com/en-us/library/22x2chfx.aspx VB.NET Only
+
+Access macro actions represent only a subset of the commands available in VBA.
+
+Alt+F11, Alt+I, M
+Insert&gt;Module     | Accesses macros and code
+
+Redim Preserve
+
+Stored array   | A1:A2
+Array constant | INDEX({1,2,3},1)
+
+
+VBA array      | Dim a: a = Array(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;): a(0)
+
+Dim Arr() As Variant
+Arr = Range(&quot;A1:B10&quot;)
+Dim R As Long
+Dim C As Long
+For R = 1 To UBound(Arr, 1) ' First array dimension is rows.
+    For C = 1 To UBound(Arr, 2) ' Second array dimension is columns.
+        Debug.Print Arr(R, C)
+    Next C
+Next R
+
+VBA: Visual Basic for Applications Different Versions
+  			VSTO: Visual Studio Tools for Office
+  			VSTA: Visual Studio Tools for Applications
+  			VS.NET: Visual Studio.NET – currently version 2003. 2005 due next month.
+  			IDE: Integrated Development Environment (in Excel, this is the visual basic editor)
+
+F# Hello World</pre>
+		<pre data-lang-guess="C#" id="pre549525">open System
+
+[&lt;EntryPoint&gt;]
+let main argv = 
+    printfn &quot;Hello World&quot; 
+    Console.ReadLine() |&gt; ignore
+    0 </pre>
+		<pre>
+</pre>
+		<pre>
+
+Mathematica  Python/ASP.NET     Excel VB</pre>
+		<table style="width:100%" border="1"><tbody>
+				<tr>
+					<td width="33%">C#</td>
+					<td width="33%">Mathematica NETLink
+					
+						<br>
+						Needs[&quot;NETLink`&quot;];<br>
+						InstallNET[];</td>
+					<td width="33%">Symbolic Mathematica</td>		
+  </tr>
+				<tr>
+					<td>MyClass o = new My Class(args);</td>
+					<td>o = NETNew[&quot;MyClass&quot;,args];</td>
+					<td>o= new[&quot;MyClass&quot;,args]</td>		
+  </tr>
+				<tr>
+					<td>o.method(args);</td>
+					<td>o@MethodName[args];</td>
+					<td>o=;</td>
+				</tr>
+				<tr>
+					<td>o.prop = 1; val = obj.prop;</td>
+					<td>o@prop = 1; val = o@prop;</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>MyClass.StaticMethod(args);</td>
+					<td>MyClass`StaticMethod[args];</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>MyClass.StaticPropertyOrField = 1;<br>
+						value = MyClass.StaticPropertyOrField;</td>
+					<td>MyClass`StaticPropertyOrField = 1;<br>
+						value = MyClass`StaticPropertyOrField;</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>int i = 23;</td>
+					<td>i = 23;</td>
+					<td>i = int[23];</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>public[x_] := (<br>
+						   Print[23];<br>
+						   Hold@x<br>
+						   );<br>
+						SetAttributes[public, HoldAll]<br>
+						using@System;<br>
+						public@class@Hello[<br>
+						   public@static@void@Main[][<br>
+						        i = int[23];<br>
+						        j = int[23];<br>
+						        k = object[0];<br>
+						        s = string[&quot;hello&quot; + &quot; world&quot;];<br>
+						        true;<br>
+						        Console@WriteLine[&quot;Hello World&quot;];<br>
+						        System@Math@Pow[2.0, 32.0];<br>
+						        ];<br>
+						   ]</td>
+				</tr>
+			</tbody>
+</table>
+		<pre>
+
+Me vs this
+<code>Friend vs internal - access modifiers allowing inter-class but not intra-assembly reference
+MustInherit vs abstract - prevents a class from being directly instantiated, and forces consumers to create object references to only derived classes
+MustOverride vs abstract - for forcing derived classes to override this method
+MyBase vs base - for referring to the base class from which the current class is derived
+NotInheritable vs sealed - for declaring classes that may not be inherited
+NotOverridable vs sealed - for declaring methods that may not be overridden by derived classes
+Overridable vs virtual - declares a method as being able to be overridden in derived classes
+Shared vs static - for declaring methods that do not require an explicit instance of an object</code></pre>
+		<table border="1" >
+			<tbody>
+				<tr>
+					<td width="25%">
+						<pre><code>Visual Basic.NET (.vbproj &amp; .vb)
+vbc.exe /t:exe /debug+ /optionstrict+ /out:.\HelloVB.exe HelloVB.vb
+</code></pre>
+					</td>
+					<td width="25%">
+						<pre><code>VBA/VB6(.vb)
+test</code></pre>
+					</td>
+					<td width="25%">
+						<pre><code>VBScript(.vbs or .vbe)
+crscript wscript</code></pre>
+					</td>
+					<td width="25%">
+						<pre><code>C#(.cs)</code></pre>
+					</td>
+					<td width="25%">C++</td>
+				</tr>
+				<tr>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code>Private Sub Form_Load()
+  Dim x As String ' type optional
+  x = &quot;Hello World&quot;
+  MsgBox x
+End Sub
+Form_Load()
+Format(#1/27/1993#, "yyyy-MM-dd Hh:mm:Ss")
+</code></pre>
+					</td>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code>namespace Add_Function{
+   class Program{
+      static void Main(string[] args){
+         int a;
+         int b;
+         int c;
+         Console.WriteLine("Enter value of 'a':");
+         a = Convert.ToInt32(Console.ReadLine());
+         Console.WriteLine("Enter value of 'b':");
+         b = Convert.ToInt32(Console.ReadLine());
+         //why can't I not use it this way?
+         c = Add(a, b);
+         Console.WriteLine("a + b = {0}", c);
+      }
+   }
+}</code></pre>
+					</td>
+					<td width="25%">#include &lt;iostream&gt;<br>
+						#include &lt;string&gt;<br>
+						using namespace std;<br>
+						class Example4 {<br>
+						    string* ptr;<br>
+						  public:<br>
+						    Example4() : ptr(new string) {}<br>
+						    Example4 (const string&amp; str) : ptr(new string(str)) {}<br>
+						    // destructor:<br>
+						    ~Example4 () {delete ptr;}<br>
+						    const string&amp; content() const {return *ptr;}<br>
+						};<br>
+						int main () {<br>
+						  Example4 foo;<br>
+						  Example4 bar (&quot;Example&quot;);<br>
+						  cout &lt;&lt; &quot;bar's content: &quot; &lt;&lt; bar.content() &lt;&lt; '\n';<br>
+						  return 0;<br>
+						}</td>
+				</tr>
+				<tr>
+					<td width="25%">
+						<pre>'Boolean, Byte, Char, Date, Decimal, Double, Integer, Long, Object,
+SByte, Short, Single, String, UInteger, ULong, User-Defined(inherit
+ValueType), UShort
+</pre>
+					</td>
+					<td width="25%">
+						<pre>'Byte,Integer,Long,Single,Double,Currency,Decimal,
+'String(n),Date,Boolean,Object,Variant
+'requires you to define variable if explicit
+<code>Option Explicit On
+Dim a, b, c, d, m, n As Integer
+Const MyInteger As Integer = 42
+Dim x, y As Double
+Dim, Set, RefBy, ByVal</code></pre>
+					</td>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code>//bool, byte, chair, decimal, double, float, int, long, sbyte, short, uint, ulong, ushort
+int a,b,c,d,m;
+double x,y;</code></pre>
+					</td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code>result = IIf(5 < 10, "Yes it is", "No it isn't</code></pre>
+					</td>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code>result = (5 < 10) ? "Yes it is" : "No it isn't"</code></pre>
+					</td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code>Dim count As Integer = 0
+Dim message As String
+If count = 0 Then
+    message = "There are no items." 
+ElseIf count = 1 Then
+    message = "There is 1 item." 
+Else
+    message = "There are " & count & " items." 
+End If)</code></pre>
+					</td>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code>r;;</code></pre>
+					</td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code>And Or Xor Not &lt;&gt; = AndAlso OrElse object.ReferenceEquals(a, b) 
+!object.ReferenceEquals(a, b) typeof(a) a is b(type comparison)</code></pre>
+					</td>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code>&amp; |  Xor != == && Is IsNot GetType(Integer) TypeOf a Is b</code></pre>
+					</td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td width="25%">
+						<pre><code>For i As Integer = 0 To number - 1
+    ' loop from zero up to one less than number
+Next
+Exit For 'breaks out of a for loop
+Exit While 'breaks out of a while loop
+Exit Do 'breaks out of a do loop</code></pre>
+					</td>
+					<td width="25%">
+						<pre><code>For i = 0 To 2
+  MsgBox i
+Next
+Dim i:  i = 0   
+While i <
+    MsgBox i
+    i = i + 1
+Wend
+
+fruits = Array("apple", "orange", "cherries")
+Dim fruitnames As Variant
+For Each Item In fruits
+  fruitnames = fruitnames & Item & Chr(10)
+Next
+MsgBox fruitnames
+Public Sub OnErrorDemo()
+   On Error GoTo ErrorHandler    'Dim x, y, z As Integer
+   x = 50
+   y = 0
+   z = x / y   ' Divide by ZERO Error Raises
+  
+   ErrorHandler:    ' Error-handling routine.
+   Select Case Err.Number   ' Evaluate error number.
+      Case 10   ' Divide by zero error
+         MsgBox (&quot;You attempted to divide by zero!&quot;)
+      Case Else
+         MsgBox &quot;UNKNOWN ERROR  - Error# &quot; &amp; Err.Number &amp; &quot; : &quot; &amp; Err.Description
+   End Select
+   Resume Next
+End Sub</code></pre>
+					</td>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code>for (int i = 0; i < number; ++i) 
+    // loop from zero up to one less than number
+}
+//break
+//continue</code></pre>
+					</td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td width="25%">
+						<pre><code>breakpoint</code></pre>
+					</td>
+					<td width="25%">
+						<pre><code>Stop</code></pre>
+					</td>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code>&nbsp;</code></pre>
+					</td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td width="25%">
+						<pre><code>Dim t As New System.Threading.Thread(Sub()
+    For n as Integer = 0 to 10   'Count to 10
+        Console.WriteLine(n)     'Print each number
+    Next
+    End Sub)
+t.Start()</code></pre>
+					</td>
+					<td width="25%">
+						<pre><code>N/A</code></pre>
+					</td>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code></code></pre>
+					</td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td width="25%">
+						<pre><code>breakpoint</code></pre>
+					</td>
+					<td width="25%">
+						<pre><code>Function MyMax(ParamArray agrs())
+
+End Function</code></pre>
+					</td>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code>private void method(params int[] arguments) { 
+    //deal with args 
+}</code></pre>
+					</td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td width="25%">
+						<pre>//Private can be used on
+// Class,Const,Declare,Delegate,Dim,Enum,Event,Function,
+  Interface,Property,Structure,Sub 
+<code>Public Class Employee
+End Class
+</code></pre>
+					</td>
+					<td width="25%">
+						<pre><code>'Classes don't really have a syntax exactly 
+Private Sub Class_Initialize()
+  MsgBox "Init"
+End Sub
+Private Sub Class_Terminate()
+  MsgBox "Terminate"
+End Sub
+'cpearson.com/excel/classes.aspx
+Type Employee
+    Name As String
+    Salary As Double
+End Type
+
+Dim i As Employee
+i.Name = "Joe Smith"
+i.Salary = 40000</code></pre>
+					</td>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code>public class Employee{
+    //Fields, properties, methods and events go here...
+}
+</code></pre>
+					</td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td width="25%">
+						<pre>//Private can be used on
+// Class,Const,Declare,Delegate,Dim,Enum,Event,Function,
+  Interface,Property,Structure,Sub 
+<code>Public Class Employee
+End Class</code></pre>
+						<pre><code>
+</code></pre>
+					</td>
+					<td width="25%">
+						<pre><code>Function Split1()
+   Dim strTest As String
+   Dim strArray() As String
+   Dim intCount As Integer
+  
+   strTest = "Fred & Wilma & Barney & Betty"
+   strArray = Split(strTest, "&")
+   
+   For intCount = LBound(strArray) To UBound(strArray)
+      MsgBox Trim(strArray(intCount))
+   Next
+End Function
+a = array("Red","Blue","Yellow")
+b = join(a,"$")
+</code></pre>
+						<pre>Sub OptionalArgs(i As String, Optional s As String = &quot;init&quot;) 
+  'MsgBox 1
+End Sub<br>
+							
+						</pre>
+					</td>
+					<td width="25%"></td>
+					<td width="25%">
+						<pre><code>string[] separators = {&quot;,&quot;, &quot;.&quot;, &quot;!&quot;, &quot;?&quot;, &quot;;&quot;, &quot;:&quot;, &quot; &quot;};<br>
+								string value = &quot;The handsome, energetic, young dog was playing with his smaller, more lethargic litter mate.&quot;;<br>
+								string[] words = value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+</code></pre>
+					</td>
+					<td width="25%"></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
