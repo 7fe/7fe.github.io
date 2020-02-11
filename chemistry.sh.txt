@@ -11,6 +11,16 @@ function chno16212(){
    fi
 }
 
+alias chno23=chcno23271232
+function chcno23271232(){
+   if [ -z "$1" ]
+   then
+     echo "abilify"
+   else
+     echo ""
+   fi
+}
+
 alias chno19=chno
 function chno19282(){
    if [ -z "$1" ]
