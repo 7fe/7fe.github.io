@@ -1,5 +1,5 @@
-# Site uses Adobe GoLive CS2
+# dvorak
+(Switch to dvorak in multiple operating systems)[http://limeblack.github.io/dvorak/]
 
-[Adobe GoLive CS2 Download](https://helpx.adobe.com/creative-suite/kb/cs2-product-downloads.html)
-
-Shift+Enter inserts new line in paragraphs# limeb.github.io
+git checkout --orphan gh-pages
+git rm .
