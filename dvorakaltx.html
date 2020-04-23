@@ -1,0 +1,28 @@
+<!doctype html>
+<title>Dvorakaltx</title>
+<h1>Dvorak altx</h1>
+<style>
+pre>span{font-family:monospace;}
+</style>
+<pre style="font-size:20px;font-family:arial;">
+<span>1234567890;=</span>
+<span>'.,pyfgcrl[]\</span>
+<span>aoeiuhtns-</span>
+<span>zjqkfbmwv/</span>
+</pre>
+<p>Dvorakaltx needs alt+bottom f to produce x.</p>
+<script>(function(){
+ var c = document.getElementsByTagName('pre')[0].children;
+ for(var i=0;i<c.length;i++){
+   for(var j=0;j<i;j++)document.getElementsByTagName('pre')[0].insertBefore(document.createTextNode(" "),c[i]);
+ }
+})();</script>
+
+<a href="dvorakaltx.klc">dvorakaltx.klc</a><br>
+<a href="dvorakaltx.ahk">dvorakaltx.ahk</a>
+
+<img src="frequency.jpg" style="width:100%">
+
+https://www.slant.co/options/1596/alternatives/~dvorak-simplified-keyboard-alternatives
+
+http://www.mit.edu/~jcb/Dvorak/
