@@ -11,29 +11,29 @@
 <a href="https://superuser.com/questions/598405">Dvorak</a>
 
 Changes Default.sh keyboard
-    wget -qO- http://limeblack.github.io/dvorak/default.sh | sh
+    wget -qO- http://limeb.github.io/default.sh | sh
 temp.sh
-    wget -qO- http://limeblack.github.io/dvorak/temp.sh | sh  
+    wget -qO- http://limeb.github.io/temp.sh | sh  
 Temp Modified Dvorak w/o Pg&PgUp
-    wget -qO- http://limeblack.github.io/dvorak/xmodmap | xmodmap -
+    wget -qO- http://limeb.github.io/xmodmap | xmodmap -
     
 The rest of the following will require a restart.  The first changes Ubuntu default dvorak keyboard to modified dvorak 
 us
-    wget -qO- http://limeblack.github.io/dvorak/us | sudo tee /usr/share/X11/xkb/symbols/us
+    wget -qO- http://limeb.github.io/us | sudo tee /usr/share/X11/xkb/symbols/us
     
 The following will set the context key and right control key as Page Down and Page Up
 pc
-    wget -qO- http://limeblack.github.io/dvorak/pc | sudo tee /usr/share/X11/xkb/symbols/pc
+    wget -qO- http://limeb.github.io/pc | sudo tee /usr/share/X11/xkb/symbols/pc
  
 And lastly this sets the RAlt key to a Page Up key.  This shorcut doesn't work with the combination 
 altwin
-    wget -qO- http://limeblack.github.io/dvorak/altwin | sudo tee /usr/share/X11/xkb/symbols/altwin
+    wget -qO- http://limeb.github.io/altwin | sudo tee /usr/share/X11/xkb/symbols/altwin
 
 
 backup /usr/share/X11/xkb/symbols/us http://pastebin.com/7w6kXz2E
 
 Lastly you can download vr.ahk for windows here
-    http://limeblack.github.io/dvorak/vr.ahk
+    http://limeb.github.io/vr.ahk
 
 <a href="https://github.com/randyrants/sharpkeys">Sharpkeys</a> writes to registry.
     
