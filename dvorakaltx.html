@@ -39,7 +39,7 @@ pre>span{font-family:monospace;}
 </style>
 <img src="https://limeb.github.io/writerdvorak.png" style="width:100%;max-width:800px;">
 <pre style="font-size:20px;font-family:arial;">
-<span>1234567890;=</span>
+<span>`1234567890;=</span>
 <span>'.,pyfgcrl[]\</span>
 <span>aoeiuhtns-</span>
 <span>\zjqkfbmwv/</span>
@@ -53,9 +53,10 @@ News:        e t a i o n s r h l d c u m p f g y w b , . v k " - 0 ' x j 1 z 2 q
 </xmp>
 <script>(function(){
  var c = document.getElementsByTagName('pre')[0].children;
- for(var i=0;i<c.length;i++){
+ for(var i=0;i<c.length-1;i++){
    for(var j=0;j<i;j++)document.getElementsByTagName('pre')[0].insertBefore(document.createTextNode(" "),c[i]);
  }
+ document.getElementsByTagName('pre')[0].insertBefore(document.createTextNode(' '),c[i]);
 })();</script>
 
 <img src="frequency.jpg" style="width:100%">
