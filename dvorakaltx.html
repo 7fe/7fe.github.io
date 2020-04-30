@@ -1,6 +1,9 @@
 <!doctype html>
 <title>Writer Dvorak keyboard layout</title>
 <h1>Writer Dvorak layout</h1>
+<script>
+document.write(location.hash);
+</script>
 <p>The layout focuses on not changing symbol locations when on the same hand.
  This cuts down on confusion when switching between Qwerty and Dvorak.
  For example []=/-z are in the same locations as Qwerty unlike Dvorak.
@@ -39,7 +42,7 @@ pre>span{font-family:monospace;}
 <span>1234567890;=</span>
 <span>'.,pyfgcrl[]\</span>
 <span>aoeiuhtns-</span>
-<span>zjqkfbmwv/</span>
+<span>\zjqkfbmwv/</span>
 </pre>
 <p>Dvorakaltx needs alt+bottom f to produce x.</p>
 <xmp>Prose:       e t a o i n h s r d l u m w c y f g , p b . v k ' " - ; ! ? x j q : z _ < > ) ( 1 2 0 4 3 5 9 8 6 7 * [ ] + & / } { % @ $ = ~
@@ -55,9 +58,6 @@ News:        e t a i o n s r h l d c u m p f g y w b , . v k " - 0 ' x j 1 z 2 q
  }
 })();</script>
 
-<a href="dvorakaltx.klc">dvorakaltx.klc</a><br>
-<a href="dvorakaltx.ahk">dvorakaltx.ahk</a>
-
 <img src="frequency.jpg" style="width:100%">
 <h4>Downloads</h4>
 <table border=0 style="text-align:left;">
@@ -68,11 +68,11 @@ News:        e t a i o n s r h l d c u m p f g y w b , . v k " - 0 ' x j 1 z 2 q
   </tr>
   <tr>
     <td>Autohotkey.exe</td>
-    <td>Windows.ahk</td>
+    <td><a href="dvorakaltx.ahk">Windows.ahk</a></td>
   </tr>
   <tr>
     <td>Microsoft Keyboard Layout</td>
-    <td>Windows.klc</td>
+    <td><a href="dvorakaltx.klc">Windows.klc</a></td>
   </tr>
   <tr>
     <td><code>wget -qO- http://limeb.github.io/xmodmap | xmodmap -</code></td>
