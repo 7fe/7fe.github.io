@@ -13,8 +13,11 @@ function SwapImages(){
     imgs[1].style.display = 'none';
   }
 }
+window.onload = function(){
+  document.getElementsByTagName('label')[0].onclick=SwapImages();
+}
 </script>
-<label onclick=SwapImages()><input type=checkbox>AltGr(ctrl+alt)</label><br>
+<label><input type=checkbox>AltGr(ctrl+alt)</label><br>
 <img src="https://limeb.github.io/writer-dvorak.png" style="width:100%;max-width:800px;display:block;">
 <img src="https://limeb.github.io/writer-dvorak2.png" style="width:100%;max-width:800px;display:none;">
 <p>The layout focuses on not changing symbol locations when on the same hand.
