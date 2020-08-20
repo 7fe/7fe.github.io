@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
 <head>
@@ -8,10 +7,8 @@
 body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap:break-word;}
 </style>
 </head>
+
 <body>
-<xmp>
-Regex vba https://stackoverflow.com/q/22542834
-</xmp>
 		<h1>VB.NET, VBA, VBScript C#, C++ - C++, F#</h1>
 		<table border="1">
 			<tbody>
@@ -45,7 +42,11 @@ Regex vba https://stackoverflow.com/q/22542834
 				</tr>
 			</tbody>
 		</table>
-		<pre>The error occurs because of the As Object clause. Unlike VBA, VBScript has only one data type — Variant, so you don't specify the data type when declaring a variable. Remove the As Object clauses and the script should work fine:
+		<pre>
+https://stackoverflow.com/q/37758275
+<a href="https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way">https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way</a>
+		
+The error occurs because of the As Object clause. Unlike VBA, VBScript has only one data type — Variant, so you don't specify the data type when declaring a variable. Remove the As Object clauses and the script should work fine:
 &lt;!doctype html&gt;&lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;IE=10&quot;&gt;&lt;script type=&quot;text/vbscript&quot;&gt;
 msgbox &quot;Vbscript&quot;
 &lt;/script&gt;
@@ -241,6 +242,7 @@ getMinutes()	Get the minute (0-59)</pre>
   Dim x As String ' type optional
   x = &quot;Hello World&quot;
 </code>MyStr = Format(Time, &quot;Long Time&quot;)<br>
+							
 							<code>  MsgBox x
 End Sub
 Form_Load()
@@ -306,7 +308,7 @@ int main () {
   Example4 foo;
   Example4 bar ("Example");
 
-  cout << "bar's content: " << bar.content() << '\
+  cout << "bar's content: " << bar.content() <<
   return 0;
 }</code></pre>
 					</td>
@@ -335,6 +337,7 @@ Dim, Set, RefBy, ByVal</code></pre>
 					<td></td>
 					<td>
 						<pre><code>//bool, byte, chair, decimal, double, float, int,<br>
+								
 long, sbyte, short, uint, ulong, ushort
 int a,b,c,d,m;
 double x,y;</code></pre>
@@ -345,17 +348,18 @@ double x,y;</code></pre>
 					<td></td>
 					<td>result = 5 &lt; 10 ? &quot;Yes it is&quot; : &quot;No it isn't&quot;</td>
 					<td>
-						<pre><code>result = IIf(5 < 10, "Yes it is", "No it isn't</code></pre>
+						<pre><code>result = IIf(5 < 10, "Yes it is", "No it isn'</code></pre>
 					</td>
 					<td></td>
 					<td>
-						<pre><code>result = (5 < 10) ? "Yes it is" : "No it isn't"</code></pre>
+						<pre><code>result = (5 < 10) ? "Yes it is" : "No it isn't</code></pre>
 					</td>
 					<td></td>
 				</tr>
 				<tr>
 					<td></td>
-					<td><pre><code>var message = "",
+					<td>
+						<pre><code>var message = "",
    count = 0;
 if ( count == 0){
   message = "There are no items";
@@ -442,7 +446,7 @@ End Sub</code></pre>
 					</td>
 					<td ></td>
 					<td >
-						<pre><code>for (int i = 0; i < number; ++i) 
+						<pre><code>for (int i = 0; i < number; ++i)
     // loop from zero up to one less than number
 }
 //break
@@ -456,6 +460,7 @@ End Sub</code></pre>
 					</td>
 					<td>
 						<pre translate="no" dir="ltr" is-upgraded=""><code dir="ltr">debugger;<br>
+								
 							</code></pre>
 					</td>
 					<td >
@@ -530,6 +535,7 @@ Private Sub Class_Terminate()
   MsgBox &quot;Terminate&quot;
 End Sub
 </code>Dim C As Class<br>
+							
 							Set C = New Class<code>
 'cpearson.com/excel/classes.aspx
 Type Employee
@@ -581,6 +587,7 @@ b = join(a,"$")
   'MsgBox 1
 End Sub<br>
 							
+							
 						</pre>
 					</td>
 					<td ></td>
@@ -596,6 +603,53 @@ string[] words = value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 </code></pre>
 					</td>
 					<td ></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Shell = new ActiveXObject(&quot;WScript.Shell&quot;);<br>
+						DesktopPath = Shell.SpecialFolders(&quot;Desktop&quot;);<br>
+						link = Shell.CreateShortcut(DesktopPath + &quot;\\test.lnk&quot;);<br>
+						// link.Arguments = &quot;1 2 3&quot;;<br>
+						link.Description = &quot;test shortcut&quot;;<br>
+						// link.HotKey = &quot;CTRL+ALT+SHIFT+X&quot;;<br>
+						// link.IconLocation = &quot;app.exe,1&quot;;<br>
+						link.TargetPath = &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot;;<br>
+						// link.WindowStyle = 3;<br>
+						// link.WorkingDirectory = &quot;c:\\blah&quot;;<br>
+						link.Save();</td>
+					<td>' Set Shell = CreateObject(&quot;WScript.Shell&quot;)<br>
+						' DesktopPath = Shell.SpecialFolders(&quot;Desktop&quot;)<br>
+						' Set link = Shell.CreateShortcut(DesktopPath &amp; &quot;\test.lnk&quot;)<br>
+						' link.Arguments = &quot;1 2 3&quot;<br>
+						' link.Description = &quot;test shortcut&quot;<br>
+						' link.HotKey = &quot;CTRL+ALT+SHIFT+X&quot;<br>
+						' link.IconLocation = &quot;app.exe,1&quot;<br>
+						' link.TargetPath = &quot;c:\blah\app.exe&quot;<br>
+						' link.WindowStyle = 3<br>
+						' link.WorkingDirectory = &quot;c:\blah&quot;<br>
+						' link.Save</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Sub WorkBook_Open()
+						<p>  MsgBox &quot;Open&quot;</p>
+						<p>End Sub</p>
+						<p>Private Sub ComboBox1_Change()</p>
+						<p>   MsgBox &quot;tesing&quot;</p>
+						<p>End Sub</p>
+					</td>
+					<td>window.onload = function(){ alert(&quot;onload&quot;); };
+						<p></p>
+						<p>document.getElementById(&quot;ComboBox1&quot;).onchange = function(){</p>
+						<p>  alert(&quot;testing&quot;);</p>
+						<p>}</p>
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
 				</tr>
 			</tbody>
 		</table>
