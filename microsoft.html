@@ -9,57 +9,27 @@ body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;wh
 </head>
 
 <body>
-		<h1>VB.NET, VBA, VBScript C#, C++ - C++, F#</h1>
-		<table border="1">
-			<tbody>
-				<tr>
-					<th>Member function</th>
-					<th>typical form for class <code>C</code>:</th>
-				</tr>
-				<tr>
-					<td><a href="#default_constructor">Default constructor</a></td>
-					<td><code>C::C();</code></td>
-				</tr>
-				<tr>
-					<td><a href="#destructor">Destructor</a></td>
-					<td><code>C::~C();</code></td>
-				</tr>
-				<tr>
-					<td><a href="#copy_constructor">Copy constructor</a></td>
-					<td><code>C::C (const C&amp;);</code></td>
-				</tr>
-				<tr>
-					<td><a href="#copy_assignment">Copy assignment</a></td>
-					<td><code>C&amp; operator= (const C&amp;);</code></td>
-				</tr>
-				<tr>
-					<td><a href="#move">Move constructor</a></td>
-					<td><code>C::C (C&amp;&amp;);</code></td>
-				</tr>
-				<tr>
-					<td><a href="#move">Move assignment</a></td>
-					<td><code>C&amp; operator= (C&amp;&amp;);</code></td>
-				</tr>
-			</tbody>
-		</table>
+		<h1>node.js, VBA, cscript, VBScript</h1>
 		<pre>
 https://stackoverflow.com/q/37758275
 <a href="https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way">https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way
 </a><a href="https://stackoverflow.com/questions/2050505/way-to-run-excel-macros-from-command-line-or-batch-file">https://stackoverflow.com/questions/2050505/way-to-run-excel-macros-from-command-line-or-batch-file</a>
+
+There is VB.NET, VBA and VBScript all different langauges.
 		
 The error occurs because of the As Object clause. Unlike VBA, VBScript has only one data type — Variant, so you don't specify the data type when declaring a variable. Remove the As Object clauses and the script should work fine:
 &lt;!doctype html&gt;&lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;IE=10&quot;&gt;&lt;script type=&quot;text/vbscript&quot;&gt;
 msgbox &quot;Vbscript&quot;
 &lt;/script&gt;
 Dim i <br>
-			For i = 1 To 3<br>
-			  MsgBox i<br>
-			Next </pre>
+For i = 1 To 3<br>
+  MsgBox i<br>
+Next</pre>
 		<pre>' VBA
 Dim i As Integer<br>
-			For i = 1 To 10<br>
-			  MsgBox i<br>
-			Next i<br>
+For i = 1 To 10<br>
+  MsgBox i<br>
+Next i<br>
 			
 <a href="./$.xlsm">$.xlsm</a>
 Excel is stupid
@@ -106,6 +76,7 @@ Array constant | INDEX({1,2,3},1)
 
 VBA array      | Dim a: a = Array(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;): a(0)
 
+
 Dim Arr() As Variant
 Arr = Range(&quot;A1:B10&quot;)
 Dim R As Long
@@ -124,83 +95,12 @@ VBA: Visual Basic for Applications Different Versions
 
 F# Hello World</pre>
 		<pre data-lang-guess="C#" id="pre549525">open System
-
-[&lt;EntryPoint&gt;]
-let main argv = 
-    printfn &quot;Hello World&quot; 
-    Console.ReadLine() |&gt; ignore
-    0 </pre>
-		<pre>
-</pre>
 		<pre>
 
-Mathematica  Python/ASP.NET     Excel VB</pre>
-		<table style="width:100%" border="1"><tbody>
-				<tr>
-					<td width="20%">C#</td>
-					<td width="20%">Mathematica NETLink
-					
-						<br>
-						Needs[&quot;NETLink`&quot;];<br>
-						InstallNET[];</td>
-					<td width="20%">Symbolic Mathematica</td>		
-  </tr>
-				<tr>
-					<td>MyClass o = new My Class(args);</td>
-					<td>o = NETNew[&quot;MyClass&quot;,args];</td>
-					<td>o= new[&quot;MyClass&quot;,args]</td>		
-  </tr>
-				<tr>
-					<td>o.method(args);</td>
-					<td>o@MethodName[args];</td>
-					<td>o=;</td>
-				</tr>
-				<tr>
-					<td>o.prop = 1; val = obj.prop;</td>
-					<td>o@prop = 1; val = o@prop;</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>MyClass.StaticMethod(args);</td>
-					<td>MyClass`StaticMethod[args];</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>MyClass.StaticPropertyOrField = 1;<br>
-						value = MyClass.StaticPropertyOrField;</td>
-					<td>MyClass`StaticPropertyOrField = 1;<br>
-						value = MyClass`StaticPropertyOrField;</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>int i = 23;</td>
-					<td>i = 23;</td>
-					<td>i = int[23];</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td><pre>public[x_] := ( 
-   Print[23]; 
-   Hold@x 
-   ); 
-SetAttributes[public, HoldAll] 
-using@System; 
-public@class@Hello[ 
-   public@static@void@Main[][ 
-        i = int[23]; 
-        j = int[23]; 
-        k = object[0]; 
-        s = string[&quot;hello&quot; + &quot; world&quot;]; 
-        true; 
-        Console@WriteLine[&quot;Hello World&quot;]; 
-        System@Math@Pow[2.0, 32.0]; 
-        ]; 
-   ]</pre></td>
-				</tr>
-			</tbody>
-</table>
-		<pre>
+Mathematica  Python/ASP.NET     Excel VB
+		</pre>
+		
+			<pre>
 
 Me vs this
 <code>Friend vs internal - access modifiers allowing inter-class but not intra-assembly reference
@@ -211,14 +111,11 @@ NotInheritable vs sealed - for declaring classes that may not be inherited
 NotOverridable vs sealed - for declaring methods that may not be overridden by derived classes
 Overridable vs virtual - declares a method as being able to be overridden in derived classes
 Shared vs static - for declaring methods that do not require an explicit instance of an object</code></pre>
+			
 		<table border="1" width="150%">
 			<tbody>
 				<tr>
-					<td>
-						<pre><code>Visual Basic.NET (.vbproj &amp; .vb)
-vbc.exe /t:exe /debug+ /optionstrict+ /out:.\HelloVB.exe HelloVB.vb
-</code></pre>
-					</td>
+					
 					<td>Javascript</td>
 					<td >
 						<pre><code>VBA/VB6(.vb)
@@ -229,13 +126,11 @@ Insert>Module     | Accesses macros and code</code></pre>
 						<pre><code>VBScript(.vbs or .vbe)
 crscript wscript</code></pre>
 					</td>
-					<td >
-						<pre><code>C#(.cs)</code></pre>
-					</td>
-					<td >C++</td>
+					
+					
 				</tr>
 				<tr>
-					<td ></td>
+					
 					<td>Form_Loard = function(){
 						<p>  x = &quot;Hello World&quot;</p>
 						<p>  alert(x);</p>
@@ -279,57 +174,11 @@ MyStr = Format("This is it", ">")    ' Returns "THIS IS IT".
     CalculateArea = Radius * Radius * 3.14159
 End Function</pre>
 					</td>
-					<td>
-						<pre><code>namespace Add_Function{
-   class Program{
-      static void Main(string[] args){
-         int a;
-         int b;
-         int c;
-         Console.WriteLine("Enter value of 'a':");
-         a = Convert.ToInt32(Console.ReadLine());
-         Console.WriteLine("Enter value of 'b':");
-         b = Convert.ToInt32(Console.ReadLine());
-         //why can't I not use it this way?
-         c = Add(a, b);
-         Console.WriteLine("a + b = {0}", c);
-      }
-   }
-}</code></pre>
-					</td>
-					<td >
-						<pre><code>#include &lt;iostream&gt;
-#include &lt;string&gt;
-using namespace std;
-
-class Example4 {
-    string* ptr;
-  public:
-    // constructors:
-    Example4() : ptr(new string) {}
-    Example4 (const string& str) : ptr(new string(str)) {}
-    // destructor:
-    ~Example4 () {delete ptr;}
-    // access content:
-    const string& content() const {return *ptr;}
-};
-
-int main () {
-  Example4 foo;
-  Example4 bar ("Example");
-
-  cout << "bar's content: " << bar.content() <<
-  return 0;
-}</code></pre>
-					</td>
+					
+					
 				</tr>
 				<tr>
-					<td >
-						<pre>'Boolean, Byte, Char, Date, Decimal, Double, Integer, Long, Object,
-SByte, Short, Single, String, UInteger, ULong, User-Defined(inherit
-ValueType), UShort
-</pre>
-					</td>
+					
 					<td>
 						JavaScript Numbers are Always 64-bit Floating Point
 						<br>
@@ -345,29 +194,21 @@ Dim x, y As Double
 Dim, Set, RefBy, ByVal</code></pre>
 					</td>
 					<td></td>
-					<td>
-						<pre><code>//bool, byte, chair, decimal, double, float, int,<br>
-								
-long, sbyte, short, uint, ulong, ushort
-int a,b,c,d,m;
-double x,y;</code></pre>
-					</td>
-					<td></td>
+					
+					
 				</tr>
 				<tr>
-					<td></td>
+					
 					<td>result = 5 &lt; 10 ? &quot;Yes it is&quot; : &quot;No it isn't&quot;</td>
 					<td>
 						<pre><code>result = IIf(5 < 10, "Yes it is", "No it isn'</code></pre>
 					</td>
 					<td></td>
-					<td>
-						<pre><code>result = (5 < 10) ? "Yes it is" : "No it isn't</code></pre>
-					</td>
-					<td></td>
+					
+					
 				</tr>
 				<tr>
-					<td></td>
+					
 					<td>
 						<pre><code>var message = "",
    count = 0;
@@ -391,33 +232,22 @@ Else
 End If)</code></pre>
 					</td>
 					<td ></td>
-					<td>
-						<pre><code>r;;</code></pre>
-					</td>
-					<td></td>
+					
+					
 				</tr>
 				<tr>
-					<td></td>
+					
 					<td>&amp;&amp; || ^ !  &lt;&gt; &amp;&amp;   ||  ===</td>
 					<td>
 						<pre><code>And Or Xor Not &lt;&gt; = AndAlso OrElse 
 Is</code></pre>
 					</td>
 					<td></td>
-					<td>
-						<pre><code>&amp; |  Xor != == && Is IsNot GetType(Integer) TypeOf a Is b</code></pre>
-					</td>
-					<td></td>
+					
+					
 				</tr>
 				<tr>
-					<td>
-						<pre><code>For i As Integer = 0 To number - 1
-    ' loop from zero up to one less than number
-Next
-Exit For 'breaks out of a for loop
-Exit While 'breaks out of a while loop
-Exit Do 'breaks out of a do loop</code></pre>
-					</td>
+					
 					<td>For(var i = 0;i&lt;2;i++){
 						<p>  alert(i);</p>
 						<p>}</p>
@@ -455,19 +285,11 @@ Public Sub OnErrorDemo()
 End Sub</code></pre>
 					</td>
 					<td ></td>
-					<td >
-						<pre><code>for (int i = 0; i < number; ++i)
-    // loop from zero up to one less than number
-}
-//break
-//continue</code></pre>
-					</td>
-					<td ></td>
+					
+					
 				</tr>
 				<tr>
-					<td >
-						<pre><code>breakpoint</code></pre>
-					</td>
+					
 					<td>
 						<pre translate="no" dir="ltr" is-upgraded=""><code dir="ltr">debugger;<br>
 								
@@ -477,34 +299,21 @@ End Sub</code></pre>
 						<pre><code>Stop</code></pre>
 					</td>
 					<td ></td>
-					<td >
-						<pre><code>&nbsp;</code></pre>
-					</td>
-					<td ></td>
+					
+					
 				</tr>
 				<tr>
-					<td >
-						<pre><code>Dim t As New System.Threading.Thread(Sub()
-    For n as Integer = 0 to 10   'Count to 10
-        Console.WriteLine(n)     'Print each number
-    Next
-    End Sub)
-t.Start()</code></pre>
-					</td>
+					
 					<td></td>
 					<td >
 						<pre><code>N/A</code></pre>
 					</td>
 					<td ></td>
-					<td >
-						<pre><code></code></pre>
-					</td>
-					<td ></td>
+					
+					
 				</tr>
 				<tr>
-					<td >
-						<pre><code>breakpoint</code></pre>
-					</td>
+					
 					<td></td>
 					<td >
 						<pre><code>Function MyMax(ParamArray agrs())
@@ -512,22 +321,11 @@ t.Start()</code></pre>
 End Function</code></pre>
 					</td>
 					<td ></td>
-					<td >
-						<pre><code>private void method(params int[] arguments) { 
-    //deal with args 
-}</code></pre>
-					</td>
-					<td ></td>
+					
+					
 				</tr>
 				<tr>
-					<td >
-						<pre>//Private can be used on
-// Class,Const,Declare,Delegate,Dim,Enum,Event,Function,
-  Interface,Property,Structure,Sub 
-<code>Public Class Employee
-End Class
-</code></pre>
-					</td>
+					
 					<td><code>function Class(){</code>
 						<p><code>  alert(&quot;Init&quot;);</code></p>
 						<p><code>}</code></p>
@@ -558,24 +356,11 @@ i.Name = "Joe Smith"
 i.Salary = 40000</code></pre>
 					</td>
 					<td ></td>
-					<td >
-						<pre><code>public class Employee{
-    //Fields, properties, methods and events go here...
-}
-</code></pre>
-					</td>
-					<td ></td>
+					
+					
 				</tr>
 				<tr>
-					<td >
-						<pre>//Private can be used on
-// Class,Const,Declare,Delegate,Dim,Enum,Event,Function,
-  Interface,Property,Structure,Sub 
-<code>Public Class Employee
-End Class</code></pre>
-						<pre><code>
-</code></pre>
-					</td>
+					
 					<td>// LBound(a)==0 to UBound(a)==a.length</td>
 					<td >
 						<pre><code>Function Split1()
@@ -601,21 +386,11 @@ End Sub<br>
 						</pre>
 					</td>
 					<td ></td>
-					<td >
-						<pre><code>string[] separators = {&quot;,&quot;, &quot;.&quot;, &quot;!&quot;,
-&quot;?&quot;, &quot;;&quot;, &quot;:
-&quot;, &quot; &quot;};
-string value = &quot;The handsome, ene
- rgetic, young dog was playing with his 
-smaller, more lethargic litter mate.&quot;;
-								
-string[] words = value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
-</code></pre>
-					</td>
-					<td ></td>
+					
+					
 				</tr>
 				<tr>
-					<td></td>
+					
 					<td>Shell = new ActiveXObject(&quot;WScript.Shell&quot;);<br>
 						DesktopPath = Shell.SpecialFolders(&quot;Desktop&quot;);<br>
 						link = Shell.CreateShortcut(DesktopPath + &quot;\\test.lnk&quot;);<br>
@@ -639,11 +414,11 @@ string[] words = value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 						' link.WorkingDirectory = &quot;c:\blah&quot;<br>
 						' link.Save</td>
 					<td></td>
-					<td></td>
-					<td></td>
+					
+					
 				</tr>
 				<tr>
-					<td></td>
+					
 					<td>window.onload = function(){ alert(&quot;onload&quot;); };
 						<p>document.getElementById(&quot;ComboBox1&quot;).onchange = function(){</p>
 						<p>aler(&quot;testing&quot;);</p>
@@ -659,11 +434,11 @@ string[] words = value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 						<pre><code>&quot;1&quot; &amp; Chr(34) &amp; &quot;2&quot; </code></pre>
 					</td>
 					<td></td>
-					<td></td>
-					<td></td>
+					
+					
 				</tr>
 				<tr>
-					<td></td>
+					
 					<td>
 						<p><a href="https://stackoverflow.com/q/13221922">https://stackoverflow.com/q/13221922</a></p>
 					</td>
@@ -690,11 +465,11 @@ string[] words = value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 						</p>
 					</td>
 					<td></td>
-					<td></td>
-					<td></td>
+					
+					
 				</tr>
 				<tr>
-					<td></td>
+					
 					<td>&lt;input id=button type=button&gt;
 						<p>document.getElementById('button').onclick = function(){</p>
 						<p>  ;</p>
@@ -709,19 +484,19 @@ string[] words = value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 						<p>UserForm1.Show</p>
 					</td>
 					<td></td>
-					<td></td>
-					<td></td>
+					
+					
 				</tr>
 				<tr>
-					<td></td>
+					
 					<td></td>
 					<td>a = Split(&quot;Red $ Blue $ Yellow&quot;,&quot;$&quot;)<br>
 						For i = 0 to ubound(a)<br>
 						  MsgBox i&amp;&quot; &quot;&amp;a(i)<br>
 						Next</td>
 					<td></td>
-					<td></td>
-					<td></td>
+					
+					
 				</tr>
 			</tbody>
 		</table>
