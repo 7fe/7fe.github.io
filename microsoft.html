@@ -44,13 +44,23 @@ body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;wh
 		</table>
 		<pre>
 https://stackoverflow.com/q/37758275
-<a href="https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way">https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way</a>
+<a href="https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way">https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way
+</a><a href="https://stackoverflow.com/questions/2050505/way-to-run-excel-macros-from-command-line-or-batch-file">https://stackoverflow.com/questions/2050505/way-to-run-excel-macros-from-command-line-or-batch-file</a>
 		
 The error occurs because of the As Object clause. Unlike VBA, VBScript has only one data type — Variant, so you don't specify the data type when declaring a variable. Remove the As Object clauses and the script should work fine:
 &lt;!doctype html&gt;&lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;IE=10&quot;&gt;&lt;script type=&quot;text/vbscript&quot;&gt;
 msgbox &quot;Vbscript&quot;
 &lt;/script&gt;
-
+Dim i <br>
+			For i = 1 To 3<br>
+			  MsgBox i<br>
+			Next </pre>
+		<pre>' VBA
+Dim i As Integer<br>
+			For i = 1 To 10<br>
+			  MsgBox i<br>
+			Next i<br>
+			
 <a href="./$.xlsm">$.xlsm</a>
 Excel is stupid
  - you can't put multiple links in the same cell 
@@ -634,19 +644,81 @@ string[] words = value.Split(separators, StringSplitOptions.RemoveEmptyEntries);
 				</tr>
 				<tr>
 					<td></td>
+					<td>window.onload = function(){ alert(&quot;onload&quot;); };
+						<p>document.getElementById(&quot;ComboBox1&quot;).onchange = function(){</p>
+						<p>aler(&quot;testing&quot;);</p>
+						<p>}</p>
+						<p>&quot;1\&quot;2&quot;  // double quotes</p>
+					</td>
 					<td>Sub WorkBook_Open()
 						<p>  MsgBox &quot;Open&quot;</p>
 						<p>End Sub</p>
 						<p>Private Sub ComboBox1_Change()</p>
-						<p>   MsgBox &quot;tesing&quot;</p>
+						<p>  MsgBox &quot;testing&quot;</p>
 						<p>End Sub</p>
+						<pre><code>&quot;1&quot; &amp; Chr(34) &amp; &quot;2&quot; </code></pre>
 					</td>
-					<td>window.onload = function(){ alert(&quot;onload&quot;); };
-						<p></p>
-						<p>document.getElementById(&quot;ComboBox1&quot;).onchange = function(){</p>
-						<p>  alert(&quot;testing&quot;);</p>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<p><a href="https://stackoverflow.com/q/13221922">https://stackoverflow.com/q/13221922</a></p>
+					</td>
+					<td>Worksheets(Array(&quot;Sheet1&quot;, &quot;Sheet2&quot;, &quot;Sheet4&quot;)).Copy
+						<p>With ActiveWorkbook </p>
+						<p>  .SaveAs Filename:=Environ(&quot;TEMP&quot;) &amp; &quot;\New3.xlsx&quot;, FileFormat:=xlOpenXMLWorkbook </p>
+						<p>  .Close SaveChanges:=False</p>
+						<p>End With</p>
+						<p>Sub Add_comment()</p>
+						<p>Dim cmt As String<br>
+							cmt = “My comment”</p>
+						<p>If ActiveCell.Comment Is Nothing Then<br>
+							  ActiveSheet.Range(Application.ActiveCell.Address).AddComment cmt<br>
+							Else<br>
+							  MsgBox “This cell already has a comment”<br>
+							End If</p>
+						<p>End Sub</p>
+						<p>Sub Delete_comment()</p>
+						<p>ActiveSheet.Range(Application.ActiveCell.Address).Comment.Delete</p>
+						<p>End Subo</p>
+						<p>' <a href="https://stackoverflow.com/questions/14822672/parsing-a-json-object-array-in-excel-vba">https://stackoverflow.com/questions/14822672/parsing-a-json-object-array-in-excel-vba</a></p>
+						<p><a href="https://stackoverflow.com/questions/6627652/parsing-json-in-excel-vba">' https://stackoverflow.com/questions/6627652/parsing-json-in-excel-vba</a></p>
+						<p><br>
+						</p>
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>&lt;input id=button type=button&gt;
+						<p>document.getElementById('button').onclick = function(){</p>
+						<p>  ;</p>
 						<p>}</p>
+						<p>var favDrink = prompt(&quot;What's your favorite cocktail drink?&quot;, &quot;Default&quot;);</p>
 					</td>
+					<td>
+						<p>Private Sub CommandButton1_Click()</p>
+						<p>Worksheets(1).Cells(1, 1) = VBAProject.UserForm1.TextBox1<br>
+							Worksheets(1).Cells(2, 1) = VBAProject.UserForm1.TextBox2</p>
+						<p>End Sub</p>
+						<p>UserForm1.Show</p>
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>a = Split(&quot;Red $ Blue $ Yellow&quot;,&quot;$&quot;)<br>
+						For i = 0 to ubound(a)<br>
+						  MsgBox i&amp;&quot; &quot;&amp;a(i)<br>
+						Next</td>
 					<td></td>
 					<td></td>
 					<td></td>
