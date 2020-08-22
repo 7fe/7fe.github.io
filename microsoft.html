@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -9,15 +10,12 @@ body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;wh
 </head>
 
 <body>
-		<h1>node.js/cscript, VBA, VBScript</h1>
+		<h1>Excel, JavaScript, VBA, VBScript</h1>
 		<pre>
-https://stackoverflow.com/q/37758275
+https://stackoverflow.com/questions/37758275/vba-looking-for-a-fast-way-to-highlight-every-other-row
 <a href="https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way">https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way
 </a><a href="https://stackoverflow.com/questions/2050505/way-to-run-excel-macros-from-command-line-or-batch-file">https://stackoverflow.com/questions/2050505/way-to-run-excel-macros-from-command-line-or-batch-file</a>
-
-VB.NET, VBA and VBScript are all different langauges.
-		
-The error occurs because of the As Object clause. Unlike VBA, VBScript has only one data type — Variant, so you don't specify the data type when declaring a variable. Remove the As Object clauses and the script should work fine:
+VB.NET, VBA and VBScript are all different langauges.  Unlike VBA, VBScript has only one data type — Variant, so you don't specify the data type when declaring a variable.
 <a href="./$.xlsm">$.xlsm</a>
 Excel is stupid
  - you can't put multiple links in the same cell 
@@ -25,50 +23,31 @@ Excel is stupid
  - it is only scriptable with
    - VBA, VB.NET, C++, Powershell
    - Mathematica
-   - http://xlwings.org/
+   - http://xlwings.org
    - https://datanitro.com/pricing
-
-Sites
 https://tduhameau.wordpress.com
 http://excelmatters.com
 http://www.automateexcel.com/functions
 http://www.cpearson.com/Excel/ListFirstAndLastElements.aspx
 http://businessfunctions.com/index.php?pageno=156
- - PMT - http://www.techonthenet.com/excel/formulas/pmt.php
-   FV
-
+http://www.techonthenet.com/excel/formulas/pmt.php
 <a href="https://blogs.harvard.edu/rprasad/2014/06/16/reading-excel-with-python-xlrd/">Reading Excel with Python</a> python-excel.org
-
 Excel Solver
-Microsoft Office VisualBasic | Microsoft Office Online 
-
-Dim 'stands for Dimensions
-
 f2 - Object Browser
 .Cells(0,0) ' -1 -1 cell
 Named Ranges Excel allows for stuff like Sum(Students)
-
-https://msdn.microsoft.com/en-us/library/22x2chfx.aspx VB.NET Only
-
 Access macro actions represent only a subset of the commands available in VBA.
-
 Redim Preserve  ' resize array
-
-Stored array   | A1:A2
-Array constant | INDEX({1,2,3},1)
-
 VBA: Visual Basic for Applications Different Versions
   			VSTO: Visual Studio Tools for Office
   			VSTA: Visual Studio Tools for Applications
   			VS.NET: Visual Studio.NET – currently version 2003. 2005 due next month.
   			IDE: Integrated Development Environment (in Excel, this is the visual basic editor)
-Mathematica  Python/ASP.NET     Excel VB
-
-Me vs this</pre>
+Mathematica  Python/ASP.NET     Excel VB</pre>
 		<table border="1" width="150%">
 			<tbody>
 				<tr>
-					
+					<td>Excel</td>
 					<td>Javascript</td>
 					<td >
 						<pre><code>VBA/VB6(.vb)
@@ -83,7 +62,18 @@ crscript wscript</code></pre>
 					
 				</tr>
 				<tr>
-					
+					<td>Stored array   | A1:A2<br>
+Array constant | INDEX({1,2,3},1)</td>
+					<td>
+						<pre><code>var a = [1, 2]
+const a = [1, 2];// not exactly the same thing but close
+</code></pre>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
 					<td><pre>Form_Load = function(){
 x = &quot;Hello World&quot;
   alert(x);
@@ -136,7 +126,7 @@ End Function</pre>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td>
 						JavaScript Numbers are Always 64-bit Floating Point
 						<br>
@@ -156,7 +146,7 @@ Dim, Set, RefBy, ByVal</code></pre>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td>result = 5 &lt; 10 ? &quot;Yes it is&quot; : &quot;No it isn't&quot;</td>
 					<td>
 						<pre><code>result = IIf(5 &lt; 10, &quot;Yes it is&quot;, &quot;No it isn'&quot;)'</code></pre>
@@ -166,7 +156,7 @@ Dim, Set, RefBy, ByVal</code></pre>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td>
 						<pre><code>var message = "",
    count = 0;
@@ -194,7 +184,7 @@ End If</code></pre>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td>&amp;&amp; || ^ !  &lt;&gt; &amp;&amp;   ||  ===</td>
 					<td>
 						<pre><code>And Or Xor Not &lt;&gt; = AndAlso OrElse 
@@ -205,7 +195,7 @@ Is</code></pre>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td>For(var i = 0;i&lt;2;i++){
 						<p>  alert(i);</p>
 						<p>}</p>
@@ -251,7 +241,7 @@ End Sub</code></pre>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td>
 						<pre translate="no" dir="ltr" is-upgraded=""><code dir="ltr">debugger;<br>
 								
@@ -265,7 +255,7 @@ End Sub</code></pre>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td></td>
 					<td >
 						<pre><code>N/A</code></pre>
@@ -275,7 +265,7 @@ End Sub</code></pre>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td></td>
 					<td >
 						<pre><code>Function MyMax(ParamArray agrs())
@@ -287,7 +277,7 @@ End Function</code></pre>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td><code>function Class(){</code>
 						<p><code>  alert(&quot;Init&quot;);</code></p>
 						<p><code>}</code></p>
@@ -322,7 +312,7 @@ i.Salary = 40000</code></pre>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td>// LBound(a)==0 to UBound(a)==a.length</td>
 					<td >
 						<pre><code>Function Split1()
@@ -352,7 +342,7 @@ End Sub<br>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td>Shell = new ActiveXObject(&quot;WScript.Shell&quot;);<br>
 						DesktopPath = Shell.SpecialFolders(&quot;Desktop&quot;);<br>
 						link = Shell.CreateShortcut(DesktopPath + &quot;\\test.lnk&quot;);<br>
@@ -380,7 +370,7 @@ End Sub<br>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td>window.onload = function(){ alert(&quot;onload&quot;); };
 						<p>document.getElementById(&quot;ComboBox1&quot;).onchange = function(){</p>
 						<p>aler(&quot;testing&quot;);</p>
@@ -400,7 +390,7 @@ End Sub<br>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td>
 						<p><a href="https://stackoverflow.com/q/13221922">https://stackoverflow.com/q/13221922</a></p>
 					</td>
@@ -431,7 +421,7 @@ End Sub<br>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td>&lt;input id=button type=button&gt;
 						<p>document.getElementById('button').onclick = function(){</p>
 						<p>  ;</p>
@@ -450,7 +440,7 @@ End Sub<br>
 					
 				</tr>
 				<tr>
-					
+					<td></td>
 					<td></td>
 					<td>a = Split(&quot;Red $ Blue $ Yellow&quot;,&quot;$&quot;)<br>
 						For i = 0 to ubound(a)<br>
