@@ -9,28 +9,15 @@ body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;wh
 </head>
 
 <body>
-		<h1>node.js, VBA, cscript, VBScript</h1>
+		<h1>node.js/cscript, VBA, VBScript</h1>
 		<pre>
 https://stackoverflow.com/q/37758275
 <a href="https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way">https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way
 </a><a href="https://stackoverflow.com/questions/2050505/way-to-run-excel-macros-from-command-line-or-batch-file">https://stackoverflow.com/questions/2050505/way-to-run-excel-macros-from-command-line-or-batch-file</a>
 
-There is VB.NET, VBA and VBScript all different langauges.
+VB.NET, VBA and VBScript are all different langauges.
 		
 The error occurs because of the As Object clause. Unlike VBA, VBScript has only one data type — Variant, so you don't specify the data type when declaring a variable. Remove the As Object clauses and the script should work fine:
-&lt;!doctype html&gt;&lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;IE=10&quot;&gt;&lt;script type=&quot;text/vbscript&quot;&gt;
-msgbox &quot;Vbscript&quot;
-&lt;/script&gt;
-Dim i <br>
-For i = 1 To 3<br>
-  MsgBox i<br>
-Next</pre>
-		<pre>' VBA
-Dim i As Integer<br>
-For i = 1 To 10<br>
-  MsgBox i<br>
-Next i<br>
-			
 <a href="./$.xlsm">$.xlsm</a>
 Excel is stupid
  - you can't put multiple links in the same cell 
@@ -50,12 +37,10 @@ http://businessfunctions.com/index.php?pageno=156
  - PMT - http://www.techonthenet.com/excel/formulas/pmt.php
    FV
 
-<a href="https://blogs.harvard.edu/rprasad/2014/06/16/reading-excel-with-python-xlrd/">Reading Excel with Python</a>
-
-python-excel.org
+<a href="https://blogs.harvard.edu/rprasad/2014/06/16/reading-excel-with-python-xlrd/">Reading Excel with Python</a> python-excel.org
 
 Excel Solver
-Google Docs JS | Microsoft Office VisualBasic | Microsoft Office Online 
+Microsoft Office VisualBasic | Microsoft Office Online 
 
 Dim 'stands for Dimensions
 
@@ -67,51 +52,19 @@ https://msdn.microsoft.com/en-us/library/22x2chfx.aspx VB.NET Only
 
 Access macro actions represent only a subset of the commands available in VBA.
 
-
-Redim Preserve
+Redim Preserve  ' resize array
 
 Stored array   | A1:A2
 Array constant | INDEX({1,2,3},1)
-
-
-VBA array      | Dim a: a = Array(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;): a(0)
-
-
-Dim Arr() As Variant
-Arr = Range(&quot;A1:B10&quot;)
-Dim R As Long
-Dim C As Long
-For R = 1 To UBound(Arr, 1) ' First array dimension is rows.
-    For C = 1 To UBound(Arr, 2) ' Second array dimension is columns.
-        Debug.Print Arr(R, C)
-    Next C
-Next R
 
 VBA: Visual Basic for Applications Different Versions
   			VSTO: Visual Studio Tools for Office
   			VSTA: Visual Studio Tools for Applications
   			VS.NET: Visual Studio.NET – currently version 2003. 2005 due next month.
   			IDE: Integrated Development Environment (in Excel, this is the visual basic editor)
-
-F# Hello World</pre>
-		<pre data-lang-guess="C#" id="pre549525">open System
-		<pre>
-
 Mathematica  Python/ASP.NET     Excel VB
-		</pre>
-		
-			<pre>
 
-Me vs this
-<code>Friend vs internal - access modifiers allowing inter-class but not intra-assembly reference
-MustInherit vs abstract - prevents a class from being directly instantiated, and forces consumers to create object references to only derived classes
-MustOverride vs abstract - for forcing derived classes to override this method
-MyBase vs base - for referring to the base class from which the current class is derived
-NotInheritable vs sealed - for declaring classes that may not be inherited
-NotOverridable vs sealed - for declaring methods that may not be overridden by derived classes
-Overridable vs virtual - declares a method as being able to be overridden in derived classes
-Shared vs static - for declaring methods that do not require an explicit instance of an object</code></pre>
-			
+Me vs this</pre>
 		<table border="1" width="150%">
 			<tbody>
 				<tr>
@@ -131,12 +84,12 @@ crscript wscript</code></pre>
 				</tr>
 				<tr>
 					
-					<td>Form_Loard = function(){
-						<p>  x = &quot;Hello World&quot;</p>
-						<p>  alert(x);</p>
-						<p>}</p>
-						<p>Form_Load()</p>
-						<pre>getFullYear()	Get the year as a four digit number (yyyy)
+					<td><pre>Form_Load = function(){
+x = &quot;Hello World&quot;
+  alert(x);
+}
+Form_Load()
+getFullYear()	Get the year as a four digit number (yyyy)
 getMonth()	Get the month as a number (0-11)
 getDate()	Get the day as a number (1-31)
 getHours()	Get the hour (0-23)
@@ -146,9 +99,8 @@ getMinutes()	Get the minute (0-59)</pre>
 						<pre><code>Private Sub Form_Load()
   Dim x As String ' type optional
   x = &quot;Hello World&quot;
-</code>MyStr = Format(Time, &quot;Long Time&quot;)<br>
-							
-							<code>  MsgBox x
+  MyStr = Format(Time, &quot;Long Time&quot;)
+  MsgBox x
 End Sub
 Form_Load()
 Format(#1/27/1993#, "yyyy-MM-dd Hh:mm:Ss")
@@ -160,7 +112,7 @@ MyStr = Format(MyTime, "hh:mm:ss AM/PM")    ' Returns "05:04:23 PM".
 MyStr = Format(MyDate, "dddd, mmm d yyyy")    ' Returns "Wednesday, Jan 27 1993".
 ' If format is not supplied, a string is returned.
 MyStr = Format(23)    ' Returns "23".
-
+' Function can return value sub can not
 ' User-defined formats.
 MyStr = Format(5459.4, "##,##0.00")    ' Returns "5,459.40".
 MyStr = Format(334.9, "###0.00")    ' Returns "334.90".
@@ -170,7 +122,13 @@ MyStr = Format("This is it", ">")    ' Returns "THIS IS IT".
 </code></pre>
 					</td>
 					<td>
-						<pre>Function CalculateArea(Radius)
+						<pre>
+&lt;!doctype html&gt;&lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;IE=10&quot;&gt;
+&lt;script type=&quot;text/vbscript&quot;&gt;
+msgbox "Hello World!"
+&lt;/script&gt;
+						
+Function CalculateArea(Radius)
     CalculateArea = Radius * Radius * 3.14159
 End Function</pre>
 					</td>
@@ -201,7 +159,7 @@ Dim, Set, RefBy, ByVal</code></pre>
 					
 					<td>result = 5 &lt; 10 ? &quot;Yes it is&quot; : &quot;No it isn't&quot;</td>
 					<td>
-						<pre><code>result = IIf(5 < 10, "Yes it is", "No it isn'</code></pre>
+						<pre><code>result = IIf(5 &lt; 10, &quot;Yes it is&quot;, &quot;No it isn'&quot;)'</code></pre>
 					</td>
 					<td></td>
 					
@@ -229,7 +187,7 @@ ElseIf count = 1 Then
     message = "There is 1 item." 
 Else
     message = "There are " & count & " items." 
-End If)</code></pre>
+End If</code></pre>
 					</td>
 					<td ></td>
 					
@@ -253,11 +211,12 @@ Is</code></pre>
 						<p>}</p>
 					</td>
 					<td>
-						<pre><code>For i = 0 To 2
+						<pre>Dim i as Integer
+<code>For i = 0 To 2
   MsgBox i
-Next
-Dim i:  i = 0   
-While i <
+Next i
+Dim i as Variant:  i = 0   
+While i &lt;
     MsgBox i
     i = i + 1
 Wend
@@ -284,7 +243,10 @@ Public Sub OnErrorDemo()
    Resume Next
 End Sub</code></pre>
 					</td>
-					<td ></td>
+					<td >Dim i <br>
+						For i = 1 To 3<br>
+						  MsgBox i<br>
+						Next </td>
 					
 					
 				</tr>
@@ -493,7 +455,18 @@ End Sub<br>
 					<td>a = Split(&quot;Red $ Blue $ Yellow&quot;,&quot;$&quot;)<br>
 						For i = 0 to ubound(a)<br>
 						  MsgBox i&amp;&quot; &quot;&amp;a(i)<br>
-						Next</td>
+						Next
+						<pre>Dim Arr() As Variant
+Arr = Range("A1:B10")
+Dim R As Long
+Dim C As Long
+For R = 1 To UBound(Arr, 1) ' First array dimension is rows.
+    For C = 1 To UBound(Arr, 2) ' Second array dimension is columns.
+        Debug.Print Arr(R, C)
+    Next C
+Next R
+</pre>
+					</td>
 					<td></td>
 					
 					
