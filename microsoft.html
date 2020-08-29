@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -10,10 +11,6 @@ body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;wh
 
 <body>
 		<h1>Excel, JavaScript, VBA, VBScript</h1>
-		<pre><code>PS = Application.PathSeparator
-</code></pre>
-		<pre><code>CStr(Environ(&quot;USERPROFILE&quot;) &amp; &quot;\Application Data&quot;)</code></pre>
-		<pre><code>process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME']</code></pre>
 		<table border="1" width="150%">
 			<tbody>
 				<tr>
@@ -48,7 +45,9 @@ const a = [1, 2];// not exactly the same thing but close
 var s = "testing\
 1\
 2";
-</code></pre>
+a[1][2];
+&quot;{0}&quot;.replace(&quot;0&quot;,&quot;testing&quot;)<br>
+							</code></pre>
 					</td>
 					<td>Range(&quot;MyBook.xls!MyRange&quot;).Font.Italic = True
 						<p>Sub ClearRange(): Application.Goto Reference:=&quot;MyBook.xls!MyRange&quot; : Selection.ClearContents : End Sub</p>
@@ -59,6 +58,7 @@ var s = "testing\
 </pre>
 						<pre><code>CStr(Environ(&quot;USERPROFILE&quot;))
 Replace(&quot;testing&quot;, &quot;{0}&quot;, &quot;0&quot;)<br>
+								
 ' no multiline string support
 							</code></pre>
 					</td>
@@ -544,6 +544,8 @@ http://www.automateexcel.com/functions
 http://www.cpearson.com/Excel/ListFirstAndLastElements.aspx
 http://businessfunctions.com/index.php?pageno=156
 http://www.techonthenet.com/excel/formulas/pmt.php
+<a href="https://www.tutorialspoint.com/vbscript/">https://www.tutorialspoint.com/vbscript/
+</a><a href="https://www.automateexcel.com/vba-code-library">https://www.automateexcel.com/vba-code-library</a>
 <a href="https://blogs.harvard.edu/rprasad/2014/06/16/reading-excel-with-python-xlrd/">Reading Excel with Python</a> python-excel.org
 Excel Solver
 f2 - Object Browser
@@ -631,5 +633,10 @@ Function JS(ByVal s As String)
     JS = ScriptEngine.Eval(s)
 End Function
 </pre>
+		<pre><code>PS = Application.PathSeparator
+</code></pre>
+		<pre><code>CStr(Environ(&quot;USERPROFILE&quot;) &amp; &quot;\Application Data&quot;)</code></pre>
+		<pre><code>process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME']</code></pre>
+
 	</body>
 </html>
