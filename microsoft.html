@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html>
 <head>
@@ -11,39 +10,10 @@ body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;wh
 
 <body>
 		<h1>Excel, JavaScript, VBA, VBScript</h1>
-		<pre>
-https://stackoverflow.com/questions/37758275/vba-looking-for-a-fast-way-to-highlight-every-other-row
-<a href="https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way">https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way
-</a><a href="https://stackoverflow.com/questions/2050505/way-to-run-excel-macros-from-command-line-or-batch-file">https://stackoverflow.com/questions/2050505/way-to-run-excel-macros-from-command-line-or-batch-file</a>
-VB.NET, VBA and VBScript are all different langauges.  Unlike VBA, VBScript has only one data type — Variant, so you don't specify the data type when declaring a variable.
-<a href="./$.xlsm">$.xlsm</a>
-Excel is stupid
- - you can't put multiple links in the same cell 
- - you can't put images(only links) in a cell, although you can attach it as a comments background
- - it is only scriptable with
-   - VBA, VB.NET, C++, Powershell
-   - Mathematica
-   - http://xlwings.org
-   - https://datanitro.com/pricing
-https://tduhameau.wordpress.com
-http://excelmatters.com
-http://www.automateexcel.com/functions
-http://www.cpearson.com/Excel/ListFirstAndLastElements.aspx
-http://businessfunctions.com/index.php?pageno=156
-http://www.techonthenet.com/excel/formulas/pmt.php
-<a href="https://blogs.harvard.edu/rprasad/2014/06/16/reading-excel-with-python-xlrd/">Reading Excel with Python</a> python-excel.org
-Excel Solver
-f2 - Object Browser
-.Cells(0,0) ' -1 -1 cell
-Named Ranges Excel allows for stuff like Sum(Students)
-Access macro actions represent only a subset of the commands available in VBA.
-Redim Preserve  ' resize array
-VBA: Visual Basic for Applications Different Versions
-  			VSTO: Visual Studio Tools for Office
-  			VSTA: Visual Studio Tools for Applications
-  			VS.NET: Visual Studio.NET – currently version 2003. 2005 due next month.
-  			IDE: Integrated Development Environment (in Excel, this is the visual basic editor)
-Mathematica  Python/ASP.NET     Excel VB</pre>
+		<pre><code>PS = Application.PathSeparator
+</code></pre>
+		<pre><code>CStr(Environ(&quot;USERPROFILE&quot;) &amp; &quot;\Application Data&quot;)</code></pre>
+		<pre><code>process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME']</code></pre>
 		<table border="1" width="150%">
 			<tbody>
 				<tr>
@@ -62,18 +32,48 @@ crscript wscript</code></pre>
 					
 				</tr>
 				<tr>
-					<td>Stored array   | A1:A2<br>
-Array constant | INDEX({1,2,3},1)</td>
+					<td>Global var |  You can name cells by clicking
+						
+						<p>the Name Box (that thing next to the formula bar</p>
+						<p>which says &quot;A1&quot; for example) and typing a name</p>
+						<p>Stored array   | A1:A2<br>
+							
+Array constant | INDEX({1,2,3},1)<br>
+multiline string Alt+Enter</p>
+					</td>
 					<td>
-						<pre><code>var a = [1, 2]
+						<pre>
+<code>var a = [1, 2]
 const a = [1, 2];// not exactly the same thing but close
+var s = "testing\
+1\
+2";
 </code></pre>
 					</td>
-					<td></td>
-					<td></td>
+					<td>Range(&quot;MyBook.xls!MyRange&quot;).Font.Italic = True
+						<p>Sub ClearRange(): Application.Goto Reference:=&quot;MyBook.xls!MyRange&quot; : Selection.ClearContents : End Sub</p>
+						<p>Public globalv<br>
+							Sub m(): globalv = 1: End Sub: m</p>
+						<pre>TypeOf 1 Is Integer
+
+</pre>
+						<pre><code>CStr(Environ(&quot;USERPROFILE&quot;))
+Replace(&quot;testing&quot;, &quot;{0}&quot;, &quot;0&quot;)<br>
+' no multiline string support
+							</code></pre>
+					</td>
+					<td>
+						<pre><code>
+Const Constant = Value
+x = CInt(&quot;1&quot;)
+' CBool, CByte, CCur, CDate, CDbl, CInt, CLng, CSng, CStr
+WScript.Echo TypeName(x)</code></pre>
+					</td>
 				</tr>
 				<tr>
-					<td></td>
+					<td>
+=DATE(1999,1,1)			
+</td>
 					<td><pre>Form_Load = function(){
 x = &quot;Hello World&quot;
   alert(x);
@@ -126,7 +126,10 @@ End Function</pre>
 					
 				</tr>
 				<tr>
-					<td></td>
+					<td>
+=A3:A4=A3:A4
+					
+					</td>
 					<td>
 						JavaScript Numbers are Always 64-bit Floating Point
 						<br>
@@ -461,7 +464,172 @@ Next R
 					
 					
 				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<pre><code>var TypeDictionary = {
+    0: 'vbEmpty',
+    1: 'vbNull',
+    2: 'vbInteger',
+    3: 'vbLong',
+    4: 'vbSingle',
+    5: 'vbDouble',
+    6: 'vbCurrency',
+    7: 'vbDate',
+    8: 'vbString',
+    9: 'vbObject',
+    10: 'vbError',
+    11: 'vbBoolean',
+    12: 'vbVariant',
+    13: 'vbDataObject',
+    17: 'vbByte'
+};
+
+var GetType = function() {
+    return TypeDictionary[arguments[0]];
+};</code></pre>
+					</td>
+					<td></td>
+					<td>
+						<pre><code>Dim TypeDictionary
+
+Set TypeDictionary = CreateObject(&quot;Scripting.Dictionary&quot;)
+TypeDictionary.Add 0, &quot;vbEmpty&quot;
+TypeDictionary.Add 1, &quot;vbNull&quot;
+TypeDictionary.Add 2, &quot;vbInteger&quot;
+TypeDictionary.Add 3, &quot;vbLong&quot;
+TypeDictionary.Add 4, &quot;vbSingle&quot;
+TypeDictionary.Add 5, &quot;vbDouble&quot;
+TypeDictionary.Add 6, &quot;vbCurrency&quot;
+TypeDictionary.Add 7, &quot;vbDate&quot;
+TypeDictionary.Add 8, &quot;vbString&quot;
+TypeDictionary.Add 9, &quot;vbObject&quot;
+TypeDictionary.Add 10, &quot;vbError&quot;
+TypeDictionary.Add 11, &quot;vbBoolean&quot;
+TypeDictionary.Add 12, &quot;vbVariant&quot;
+TypeDictionary.Add 13, &quot;vbDataObject&quot;
+TypeDictionary.Add 17, &quot;vbByte&quot;
+
+Public Function GetType(argument)
+    GetType = TypeDictionary.Item(VarType(argument))
+End Function</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
 			</tbody>
 		</table>
+		<pre>
+https://stackoverflow.com/questions/37758275/vba-looking-for-a-fast-way-to-highlight-every-other-row
+<a href="https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way">https://stackoverflow.com/questions/26356672/how-to-access-sql-server-from-vba-in-a-non-deprecated-way
+</a><a href="https://stackoverflow.com/questions/2050505/way-to-run-excel-macros-from-command-line-or-batch-file">https://stackoverflow.com/questions/2050505/way-to-run-excel-macros-from-command-line-or-batch-file</a>
+VB.NET, VBA and VBScript are all different langauges.  Unlike VBA, VBScript has only one data type — Variant, so you don't specify the data type when declaring a variable.
+<a href="./$.xlsm">$.xlsm</a>
+Excel is stupid
+ - you can't put multiple links in the same cell 
+ - you can't put images(only links) in a cell, although you can attach it as a comments background
+ - it is only scriptable with
+   - VBA, VB.NET, C++, Powershell
+   - Mathematica
+   - http://xlwings.org
+   - https://datanitro.com/pricing
+https://tduhameau.wordpress.com
+https://excelk.com/
+http://excelmatters.com
+http://www.automateexcel.com/functions
+http://www.cpearson.com/Excel/ListFirstAndLastElements.aspx
+http://businessfunctions.com/index.php?pageno=156
+http://www.techonthenet.com/excel/formulas/pmt.php
+<a href="https://blogs.harvard.edu/rprasad/2014/06/16/reading-excel-with-python-xlrd/">Reading Excel with Python</a> python-excel.org
+Excel Solver
+f2 - Object Browser
+.Cells(0,0) ' -1 -1 cell
+Named Ranges Excel allows for stuff like Sum(Students)
+Access macro actions represent only a subset of the commands available in VBA.
+Redim Preserve  ' resize array
+VBA: Visual Basic for Applications Different Versions
+  			VSTO: Visual Studio Tools for Office
+  			VSTA: Visual Studio Tools for Applications
+  			VS.NET: Visual Studio.NET – currently version 2003. 2005 due next month.
+  			IDE: Integrated Development Environment (in Excel, this is the visual basic editor)
+  			
+Set objHTTP = CreateObject("MSXML2.ServerXMLHTTP")
+URL = "http://www.somedomain.com"
+objHTTP.Open "POST", URL, False
+objHTTP.setRequestHeader "User-Agent", "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)"
+objHTTP.send("")
+
+Dim fso as Object
+Set fso = CreateObject("Scripting.FileSystemObject")
+Dim oFile as Object
+Set oFile = FSO.CreateTextFile(".\test2.txt")
+oFile.WriteLine "test" 
+oFile.Close
+Set fso = Nothing
+Set oFile = Nothing
+
+HouseCalc 99800, 43100
+Call HouseCalc(380950, 49500)
+
+named arguments
+MsgBox Title:=&quot;Task Box&quot;, Prompt:=&quot;Task Completed!&quot;<br>
+			
+
+ActiveSheet.Range(&quot;A1&quot;).Select<br>
+			ActiveCell.CurrentRegion.Copy<br>
+			ActiveSheet.Range(&quot;A2&quot;).Select<br>
+			ActiveSheet.Paste
+</pre>
+	<pre>Option Explicit
+'code loosely based on 'http://stackoverflow.com/questions/5773683/excel-vba-parsed-json-object-loop
+'actual code from https://stackoverflow.com/questions/23580472/calling-javascript-files-from-vba
+'code allows you to run JScript code in Excel/VBA
+'Tools->References->
+'MSScriptControl; Microsoft Script Control 1.0;  {0E59F1D2-1FBE-11D0-8FF2-00A0D10038BC}; C:\Windows\SysWOW64\msscript.ocx
+Private moScriptEngine As ScriptControl
+
+Public Property Get ScriptEngine()
+    If moScriptEngine Is Nothing Then
+        Set moScriptEngine = New ScriptControl
+        moScriptEngine.Language = "JScript"
+        'moScriptEngine.AllowUI = True
+    End If
+    Set ScriptEngine = moScriptEngine
+End Property
+
+Public Sub AddJSFile(ByVal sJSFilename As String)
+    Debug.Assert LCase$(Right$(sJSFilename, 3)) = ".js"
+    Dim fso As Object 'Scripting.FileSystemObject
+    Set fso = VBA.CreateObject("Scripting.FileSystemObject")
+
+    Debug.Assert fso.FileExists(sJSFilename)
+    Dim fil As Object 'Scripting.File
+    Set fil = fso.GetFile(sJSFilename)
+
+    Dim ins As Object 'Scripting.TextStream
+    Set ins = fil.OpenAsTextStream(1)  '1=ForReading
+
+    Dim sCode As String
+    sCode = ins.ReadAll
+
+    ins.Close
+    Set ins = Nothing
+    Set fil = Nothing
+    Set fso = Nothing
+
+    Debug.Assert Len(sCode) > 0
+    ScriptEngine.AddCode sCode
+End Sub
+
+'!Fellow StackOverflow users, press F5 on this Sub as this is entry point!
+Function JS(ByVal s As String)
+    AddJSFile ActiveWorkbook.Path &amp; &quot;\testing.js&quot;
+    JS = ScriptEngine.Eval(s)
+End Function
+</pre>
 	</body>
 </html>
