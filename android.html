@@ -5,6 +5,57 @@
 <style>body{font-size: 12px}code,pre{margin:0;padding:0;}
 body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap:break-word;}
 </style></head><body><h1>Android</h1>
+<script>
+function getRandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+function graph(t){
+  t.style.borderCollapse='collapse';
+  t=t.rows[0];
+  for(var i=0;i<t.children.length;i++){
+    t.children[i].style.textAlign = 'center';
+    t.children[i].innerHTML = "<div style='display:inline-block;background:"+getRandomColor()+";width:20px;height:"+t.children[i].innerHTML+"px'></div><br>"+t.children[i].innerHTML;
+    t.children[i].style.verticalAlign = 'bottom';
+  }
+}
+window.onload = function(){
+  var t = document.getElementsByClassName('bargraph');
+  for(var i=0;i<t.length;i++)graph(t[i]);
+  
+}
+</script><pre><b>10 Most Prescribed Psychiatric Drugs in the the U.S. (in millions)</b>
+
+	<table border="1" cellspacing="2" cellpadding="0" class="bargraph">
+	<tr>
+		<td>44</td>
+		<td>14</td>
+		<td>15</td>
+		<td>16</td>
+		<td>346</td>
+		<td>19</td>
+		<td>19</td>
+		<td>27</td>
+		<td>14</td>
+	</tr>
+	<tr>
+		<td>Xanax</td>
+		<td>Valium/<br>
+			Diazepam</td>
+		<td>Seroquel<br>
+    (antipsychotic)</td>
+		<td>Cymbalta<br>(antidepressant)</td>
+		<td>Trazodone<br>(antidepressant)</td>
+		<td>Prozac</td>
+		<td>Zoloft</td>
+		<td>Lexapro</td>
+		<td>Effexor</td>
+	</tr>
+</table>
 <p>
 <a href="https://www.ifixit.com/Guide/How+to+Remove+a+Stripped+Screw/13213">How to remove stripped screws</a>
 Blackberry pointer mode may be close to what I need.
