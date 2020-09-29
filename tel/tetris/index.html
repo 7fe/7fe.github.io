@@ -92,7 +92,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. --><head><meta http-equiv="Content
 	<div id="controls" style="float: left"> 
 		<input type="button" onclick="if (TETRIS.isPaused()) { TETRIS.unPause(); } else { TETRIS.setPause(); }" value="Pause" style="font-size: 150%"><br>
 		
-		<p><input type="button" onclick="var i = document.getElementById(&quot;instr&quot;).style; i.display = (i.display==&quot;none&quot;?&quot;inline&quot;:&quot;none&quot;); TETRIS.setPause(); " value="Toggle Instructions"></p>
+		<p style="display:none"><input type="button" onclick="var i = document.getElementById(&quot;instr&quot;).style; i.display = (i.display==&quot;none&quot;?&quot;inline&quot;:&quot;none&quot;); TETRIS.setPause(); " value="Toggle Instructions"></p>
 	</div>
 	<div id="instr" style="display: none;"> 
 
