@@ -603,6 +603,21 @@ Public Property Get ScriptEngine()
     Set ScriptEngine = moScriptEngine
 End Property
 
+Do While True
+    WScript.StdOut.Write("$ ")
+
+    line = Trim(WScript.StdIn.ReadLine)
+
+    If LCase(line) = "exit" Then Exit Do
+
+    On Error Resume Next
+    Execute line
+    If Err.Number <> 0 Then
+        WScript.StdErr.WriteLine Err.Description
+    End If
+    On Error Goto 0
+Loop
+
 Public Sub AddJSFile(ByVal sJSFilename As String)
     Debug.Assert LCase$(Right$(sJSFilename, 3)) = ".js"
     Dim fso As Object 'Scripting.FileSystemObject
