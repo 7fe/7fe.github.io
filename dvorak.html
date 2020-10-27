@@ -129,6 +129,16 @@ xmodmap -e "keycode 102 = a Hiragana_Katakana Hiragana_Katakana"
 echo xmodmap -e "keycode 62 = a a a"  this does not work
 
 keycode 64 = Mode_switch
+
+ALTGR
+
+RAlt:: AltGR := true
+RAlt Up:: AltGR := false
+
+#If (AltGR)
+	*SC030::Send {x}
+        *+SC030::Send {X}
+#If
 </xmp>
 Demo text  <li>b location sucks on qwerty.  You effectively need jxqz in that location</li>
  <li>c location sucks on Qwerty except k is actually more common on Dvorak and a similar location.  The bottom row should be used minimally.</li>
