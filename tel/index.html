@@ -6,7 +6,7 @@ Apps that can't be mobile.
 <style>
 img{margin:5px;width:40px;float:left;}
 a{float:left;display:inline-block;width:40px;height:70px;}
-a[href^="https://"]:after{content:"test"}
+a[href^="https://"]:after{content:attr(data-title);}
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"><center>
 <div style="width:200px">I use a very low memory phone(8GB) with Android and no data connection.
@@ -15,7 +15,14 @@ These are the mobile web applications I use regularly.</div>
 <br>
 https://react.rocks/tag/Game
 <br>
-<input type=text type=submit placeholder=Search>
+<style id=style2><style>
+<script>
+Search = function(){
+  var style2 = document.getElementById('style2');
+  style2.innerHTML = "color:red;";
+}  
+</script>
+<input type=text type=submit placeholder=Search onkeydown="Search()">
 <div style="width:200px;background:black;border-radius:12px;">
 
 <h2 style="color:#ccc">HTML5 Web Apps</h2>
