@@ -1,5 +1,4 @@
-<!doctype html>
-<!--
+<!doctype html><!--
 Apps that can't be mobile.
   - fb messenger
 -->
@@ -21,11 +20,11 @@ Search = function(i){
   i = i.replace(/"/g,"");
   var style2 = document.getElementById('style2');
   if(i=="")style2.innerHTML = "";
-  else style2.innerHTML = "a[title*="+i+" i]{background:red;}";
+  else style2.innerHTML = "#webapps a{display:none}#webapps>a[title*="+i+" i]{display:block;}";
 } 
 </script>
 <input type=text placeholder=Search onkeydown="Search(this.value)">
-<div style="width:360px;background:black;border-radius:12px;">
+<div id=webapps style="width:360px;background:black;border-radius:12px;">
 
 <h2 style="color:#ccc">HTML5 Web Apps</h2>
 
