@@ -18,8 +18,10 @@ https://react.rocks/tag/Game
 <style id=style2></style>
 <script>
 Search = function(i){
+  i = i.replace(/"/g,"");
   var style2 = document.getElementById('style2');
-  style2.innerHTML = "a[title*="+i+" i]{background:red;}";
+  if(i=="")style.innerHTML = "";
+  else style2.innerHTML = "a[title*="+i+" i]{background:red;}";
 } 
 </script>
 <input type=text placeholder=Search onkeydown="Search(this.value)">
