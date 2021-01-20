@@ -213,3 +213,12 @@ function iethylstilbestrol(){
 function MPA(){
    echo "Medroxyprogesterone acetate";
 }
+
+# banana      C7H14O2
+# strawberry  C12H14O3
+# apple       C7H14O2
+# cinnamon 
+# butter
+# wintergreen
+# grape 
+# orange
