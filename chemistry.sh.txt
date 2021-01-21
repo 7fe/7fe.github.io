@@ -1,5 +1,6 @@
 #!/bin/sh
 # wget -qO- http://bar.ren/chemistry.sh.txt > chemistry.sh
+# source chemistry.sh
 
 alias chno16=chno16212
 function chno16212(){
