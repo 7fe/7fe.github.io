@@ -217,9 +217,10 @@ function MPA(){
 
 # banana      C7H14O2
 # strawberry  C12H14O3
-# apple       C7H14O2
-# cinnamon 
-# butter
-# wintergreen
-# grape 
-# orange
+# apple       C4H9_COO_C2H5
+# cinnamon    C9H8O
+# butter      C3H7COOH
+# wintergreen C8H8O3
+# grape       C8H9NO2
+# orange      C10H16
+# ham         C16H21N8O8 P
