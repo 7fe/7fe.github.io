@@ -10,6 +10,7 @@ table{border-collapse:collapse}</style>
 		<h1>Mist - Mathematica, CLisp(Cygwin on Windows)</h1>
 		<p>Lisp is a great language but it appears it not truely self modifying because macros can't be modified by other macros.  (a . b) has (cons a b) as FullForm.  <a href="">90minSchemetoCCompiler</a></p>
     <p>The best idea I have come up with is to create a part of the code that exports to lisp code and a part that exports to Mathematica code.  For example I could potentially prefix mathematica code with $ sign.  Mathematica's editor is really nice.  Another possibility is maybe using matics.net with the Mathematica FrontEnd.  ClojureScript is another possibility.  The goal is to essentially have the ideal of editor of Mathematica but with the code in an open source language.  Mathematica Editor -> Lisp/JSON/XML -> JS/Java  The problem is anything that involves pattern matching needs to call back to Mathematica/Mathics.net.</p>
+    <p>Python supports fractions, imaginary, infinity, -infinity, null, while JavaScript doesn't support fractions or imaginary numbers.</p>
     <pre>
     $Replace[Import["a.txt"],"a.txt"->"b.txt"]                (Import "b.txt")                                         Import/Require("test")
     $ReplaceAll[Import["c.txt"]],"c.txt"->"d.txt"]            (ReplaceAll[Import["abc.txt"]],"abc.txt"->"test2.txt"])  ReplaceAll(`Import["test"]`,{"abc.txt":"test2.txt"})
