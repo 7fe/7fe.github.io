@@ -10,8 +10,6 @@ document.head.innerHTML = `<link rel="apple-touch-icon" href='${url}'>
 <link rel="shortcut icon" href='${url}'>
 `;
 document.title = name;
-
-
 if (!document.location.hash) {
   document.write(`<input type=text placeholder=Name id=name value='${name}'><br>`);
   document.write(`<input type=text placeholder="Image URL" id=url value='${url}'><br>`);
@@ -23,9 +21,15 @@ else{
 
 function SUBMIT(){
   document.location.hash = document.getElementById('name').value.padEnd(30,' ') +
-  document.getElementById('url').value.padEnd(270,' ') + 
+  (url=document.getElementById('url').value.padEnd(270,' ')) + 
   document.getElementById('redirect').value;
   //window.location.replace(window.location);
+  document.head.innerHTML = `<link rel="apple-touch-icon" href='${url}'>
+<meta property="og:image" content='${url}'/>
+<link rel="image_src" href='${url}'>
+<link rel="shortcut icon" href='${url}'>
+`;
+document.title = name;
 };
 </script>
 <br>
