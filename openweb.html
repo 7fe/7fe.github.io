@@ -1,0 +1,34 @@
+<!doctype html><head></head>
+<script>
+var name = decodeURI(document.location.hash.slice(1)).slice(0,30).trim().replace(/'/g,'');
+var url = decodeURI(document.location.hash.slice(1)).slice(30,300).trim().replace(/'/g,'');
+var redirect = decodeURI(document.location.hash.slice(1)).slice(300).trim().replace(/'/g,'');
+
+document.head.innerHTML = `<link rel="apple-touch-icon" href='${url}'>
+<meta property="og:image" content='${url}'/>
+<link rel="image_src" href='${url}'>
+<link rel="shortcut icon" href='${url}'>
+`;
+document.title = name;
+
+
+if (!window.matchMedia('(display-mode: standalone)').matches) {
+  document.write(`<input type=text placeholder=Name id=name value='${name}'><br>`);
+  document.write(`<input type=text placeholder="Image URL" id=url value='${url}'><br>`);
+  document.write(`<input type=text placeholder="Redirect" id=redirect value='${redirect}'>`);
+}
+else{
+  window.location.replace(redirect);
+}
+
+function SUBMIT(){
+  document.location.hash = document.getElementById('name').value.padEnd(30,' ') +
+  document.getElementById('url').value.padEnd(270,' ') + 
+  document.getElementById('redirect').value;
+  //window.location.replace(window.location);
+  location.reload();
+};
+</script>
+<br>
+<input type=Submit onclick=SUBMIT()>
+<br>
