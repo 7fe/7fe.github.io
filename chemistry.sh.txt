@@ -1,81 +1,29 @@
 #!/bin/sh
 # wget -qO- http://bar.ren/chemistry.sh.txt > chemistry.sh
 # source chemistry.sh
-
-alias chno16=chno16212
-function chno16212(){
-   if [ -z "$1" ]
-   then
-     echo "Rozerem"
-   else
-     echo ""
-   fi
-}
-
-alias chno23=chcno23271232
-function chcno23271232(){
-   if [ -z "$1" ]
-   then
-     echo "abilify"
-   else
-     echo ""
-   fi
-}
-
-alias chno19=chno
-function chno19282(){
-   if [ -z "$1" ]
-   then
-     echo "tesosterone"
-   else
-     echo "C7H14N2O3"
-   fi
-}
-
-chno71423=chno7
-function chno71423(){
-   if [ -z "$1" ]
-   then
-     echo "L-Theanine"
-   else
-     echo "C7H14N2O3"
-   fi
-}
-
-alias chno1266=chno1
-function chno1266(){
-   if [ -z "$1" ]
-   then
-     echo "?glucose?"
-   else
-     echo ""
-   fi
-}
-
-alias chno8=chno8112
-function chno8112(){
-   if [ -z "$1" ]
-   then
-     echo "dopamine"
-   else
-     echo ""
-   fi
-}
-
-alias cho3=cho383
-function cho383(){
-  echo "glycerol"
-}
-
-alias chns=chns17204
-function chns17204(){
-   if [ -z "$1" ]
-   then
-     echo "Zyprexa/Olanzapine - C17H20N4S"
-   else
-     echo ""
-   fi
-}
+# banana      C7H14O2
+# strawberry  C12H14O3
+# apple       C4H9_COO_C2H5
+# cinnamon    C9H8O
+# butter      C3H7COOH
+# wintergreen C8H8O3
+# grape       C8H9NO2
+# orange      C10H16
+# ham         C16H21N8O8 P
+# ltheanine   C7H14N2O3
+# rozerem     
+# abilify
+# tesosterone
+# glucose 
+# dompamine
+# glycerol
+# zyprexa
+# lithium orotate
+# lithium carbonate
+# MPA acetate
+# lucrin
+# chloroform
+# citric acid
 
 alias licho=licho3657
 function licho3657(){
@@ -83,20 +31,6 @@ function licho3657(){
    then
      echo "Lithium Citrate"
    elif [ "$1" == "eq" ]
-   then
-     echo "Li3C6H5O7"
-   fi
-}
-
-alias lico=lico23
-function lico23(){
-   if [ "$1" == "" ]
-   then
-     echo "Lithium Carbonate"
-   elif [ "$1" == "eq" ]
-   then
-     echo ""
-   elif [ "$1" == "fo" ]
    then
      echo "Li3C6H5O7"
    fi
@@ -130,38 +64,6 @@ function chlino5324(){
    fi
 }
 
-function cho1266(){
-   if [ "$1" == "" ]
-   then
-     echo "Glucose"
-   elif [ "$1" == "eq" ]
-   then
-     echo "c6h12o6"
-   elif [ "$1" == "fo" ]
-   then
-     echo "cho1266"
-   fi
-}
-
-alias citricacid=cho687
-function cho687(){
-  echo "citric acid c6h8o7"
-}
-
-function cho19282(){
-   if [ "$1" == "" ]
-   then
-     echo "tesosterone"
-   elif [ "$1" == "eq" ]
-   then
-     echo ""
-   elif [ "$1" == "fo" ]
-   then
-     echo "c19h28o2"
-   fi
-}
-alias cho192=cho19282
-
 function bn(){
    if [ "$1" == "" ]
    then
@@ -180,29 +82,6 @@ function nhfcs55(){
 }
 alias nhfcs=nhfcs55
 
-function chcl3(){
-  echo "chloroform"
-}
-
-alias chno5=chno59841612
-function chno59841612(){
-   if [ -z "$1" ]
-   then
-     echo "Lucrin - c59h84n16o12"
-   else
-     echo ""
-   fi
-}
-
-function lucrin(){
-   if [ -z "$1" ]
-   then
-     echo "c59h84n1612"
-   else
-     echo ""
-   fi
-}
-
 function benperidol(){
     echo "chno2224F32";
 }
@@ -211,16 +90,3 @@ function iethylstilbestrol(){
    echo "cho18202";
 }
 
-function MPA(){
-   echo "Medroxyprogesterone acetate";
-}
-
-# banana      C7H14O2
-# strawberry  C12H14O3
-# apple       C4H9_COO_C2H5
-# cinnamon    C9H8O
-# butter      C3H7COOH
-# wintergreen C8H8O3
-# grape       C8H9NO2
-# orange      C10H16
-# ham         C16H21N8O8 P
