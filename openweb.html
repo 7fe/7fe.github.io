@@ -12,7 +12,7 @@ document.head.innerHTML = `<link rel="apple-touch-icon" href='${url}'>
 document.title = name;
 
 
-if (!window.matchMedia('(display-mode: standalone)').matches) {
+if (!document.location.hash) {
   document.write(`<input type=text placeholder=Name id=name value='${name}'><br>`);
   document.write(`<input type=text placeholder="Image URL" id=url value='${url}'><br>`);
   document.write(`<input type=text placeholder="Redirect" id=redirect value='${redirect}'>`);
@@ -26,7 +26,6 @@ function SUBMIT(){
   document.getElementById('url').value.padEnd(270,' ') + 
   document.getElementById('redirect').value;
   //window.location.replace(window.location);
-  location.reload();
 };
 </script>
 <br>
