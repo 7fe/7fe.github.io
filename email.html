@@ -19,17 +19,15 @@ onchange = function(){
   var s = document.getElementById('s').value;
   var body = document.getElementById('body').value ;
 
-  var t = "<a href='mailto:"+encodeURIComponent(to)+
+  document.getElementById('output').href = 'mailto:'+encodeURIComponent(to)+
       (cc?("?cc="+encodeURIComponent(cc)):'')+
       (bcc?("?bcc="+encodeURIComponent(bcc)):'')+
       (s?("?subject="+encodeURIComponent(s)):'')+
-      "&body="+encodeURIComponent(body)+
-      "'>Email</a>";
-  document.getElementById('output').innerHTML = t;
+      "&body="+encodeURIComponent(body);
 }
   
 </script>
-  <div id=output></div>  
+  <a id=output></a>  
 <!--a href="mailto:john.doe@example.com?cc=cc&amp;bcc=bcc&amp;subject=john.doe@example.com&amp;body=body">email</a-->
   
 </body>
