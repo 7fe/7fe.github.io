@@ -24,6 +24,7 @@ onchange = function(){
       (bcc?("?bcc="+encodeURIComponent(bcc)):'')+
       (s?("?subject="+encodeURIComponent(s)):'')+
       "&body="+encodeURIComponent(body);
+  document.getElementById('output').innerText = s;
 }
   
 </script>
