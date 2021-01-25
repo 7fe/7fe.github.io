@@ -20,16 +20,16 @@ bcc <input type="text" id="bcc" placeholder="i@example.com,b@example.com"><br>
 <input type="text" placeholder=Subject id="s" value=""><br><textarea id="body" placeholder="email content" style="margin: 0px; width: 354px; height: 232px;"></textarea>
 <br><script>
 onkeydown = function(){
-  var to = document.getElementById('email').value;
+  var to = document.getElementById('to').value;
   var cc = document.getElementById('cc').value;
   var bcc = document.getElementById('bcc').value;
   var s = document.getElementById('s').value;
   var body = document.getElementById('body').value ;
 
-  var t = "<a href='mailto:"+s+
-      (cc?("?cc="+cc):'')+
-      (bcc?("?bcc="+bcc):'')+
-      (s?("?subject="+s):'')+
+  var t = "<a href='mailto:"+to+
+      (cc?("?cc="+encodeURIComponent(cc)):'')+
+      (bcc?("?bcc="+encodeURIComponent(bcc)):'')+
+      (s?("?subject="+encodeURIComponent(s)):'')+
       "&body="+encodeURIComponent(body)+
       "'>Email</a>";
   document.getElementById('output').innerHTML = t;
