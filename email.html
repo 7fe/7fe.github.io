@@ -22,13 +22,13 @@ subject <input type="text" id="s" value=""><br><textarea id="body" placeholder="
 var s = document.getElementById('email').getAttribute('value');
 var cc = document.getElementById('cc').getAttribute('value');
 var bcc = document.getElementById('bcc').getAttribute('value');
-var body = document.getElementById('body').innerHTML;
+var body = document.getElementById('body').value ;
 
 onkeydown = function(){
   var t = "<a href='mailto:"+s+
-      (cc!=''?("?cc="+cc):'')+
-      (bcc!=''?("?bcc="+bcc):'')+
-      (s!=''?("?subject="+s):'')+
+      (cc?("?cc="+cc):'')+
+      (bcc?("?bcc="+bcc):'')+
+      (s?("?subject="+s):'')+
       "&body="+encodeURIComponent(body)+
       "'>Email</a>";
   document.getElementById('Email').innerHTML = t;
