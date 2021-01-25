@@ -12,7 +12,7 @@ cc <input type="text" id="cc" placeholder="i@example.com,b@example.com"><br>
 bcc <input type="text" id="bcc" placeholder="i@example.com,b@example.com"><br>
 <input type="text" placeholder=Subject id="s" value=""><br><textarea id="body" placeholder="email content" style="margin: 0px; width: 354px; height: 232px;"></textarea>
 <br><script>
-onkeydown = function(){
+onkeyup = function(){
   var to = document.getElementById('to').value;
   var cc = document.getElementById('cc').value;
   var bcc = document.getElementById('bcc').value;
