@@ -20,9 +20,9 @@ onchange = function(){
   var body = document.getElementById('body').value ;
 
   var t = "<a href='mailto:"+to+
-      (cc?("?cc="+encodeURIComponent(cc)):'')+
-      (bcc?("?bcc="+encodeURIComponent(bcc)):'')+
-      (s?("?subject="+encodeURIComponent(s)):'')+
+      (cc?("?cc="+encodeURIComponent(cc)):'')+';'+
+      (bcc?("?bcc="+encodeURIComponent(bcc)):'')+';'+
+      (s?("?subject="+encodeURIComponent(s)):'')+';'+
       "&body="+encodeURIComponent(body)+
       "'>Email</a>";
   document.getElementById('output').innerHTML = t;
