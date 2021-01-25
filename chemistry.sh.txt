@@ -24,6 +24,10 @@
 # lucrin
 # chloroform
 # citric acid
+# High-fructose corn syrup
+# benperidol
+# Lithium Orotat
+# iethylstilbestrol
 
 alias licho=licho3657
 function licho3657(){
@@ -33,8 +37,11 @@ function licho3657(){
    elif [ "$1" == "eq" ]
    then
      echo "Li3C6H5O7"
+   elif [ "$1" == "fo" ]
+   then
+     echo "Li3C6H5O7"
    fi
-}
+ }
 
 alias lichno=lichno5324
 function lichno5324(){
@@ -50,24 +57,10 @@ function lichno5324(){
    fi
 }
 
-alias chnlino=chlino5324
-function chlino5324(){
-   if [ "$1" == "" ]
-   then
-     echo "Lithium Orotate"
-   elif [ "$1" == "eq" ]
-   then
-     echo ""
-   elif [ "$1" == "fo" ]
-   then
-     echo "C5H3LiN2O4"
-   fi
-}
-
 function bn(){
    if [ "$1" == "" ]
    then
-     echo "Boron Nitride + Iodine Monofluoride -- Nitrogen triiodide + Boron trifluoride"
+     echo "Boron Nitride + Iodine Monofluoride -> Nitrogen triiodide + Boron trifluoride"
    elif [ "$1" == "+" ]
    then
      echo "  bn + 3if -- ni3 + bf3"
@@ -76,17 +69,3 @@ function bn(){
      echo "Purple gas displays."
    fi
 }
-
-function nhfcs55(){
-  echo "High-fructose corn syrup"
-}
-alias nhfcs=nhfcs55
-
-function benperidol(){
-    echo "chno2224F32";
-}
-
-function iethylstilbestrol(){
-   echo "cho18202";
-}
-
