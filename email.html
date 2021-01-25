@@ -19,12 +19,13 @@ cc <input type="text" id="cc" placeholder="i@example.com,b@example.com"><br>
 bcc <input type="text" id="bcc" placeholder="i@example.com,b@example.com"><br>
 subject <input type="text" id="s" value=""><br><textarea id="body" placeholder="email content" style="margin: 0px; width: 354px; height: 232px;"></textarea>
 <br><script>
+onkeydown = function(){
+
 var s = document.getElementById('email').getAttribute('value');
 var cc = document.getElementById('cc').getAttribute('value');
 var bcc = document.getElementById('bcc').getAttribute('value');
 var body = document.getElementById('body').value ;
 
-onkeydown = function(){
   var t = "<a href='mailto:"+s+
       (cc?("?cc="+cc):'')+
       (bcc?("?bcc="+bcc):'')+
