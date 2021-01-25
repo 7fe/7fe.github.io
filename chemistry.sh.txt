@@ -28,6 +28,7 @@
 # benperidol
 # Lithium Orotat
 # iethylstilbestrol
+# boron nitride
 
 alias licho=licho3657
 function licho3657(){
@@ -57,15 +58,4 @@ function lichno5324(){
    fi
 }
 
-function bn(){
-   if [ "$1" == "" ]
-   then
-     echo "Boron Nitride + Iodine Monofluoride -> Nitrogen triiodide + Boron trifluoride"
-   elif [ "$1" == "+" ]
-   then
-     echo "  bn + 3if -- ni3 + bf3"
-   elif [ "$1" == "out" ]
-   then
-     echo "Purple gas displays."
-   fi
-}
+
