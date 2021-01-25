@@ -5,8 +5,8 @@
 </head><body>
 <h1>Email</h1><p>Send out mass email.  Blind carbon copy hides the original sender.
 
-<a href="mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&subject=Big%20News&body=Body-goes-here">email</a>
-mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&subject=Big%20News&body=Body-goes-here
+<a href="mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&amp;bcc=lastperson@theirsite.com&amp;subject=Big%20News&amp;body=Body-goes-here">email</a>
+mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&amp;bcc=lastperson@theirsite.com&amp;subject=Big%20News&amp;body=Body-goes-here
   
 How to set up Outlook to work and look like Gmail
 Minimized lines
@@ -14,11 +14,11 @@ Minimized lines
 <a href="https://www.linkedin.com/pulse/make-outlook-work-like-gmail-joshua-forman">Make Outlook work like Gmail</a>
 </p>
 
-email <input type=text id=email value="john.doe@example.com"><br>
-cc <input type=text id=cc value="cc"><br>
-bcc <input type=text id=bcc value="bcc"><br>
-subject <input type=text id=s value="subject"><br>
-body <input type=text id=body value="body"><br>
+email <input type="text" id="email" placeholder="i@example.com,b@example.com"><br>
+cc <input type="text" id="cc" placeholder="i@example.com,b@example.com"><br>
+bcc <input type="text" id="bcc" placeholder="i@example.com,b@example.com"><br>
+subject <input type="text" id="s" value=""><br><textarea id="body" placeholder="email content" style="margin: 0px; width: 354px; height: 232px;"></textarea>
+<br><input type="button" value="Submit"> <br>
 <script>
 var s = document.getElementById('email').getAttribute('value');
 var cc = document.getElementById('cc').getAttribute('value');
@@ -26,4 +26,5 @@ var bcc = document.getElementById('bcc').getAttribute('value');
 var body = document.getElementById('body').getAttribute('value');
 
 document.write("<a href='mailto:"+s+"?cc="+cc+"&bcc="+bcc+"&subject="+s+"&body="+body+"'>email</a>");
-</script>
+</script><a href="mailto:john.doe@example.com?cc=cc&amp;bcc=bcc&amp;subject=john.doe@example.com&amp;body=body">email</a>
+</body>
