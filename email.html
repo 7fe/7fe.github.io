@@ -14,17 +14,17 @@ Minimized lines
 <a href="https://www.linkedin.com/pulse/make-outlook-work-like-gmail-joshua-forman">Make Outlook work like Gmail</a>
 </p>
 
-email <input type="text" id="email" placeholder="i@example.com,b@example.com"><br>
+to <input type="text" id="to" placeholder="i@example.com,b@example.com"><br>
 cc <input type="text" id="cc" placeholder="i@example.com,b@example.com"><br>
 bcc <input type="text" id="bcc" placeholder="i@example.com,b@example.com"><br>
-subject <input type="text" id="s" value=""><br><textarea id="body" placeholder="email content" style="margin: 0px; width: 354px; height: 232px;"></textarea>
+<input type="text" placeholder=Subject id="s" value=""><br><textarea id="body" placeholder="email content" style="margin: 0px; width: 354px; height: 232px;"></textarea>
 <br><script>
 onkeydown = function(){
-
-var s = document.getElementById('email').getAttribute('value');
-var cc = document.getElementById('cc').getAttribute('value');
-var bcc = document.getElementById('bcc').getAttribute('value');
-var body = document.getElementById('body').value ;
+  var to = document.getElementById('email').value;
+  var cc = document.getElementById('cc').value;
+  var bcc = document.getElementById('bcc').value;
+  var s = document.getElementById('s').value;
+  var body = document.getElementById('body').value ;
 
   var t = "<a href='mailto:"+s+
       (cc?("?cc="+cc):'')+
@@ -32,11 +32,11 @@ var body = document.getElementById('body').value ;
       (s?("?subject="+s):'')+
       "&body="+encodeURIComponent(body)+
       "'>Email</a>";
-  document.getElementById('Email').innerHTML = t;
+  document.getElementById('output').innerHTML = t;
 }
   
 </script>
-  <div id=Email></div>  
+  <div id=output></div>  
 <!--a href="mailto:john.doe@example.com?cc=cc&amp;bcc=bcc&amp;subject=john.doe@example.com&amp;body=body">email</a-->
   
 </body>
