@@ -26,9 +26,9 @@ var body = document.getElementById('body').innerHTML;
 
 onkeydown = function(){
   var t = "<a href='mailto:"+s+
-      (ccc!=''?("?cc="+cc+):'')
-      (bcc!=''?("?bcc="+bcc+):'')
-      (s!=''?("?subject="+s+):'')
+      (ccc!=''?("?cc="+cc+):'')+
+      (bcc!=''?("?bcc="+bcc+):'')+
+      (s!=''?("?subject="+s+):'')+
       "&body="+encodeURIComponent(body)+
       "'>Email</a>";
   document.getElementById('Email').innerHTML = t;
