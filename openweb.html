@@ -10,7 +10,7 @@ document.head.innerHTML = `<link rel="apple-touch-icon" href='${url}'>
 <link rel="shortcut icon" href='${url}'>
 `;
 document.title = name;
-if (!document.location.hash) {
+if (!redirect) {
   document.write(`<input type=text placeholder=Name id=name value='${name}'><br>`);
   document.write(`<input type=text placeholder="Image URL" id=url value='${url}'><br>`);
   document.write(`<input type=text placeholder="Redirect" id=redirect value='${redirect}'>`);
@@ -29,7 +29,6 @@ function SUBMIT(){
 <link rel="image_src" href='${url}'>
 <link rel="shortcut icon" href='${url}'>
 `;
-document.title = name;
 };
 </script>
 <br>
