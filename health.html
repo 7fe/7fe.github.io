@@ -20,7 +20,10 @@ function getRandomColor() {
   for (var i = 0; i < 6; i++) {
     color += letters[Math.floor(Math.random() * 16)];
   }
-  if(isGreen(hexToRgb(color)))return getRandomColor(); 
+  var colors = hexToRgb(color);
+  if(isGreen(colors.r,colors.g,colors.b)){
+    return getRandomColor(); 
+  }
   return color;
 }
 function graph(t){
