@@ -10,8 +10,8 @@ can be modified.
 td{border:1px solid black;}
 td[contenteditable=no]{background:lightgrey;}
 </style><center><script>
-w = function(x){document.write(x);}
-w("<pre>"+decodeURI(document.location.hash)+"</pre><br>");
+//w = function(x){document.write(x);}
+//w("<pre>"+decodeURI(document.location.hash)+"</pre><br>");
 
 //https://caniuse.com/#feat=datauri detect data URI support
 
@@ -266,7 +266,8 @@ ahk = function(i){
   else "";
 };
 //ahkaltgr()
-document.write(`<a title="Autohotkey must keep original shift key locations.  For example aA, /?, -_" download="${KBD}.ahk"
+write = function(){};
+write(`<a title="Autohotkey must keep original shift key locations.  For example aA, /?, -_" download="${KBD}.ahk"
 href="data:;charset=utf-8,${encodeURI(`
 
 *SC0d::Send {blind}{=}
@@ -324,7 +325,7 @@ ${ahk("*[ahk='*SC011']")}
 `)}">${KBD}.ahk</a>`)
 </script>&nbsp;
 <script id="klc" style="display:none;">
-document.write(`<a title="" download="${KBD}.klc"
+write(`<a title="" download="${KBD}.klc"
 href="data:,${encodeURI(`KBD	wtrdvrk	"United States Writer Dvorak"
 
 COPYRIGHT	"."
@@ -497,7 +498,7 @@ ENDKBD
 </script>
 &nbsp;
 <script id="xmodmap" style="display:none;">
-document.write(`<a title="cat ${KBD}.xmodmap | xmodmap -" download="xmodmap"
+write(`<a title="cat ${KBD}.xmodmap | xmodmap -" download="xmodmap"
 href="data:,${encodeURI(`
 keycode  10 = 1 exclam
 keycode  11 = 2 at
@@ -576,7 +577,7 @@ keycode 188 = parenright NoSymbol parenright
 `)}">${KBD}.xmodmap</a>`)
 </script>
 <script id="keylayout" style="display:none;">
-document.write(`<a title="/Library/Keyboard Layouts" download="mac.keylayout"
+write(`<a title="/Library/Keyboard Layouts" download="mac.keylayout"
 href="data:,${encodeURI(`
 <\?xml version="1.0" encoding="UTF-8"\?>
 <!DOCTYPE keyboard PUBLIC "" "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
