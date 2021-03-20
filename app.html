@@ -1,16 +1,17 @@
 <!doctype html><head></head>
 <script>
-var name = decodeURI(document.location.hash.slice(1)).slice(0,30).trim().replace(/'/g,'');
-var url = decodeURI(document.location.hash.slice(1)).slice(30,300).trim().replace(/'/g,'');
-var redirect = decodeURI(document.location.hash.slice(1)).slice(300).trim().replace(/'/g,'');
+var app = decodeURI(document.location.hash.slice(1)).slice(0,1);
+var name = decodeURI(document.location.hash.slice(1)).slice(1,31).trim().replace(/'/g,'');
+var url = decodeURI(document.location.hash.slice(1)).slice(31,301).trim().replace(/'/g,'');
+var redirect = decodeURI(document.location.hash.slice(1)).slice(301).trim().replace(/'/g,'');
 
 document.head.innerHTML = `<link rel="apple-touch-icon" href='${url}'>
 <meta property="og:image" content='${url}'/>
 <link rel="image_src" href='${url}'>
-<meta name="mobile-web-app-capable" content="yes">
 <link rel="shortcut icon" href='${url}'>
-`;
+`+(+app?'<meta name="mobile-web-app-capable" content="yes">':'');
 document.title = name;
+
 
 if (!window.matchMedia('(display-mode: standalone)').matches) {
   document.write(`<input type=text placeholder=Name id=name value='${name}'><br>`);
@@ -22,7 +23,7 @@ else{
 }
 
 function SUBMIT(){
-  document.location.hash = document.getElementById('name').value.padEnd(30,' ') +
+  document.location.hash = +document.getElementById('app').checked+document.getElementById('name').value.padEnd(30,' ') +
   document.getElementById('url').value.padEnd(270,' ') + 
   document.getElementById('redirect').value;
   //window.location.replace(window.location);
@@ -30,7 +31,10 @@ function SUBMIT(){
 };
 </script>
 <br>
-<label><input type=checkbox> App<br></label>
+<label><input type=checkbox id=app> App<br></label>
+<script>
+if(+app)document.getElementById('checkbox').checked=true;
+</script>
 <input type=Submit onclick=SUBMIT()>
 <br><a href="#test%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20https://www2.bac-assets.com/spa/widgets/social-share-widget/1.0.0/spa-assets/images/assets-images-global-favicon-apple-touch-icon-CSX5849f184.png">
 Bank of America</a><br>
