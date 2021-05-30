@@ -16,7 +16,7 @@ document.title = name;
 if (!window.matchMedia('(display-mode: standalone)').matches) {
   document.write(`<input type=text placeholder=Name id=name value='${name}'><br>`);
   document.write(`<input type=text placeholder="Image URL" id=url value='${url}'><br>`);
-  document.write(`<input type=text placeholder="Redirect" id=redirect value='${redirect}'>`);
+  document.write(`<input type=text placeholder="Redirect" id=redirect value='${redirect}'><img src="${'http://'+url_hostname(redirect)+'/favicon.ico'}">`);
 }
 else{
   window.location.replace(redirect);
@@ -44,3 +44,4 @@ if(+app)document.getElementById('app').checked=true;
 <a href=""></a>Youtube<br>
 <a href="">Bank of America</a><br>
 <a href="https://www.towergame.app/">Tower Game</a><br>
+<a href="https://appsco.pe/">AppScope</a><br>
