@@ -8,7 +8,7 @@ var redirect = decodeURI(document.location.hash.slice(1)).slice(301).trim().repl
 document.head.innerHTML = `<link rel="apple-touch-icon" href='${url}'>
 <meta property="og:image" content='${url}'/>
 <link rel="image_src" href='${url}'>
-<link rel="shortcut icon" href='${url}'>
+<link rel="shortcut icon" href='${url_hostname(redirect)+'favicon.ico'}'>
 `+(+app?'<meta name="mobile-web-app-capable" content="yes">':'');
 document.title = name;
 
@@ -21,7 +21,11 @@ if (!window.matchMedia('(display-mode: standalone)').matches) {
 else{
   window.location.replace(redirect);
 }
-
+function url_hostname(data) {
+  var    a      = document.createElement('a');
+         a.href = data;
+  return a.hostname;
+}
 function SUBMIT(){
   document.location.hash = +document.getElementById('app').checked+document.getElementById('name').value.padEnd(30,' ') +
   document.getElementById('url').value.padEnd(270,' ') + 
@@ -36,3 +40,7 @@ function SUBMIT(){
 if(+app)document.getElementById('app').checked=true;
 </script>
 <input type=Submit onclick=SUBMIT()>
+<h3>List of Apps</h3>
+<a href=""></a>Youtube<br>
+<a href="">Bank of America</a><br>
+<a href="https://www.towergame.app/">Tower Game</a><br>
