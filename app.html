@@ -8,7 +8,7 @@ var redirect = decodeURI(document.location.hash.slice(1)).slice(301).trim().repl
 document.head.innerHTML = `<link rel="apple-touch-icon" href='${url}'>
 <meta property="og:image" content='${url}'/>
 <link rel="image_src" href='${url}'>
-<link rel="shortcut icon" href='${'http://'+url_hostname(redirect)+'/favicon.ico'}'>
+<link rel="shortcut icon" type='image/png' href='${url}'>
 `+(+app?'<meta name="mobile-web-app-capable" content="yes">':'');
 document.title = name;
 
@@ -32,7 +32,27 @@ function SUBMIT(){
   document.getElementById('redirect').value;
   //window.location.replace(window.location);
   location.reload();
-};
+}
+function toDataURL(src, callback, outputFormat) {
+  var img = new Image();
+  img.crossOrigin = 'Anonymous';
+  img.onload = function() {
+    var canvas = document.createElement('CANVAS');
+    var ctx = canvas.getContext('2d');
+    var dataURL;
+    canvas.height = this.naturalHeight;
+    canvas.width = this.naturalWidth;
+    ctx.drawImage(this, 0, 0);
+    dataURL = canvas.toDataURL(outputFormat);
+    callback(dataURL);
+  };
+  img.src = src;
+  if (img.complete || img.complete === undefined) {
+    img.src = "data:image/ico;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+    img.src = src;
+  }
+}
+
 </script>
 <br>
 <label><input type=checkbox id=app> App<br></label>
