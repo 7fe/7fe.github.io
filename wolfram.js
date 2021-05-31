@@ -1,7 +1,7 @@
 (function(){
   alert('wolfram');
 })();
-/*
+/* https://github.com/josdejong/mathjs
 document.write(math.simplify('x^2*x').toString());
 document.write(math.simplify('x^2*x').toString());
 
