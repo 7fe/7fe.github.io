@@ -12,7 +12,7 @@ body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;wh
 <body>
 		<h1>php, php Smybolic, php AST</h1>
 		<p>PHP is an interesting language because it is very similar JSX in many ways.  I would like to create a table comparing php 5 to php 7.  <a href="https://www.tutorialspoint.com/php7/php7_closure_call.htm">tutorialspoint PHP7</a>. PHP7 is pretty straight forwardish. I want to create a simple library that is both valid JS and allows of pasting of HTML code. PHP7 library that lets you use the most common javascript functions.   php has special functions for utf-8 support.  <a href="https://security.stackexchange.com/q/117131">Detecting PHP</a>
-		<p>There is no operator overloading in php., but you can sort of extend the functions by making a class with __invoke.   Arrays and Srings can not be subclassed effectively because gettype with no technique will return the correct value.  To deal with utf-8 in php you use the <a href="http://www.php.net/manual/en/ref.mbstring.php">mbstring</a> functions.</p>
+		<p>There is no operator overloading in php., but you can sort of extend the functions by making a class with __invoke.   Arrays and Srings can not be subclassed effectively because gettype with no technique will return the correct value.  To deal with utf-8 in php you use the <a href="http://www.php.net/manual/en/ref.mbstring.php">mbstring</a> functions and mysql uses `utf8mb4` for character set.</p>
 		<pre>function sr_length($a){return count($a);}
 function s_indexOf($a){return strpos();}
 function s_split(){str_split("abcd");}
@@ -24,7 +24,8 @@ function s_split(){str_split("abcd");}
 a`
 
 `;
-php -S localhost:80 index.php
+// ./ directory of php.ini
+php -c ./ -S localhost:80 index.php
 echo r(&quot;1234&quot;)-&gt;split('')-&gt;join(',')();
 echo r([1,2,3])-&gt;indexOf(2);
 </pre>
