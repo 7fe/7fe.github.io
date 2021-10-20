@@ -247,7 +247,24 @@ Control+letter
 Enter
 </pre>
 					</td>
-					<td></td>
+					<td><pre>on open a
+	(* terminal run of script *)
+	repeat with i in a
+		main(a)
+	end repeat
+end open
+
+on run
+	(* tell me to open (choose file) *)
+	main(choose file)
+end run
+
+
+on main(a)
+	(* display dialog POSIX path of a *)
+	set a to POSIX path of a
+	do shell script "echo " & a
+						end main</pre></td>
 					<td></td>
 				</tr>
 			</tbody>
