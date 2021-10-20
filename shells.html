@@ -207,7 +207,15 @@ interact -o -nobuffer -re $prompt return
 send "my_command1\r"
 interact -o -nobuffer -re $prompt return
 send "my_command2\r"
-interact</pre></td>
+interact
+
+
+#!/usr/bin/expect -d
+set timeout 20
+spawn sudo php -S 127.0.0.1:80
+expect "Password:"
+send " \r"
+</pre></td>
 					<td></td>
 				</tr>
 				<tr>
