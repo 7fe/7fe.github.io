@@ -15,16 +15,74 @@ body>pre{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;wh
 		<p>There is no operator overloading in php., but you can sort of extend the functions by making a class with __invoke.   Arrays and Srings can not be subclassed effectively because gettype with no technique will return the correct value.  To deal with utf-8 in php you use the <a href="http://www.php.net/manual/en/ref.mbstring.php">mbstring</a> functions and <a href="https://www.toptal.com/php/a-utf-8-primer-for-php-and-mysql">mysql</a> uses `utf8mb4` for character set. I need to break down the PHP functions and wordpress internal php functions.</p>
 		<pre>function sr_length($a){return count($a);}
 function s_indexOf($a){return strpos();}
-function s_split(){str_split("abcd");}
+function mb_str_split(str){print_r(mb_split("\s", "hello world") );}
+function mb_strlen(str){str.length}
+mb_strpos("test","t",int $offset = 0);
+mb_strrchr(
+    string $haystack,
+    string $needle,
+    bool $before_needle = false
+ );
+mb_strrichr(
+    string $haystack,
+    string $needle,
+    bool $before_needle = false,
+    ?string $encoding = null
+);
+echo mb_substr_count("This is a test", "is"); // prints out 2
+mb_substr(
+    string $string,
+    int $start,
+    ?int $length = null,
+    ?string $encoding = null
+);
+mb_strstr(
+    string $haystack,
+    string $needle,
+    bool $before_needle = false,
+    ?string $encoding = null
+);
 
-$test = mb_ereg_match(".*a", "some apples"); // returns true
+$values = [65, 63, 0x20AC, 128024];
+foreach ($values as $value) {
+    var_dump(mb_chr($value, 'UTF-8'));
+    var_dump(mb_chr($value, 'ISO-8859-1'));
+}
+
+mb_strtoupper
+mb_strtlower
+
+if (preg_match('/1999/', $s)) {
+  echo "party!\n";
+}
+if (s.match(/1999/)) {
+  console.log('party!');
+}
+
+$s = "do re mi mi mi";
+$s = preg_replace('/mi/', "ma", $s);
+
+s = 'do re mi mi mi';
+s.replace(/mi/g, 'ma');
+
+a.filter((x) => x > 1)	
+
+array_filter([1, 2, 3],
+  function ($x) {
+    return $x>1;
+  })
+
+array_reduce([1, 2, 3],
+  function($x,$y) {
+    return $x + $y;
+  }, 0)
+
+a.reduce((m, o) => m + o, 0)	
 
 Unlike preg_replace, mb_ereg_replace doesn't use separators
-
-Exemple with preg_replace :
 $data = preg_replace("/[^A-Za-z0-9\.\-]/","",$data);
-Exemple with mb_ereg_replace :
-$data = mb_ereg_replace("[^A-Za-z0-9\.\-]","",$data); 
+
+
 
 a`!doctype html><title>test</title>`;  
   console.log("test");
