@@ -105,6 +105,11 @@ class CaseInsensitiveArray extends ArrayObject {
 					<pre>echo &quot;is array: &quot;.is_array($b);  // false</pre>
 				</td>
 			</tr>
+			<tr>
+				<td><pre>var return_true = 'some apples'.match(/.*/i);</pre>
+				</td><td><pre>$return_1 = mb_ereg_match(".*a", "some apples");</pre>
+				</td>
+			</tr>
 		</table>
 		<p>Symbolic PHP was me experimenting making it similar to mathematica which failed miserably.</p>
 		<table style="width:100%" border="1"><tbody>
