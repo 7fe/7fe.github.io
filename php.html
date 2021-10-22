@@ -88,6 +88,20 @@ let a2 = _.flatten(a);
 
 mb_check_encoding, mb_convert_encoding, mb_encode_mimeheader, mb_encode_numericentity, mb_encoding_aliases mb_internal_encoding mb_list_encodings mb_regex_encoding 
 
+iconv_strlen mb_strlen 
+
+class X {
+    private $non_static_member = 1;
+    private static $static_member = 2;
+
+    function __construct() {
+        echo $this->non_static_member . ' '
+           . self::$static_member;
+    }
+}
+
+new X();
+
 a`!doctype html><title>test</title>`;  
   console.log("test");
   
