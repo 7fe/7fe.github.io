@@ -58,4 +58,6 @@ function lichno5324(){
    fi
 }
 
-
+ function create(){
+     alias $1="echo $2";
+ }
