@@ -29,21 +29,7 @@
 # Lithium Orotat
 # iethylstilbestrol
 # boron nitride
-# lithium citrate Li3C6H5O7
-
-alias licho=licho3657
-function licho3657(){
-   if [ "$1" == "" ]
-   then
-     echo "Lithium Citrate"
-   elif [ "$1" == "eq" ]
-   then
-     echo "Li3C6H5O7"
-   elif [ "$1" == "fo" ]
-   then
-     echo "Li3C6H5O7"
-   fi
- }
+# lithium citrate Li3C6H5O7 licho3657
 
  function create(){
      alias $1="echo $2 $3";
