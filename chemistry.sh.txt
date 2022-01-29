@@ -14,7 +14,7 @@
 # rozerem     
 # abilify
 # tesosterone
-# glucose 
+# create glucose     C6H12O6       cho6126
 # dompamine
 # glycerol
 # zyprexa
