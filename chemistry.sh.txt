@@ -30,7 +30,4 @@
 # iethylstilbestrol
 # boron nitride
 # lithium citrate Li3C6H5O7 licho3657
-
- function create(){
-     alias $1="echo $2 $3";
- }
+function create(){alias $1="echo $2 $3";}
