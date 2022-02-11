@@ -575,7 +575,26 @@ keycode 132 = BackSpace
 keycode 187 = parenleft NoSymbol parenleft
 keycode 188 = parenright NoSymbol parenright
 `)}">${KBD}.xmodmap</a>`)
+</script><script id="xmodmap" style="display:none;">
+write(`<a title="There are 2 files to edit." download="${KBD}"
+href="data:,${encodeURI(`
+/usr/share/X11/xkb/symbols/
+/usr/share/X11/xkb/rules/evdev.xml
+
+<layout>
+ <configItem>
+   <name> X </name>
+   <shortDescription> Y </shortDescription>
+   <description> Z </description>
+   <languageList>
+      <iso639Id> aaa </iso639Id>
+   </languageList>
+ </configItem>
+ <variantList/>
+</layout>
+`)}">${KBD}.xmodmap</a>`)
 </script>
+
 <script id="keylayout" style="display:none;">
 write(`<a title="/Library/Keyboard Layouts" download="mac.keylayout"
 href="data:,${encodeURI(`
