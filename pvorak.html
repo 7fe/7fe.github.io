@@ -1,0 +1,87 @@
+<!doctype html>
+<title>Writer Dvorak keyboard layout</title>
+<h1>Writer Dvorak layout</h1>
+<script>
+function SwapImages(){
+  var imgs = document.getElementsByTagName('img');
+  if(imgs[0].style.display == 'block'){
+    imgs[0].style.display = 'none';
+    imgs[1].style.display = 'block';
+  }
+  else{
+    imgs[0].style.display = 'block';
+    imgs[1].style.display = 'none';
+  }
+}
+</script>
+<label onmouseover="SwapImages()"><input type=checkbox>AltGr(ctrl+alt)</label><br>
+<img src="https://limeb.github.io/writer-dvorak.png" style="width:100%;max-width:800px;display:block;">
+<img src="https://limeb.github.io/writer-dvorak2.png" style="width:100%;max-width:800px;display:none;">
+<p>The layout focuses on not changing symbol locations when on the same hand.
+ This cuts down on confusion when switching between Qwerty and Dvorak.
+ For example []=/-z are in the same locations as Qwerty unlike Dvorak.
+ If you look at the <a href="https://commons.wikimedia.org/wiki/File:KB_DSKtypewriter.svg">classic Dvorak</a> 
+ location the number keys were out of order a natural progression is to put as many
+ symbols back to the original locations.  As someone who writes text these keys made my life a headache.  
+ It is called Writer Dvorak because it focuses on writing English in Dvorak.
+ I do some programming with Unix and JavaScript(CSS & HTML) but the English
+ language was the target.  I finally decided that if a key isn't on, below or above
+ the home row it shouldn't be changed but the keyboard layout became to different to
+ Dvorak so I scratched this with the semicolon.  Programmer Dvorak changes a lot more keys especially 
+ when it comes to the number keys.
+ <!--h4>Why didn't you put " in the same location?</h4>
+ Because I type on Dvorak frequently enough that my head got to confused
+ and the location of the ; is close enough to Qwerty with a finger switch.
+ When I switched to Dvorak on work and other computers I primarily needed the 
+ English language and that is it. -->
+ <h4>Why was the i moved?</h4>
+ I was moved because it has a higher frequency in the English language.
+ If you don't like it move it.  My head tends to switch back and forth
+ between regular Dvorak and this modification okay.  I(7.31%) is higher then U(2.88%).
+ <h4>Why are there 2 f keys?</h4>
+ Because F keys(2.3%), the symbols and the I(7.31%) keys should fall in line with
+ <a href="https://raw.githubusercontent.com/kdeloach/workman/gh-pages/images/keyboard_graded1.png">difficulty to reach</a> and the fact 90% of people are right handed. 
+ In Dvorak the <a href="https://en.wikipedia.org/wiki/Letter_frequency#/media/File:English_letter_frequency_(frequency).svg">letter frequency</a> in the graph below.  X has a .17 frequency so it selected based 
+ on similarity of the F key.  If you type on F frequently on a laptop and computer 
+ it makes reaching the key that much easier on a laptop with out having to reach for the keys.  
+ X is reached by pressing ctrl+alt+bottom F or AltGr+bottom f depending on the layout.  F is roughly 13 times more common as X.
+ Dvorak was designed originally for a staggered keyboard and not a flat laptop.
+</p>
+<h4>Is English the only target language?</h4>
+<p>Yes at this time it is.  Dead keys could be added easily but I simply don't use them at all in English.  Bash which makes extensive use of the -_ keys has an AltGr switch to be the same as Dvorak.</p>
+<p></p>
+<h4>Downloads</h4>
+<table border=0 style="text-align:left;">
+  <tr>
+    <th>Executable/<br>
+	Command</th>
+    <th>Source</th>
+  </tr>
+  <tr>
+    <td><a href=#>Autohotkey.exe</a></td>
+    <td><a href="dvorakaltx.ahk">Windows.ahk</a></td>
+  </tr>
+  <tr>
+    <td><a href=#>Microsoft Keyboard Layout.exe</a></td>
+    <td><a href="dvorakaltx.klc">Windows.klc</a></td>
+  </tr>
+  <tr>
+    <td><code>wget -qO- http://limeb.github.io/xmodmap | xmodmap -</code></td>
+    <td><a href="http://limeb.github.io/xmodmap"></a></td>
+  </tr>
+  <tr>
+    <td><code>Mac.keylayout</code></td>
+    <td><a href=#>Mac.keylayout</a></td>
+  </tr>
+</table>
+<h4>Related Links</h4>
+<ul>
+ <li><a href="https://www.kaufmann.no/roland/dvorak/">Programmer Dvorak</a></li>
+ <li><a href="http://xahlee.info/kbd/char_frequency_counter.html">Char Frequency Counter</a></li>
+ <li>https://en.wikipedia.org/wiki/Keyboard_layout#Non-QWERTY-based_Latin-script_keyboard_layouts</li>
+ <li>https://www.slant.co/options/1596/alternatives/~dvorak-simplified-keyboard-alternatives</li>
+ <li>http://www.mit.edu/~jcb/Dvorak/</li>
+ <li>https://demonstrations.wolfram.com/MappingLetterFrequencyToAKeyboard/</li>
+ <li><a download="Hello-World.txt" href="data:application/octet-stream,HELLO-WORLDDDDDDDD">Hello-World</a></li>
+</ul>
+<center>Austin Anderson</center>
