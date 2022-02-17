@@ -577,11 +577,13 @@ keycode 188 = parenright NoSymbol parenright
 `)}">${KBD}.xmodmap</a>`)
 </script> 
 [ <script id="xmodmap" style="display:none;">
-write(`<a title="There are 2 files to move.  Put this file in /usr/share/X11/xkb/symbols/" download="${KBD}"
+write(`<a title="There are 2 files to edit/move.  Put this file in /usr/share/X11/xkb/symbols/" download="${KBD}"
 href="data:,${encodeURI(`
-/usr/share/X11/xkb/symbols/
-/usr/share/X11/xkb/rules/evdev.xml
 
+`)}">${KBD}</a>`)
+</script> <script id="xmodmap" style="display:none;">
+write(`<a title="Edit the 2nd file in /usr/share/X11/xkb/rules/evdev.xml" download="${KBD}"
+href="data:,${encodeURI(`
 <layout>
  <configItem>
    <name> X </name>
@@ -592,9 +594,8 @@ href="data:,${encodeURI(`
    </languageList>
  </configItem>
  <variantList/>
-</layout>
-`)}">${KBD}</a>`)
-</script> ]
+</layout>`)}">${KBD}</a>`)
+</script>]
 
 <script id="keylayout" style="display:none;">
 write(`<a title="/Library/Keyboard Layouts" download="mac.keylayout"
