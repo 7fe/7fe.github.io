@@ -1,133 +1,37 @@
-<!doctype html>
-<html><head>
-  <meta charset="utf-8">
-  <title>Modified Dvorak quick fix</title>
-</head><body>
-<h1>Modified Dvorak quick fix</h1>
-<xmp>Prose:       e t a o i n h s r d l u m w c y f g , p b . v k ' " - ; ! ? x j q : z _ < > ) ( 1 2 0 4 3 5 9 8 6 7 * [ ] + & / } { % @ $ = ~
-Casual:      e t a o i n s r h l d c u m g y f p w b . , v k 0 - ' x ) ( 1 j 2 : q " / 5 ! ? z 3 4 6 8 7 9 % [ ] * = + | _ ; \ > $ # ^ & @ < ~ { } `
-Programming: e t a r i s n o l c d _ p u f m ( ) g h ; b , = . v x y * " k w - 0 / $ > { } 1 : ' \ 2 q [ ] j & + z < 3 | @ # 4 ! 8 5 6 9 7 % ? ~ ^ `
-Formal:      e t a i o n s r h l d c u f m p g y w b , v . k - x " ; 1 j q 0 2 ' ) ( z : 9 [ ] 3 4 5 6 8 7 ? ` _ / ! & ^ + % = { * } | ~ > # < @ $
-News:        e t a i o n s r h l d c u m p f g y w b , . v k " - 0 ' x j 1 z 2 q 9 5 3 8 4 7 : 6 ( ) $ ; | ? / ! & ] [ % @ _ > < * = + #
-</xmp>
-<script>
-document.write(decodeURIComponent("#%601234567890;=',.gyfpcrl[]\aoehuditns-zqjkfbmwv/"));
-</script>
-<p><a href="http://superuser.com/q/598405">Here</a> is the super.com question that is related.  <a href="https://play.typeracer.com/?universe=code">TypeRacer</a><a href="https://www.patrick-wied.at/projects/heatmap-keyboard/">Heatmap</a> <a href="https://dzone.com/articles/most-pressed-keys-various">Language Heatmap</a>  <a href="https://github.com/kentonv/dvorak-qwerty">Dvorak Qwerty may solve my problems with Ubuntu and keyboard modifiers.</a></p>
-<pre><code>
-<a href="./keys.skl">keys.skl</a> <a href="./us2.zip">us2.zip</a>
+<!doctype html><html><head><meta charset="utf-8"><title>Dvorak</title></head><body>
+<pre>e t a o i n s r h l d c u m g y f p w b . , v k 0 - ' x ) ( 1 j 2 : q " / 5 ! ? z 3 4 6 8 7 9 % [ ] * = + | _ ; \ > $ # ^ & @ < ~ { } `
 
-<a href="https://superuser.com/questions/598405">Dvorak</a>
+<a href="http://superuser.com/q/598405">superuser</a> <a href="https://play.typeracer.com/?universe=code">TypeRacer</a> <a href="https://www.patrick-wied.at/projects/heatmap-keyboard/">Heatmap</a> <a href="https://dzone.com/articles/most-pressed-keys-various">Language Heatmap</a>  <a href="https://github.com/kentonv/dvorak-qwerty">Dvorak Control Qwerty</a>
+OSX PCKeyboardHack, KeyRemap4MacBook,<a href="https://pqrs.org/osx/karabiner/">Karabiner</a> is the only way to remap the PgDn & PgUp keys.  Here is my <a href="http://dus.tn/dvorak/private.xml">private.xml</a>
 
-Changes Default.sh keyboard
-    wget -qO- http://limeb.github.io/default.sh | sh
-temp.sh
-    wget -qO- http://limeb.github.io/temp.sh | sh  
 Temp Modified Dvorak w/o Pg&PgUp
-    wget -qO- http://limeb.github.io/xmodmap | xmodmap -
-    
-The rest of the following will require a restart.  The first changes Ubuntu default dvorak keyboard to modified dvorak 
-us
-    wget -qO- http://limeb.github.io/us | sudo tee /usr/share/X11/xkb/symbols/us
+    wget -qO- http://7fe.github.io/xmodmap | xmodmap -
     
 The following will set the context key and right control key as Page Down and Page Up
 pc
-    wget -qO- http://limeb.github.io/pc | sudo tee /usr/share/X11/xkb/symbols/pc
+    wget -qO- http://7fe.github.io/pc | sudo tee /usr/share/X11/xkb/symbols/pc
  
 And lastly this sets the RAlt key to a Page Up key.  This shorcut doesn't work with the combination 
 altwin
-    wget -qO- http://limeb.github.io/altwin | sudo tee /usr/share/X11/xkb/symbols/altwin
-
+    wget -qO- http://7fe.github.io/altwin | sudo tee /usr/share/X11/xkb/symbols/altwin
 
 backup /usr/share/X11/xkb/symbols/us http://pastebin.com/7w6kXz2E
-
-Lastly you can download vr.ahk for windows here
-    http://limeb.github.io/vr.ahk
-
-<a href="https://github.com/randyrants/sharpkeys">Sharpkeys</a> writes to registry.
-    
-    
-OSX PCKeyboardHack, KeyRemap4MacBook,<a href="https://pqrs.org/osx/karabiner/">Karabiner</a> is the only way to remap the PgDn & PgUp keys.  Here is my <a href="http://dus.tn/dvorak/private.xml">private.xml</a>
-
-    wget -qO- http://limeblack.github.io/dvorak/DvorakModified.keylayout > /Library/Keyboard\ Layouts/DvorakModified.keylayout
-
-Regular Karabiner is interesting 
+<a href="http://7fe.github.io/vr.ahk">vr.ahk</a> <a href="https://github.com/randyrants/sharpkeys">Sharpkeys</a> <a href="./keys.skl">keys.skl</a> <a href="./us2.zip">us2.zip</a>
 <a href="https://github.com/tekezo/Files/tree/master/KeyRemap4MacBook">Here are the default Karabiner shorcuts</a> <a href="https://pqrs.org/osx/karabiner/document.html#privatexml">Karabiner Usage</a> <a href="https://web.archive.org/web/20141010040926/https://pqrs.org/osx/karabiner/xml.html.en">Example Private.xml</a>
 
-thinkpad japanese keyboard
-thinkpad nordic keyboard
-<a href="https://www.ebay.com/itm/Spanish-keyboard-for-Lenovo-ThinkPad-T400S-T410-T420-T510-T520-W510-W520-X220/152878737200?hash=item2398486730%3Ag%3AOnoAAOSw-uhaZzcx&_sacat=0&_nkw=spanish+keyboard+thinkpad&_from=R40&rt=nc&LH_TitleDesc=0">Spanish Keyboard Thinkpad T420</a>
-
-<a href=#>UK English Keyboard Layout</a>  Switching 2 keys on a thinkpad keyboard would essentially result in a different keyboard layout.  The number 2 & 3 keys would result in a different layout essentially.
-
-http://www.welovemacs.com/
-
-<a href="http://kbd-intl.narod.ru/english/layouts">Keyboard Layout Chart</a>
-
-<a href="https://support.apple.com/en-us/HT201794">Apple Keybord Layouts</a>
-
-<a href="http://blog.wooting.nl/the-ultimate-guide-to-keyboard-layouts-and-form-factors/">Ultimate Guide to Keyboard Formfactor</a>
-
-Nordic Keyboard Layout
-Thinkpad - 01hx422, 01hx449
-
-<img src="https://www.w3.org/TR/uievents-code/images/functional-row-a.svg">
-
-"NonConvert, "Space", "Convert", "KanaMode"	
-
-Japanese auction sites https://www.mercari.com/  buyee.jp https://zenmarket.jp/
-
-https://www.reddit.com/r/thinkpad/comments/7u43vv/whats_the_best_way_to_fix_function_key_spacing_on/
+<a href="http://kbd-intl.narod.ru/english/layouts">Keyboard Layout Chart</a> <a href="https://support.apple.com/en-us/HT201794">Apple Keybord Layouts</a> <a href="http://blog.wooting.nl/the-ultimate-guide-to-keyboard-layouts-and-form-factors/">Ultimate Guide to Keyboard Formfactor</a>
+<a href="https://www.w3.org/TR/uievents-code/images/functional-row-a.svg">Japanese vs Korean Keyboard</a> Japanese auction sites mercari.com  buyee.jp zenmarket.jp
 
 <a href="https://www.google.com/search?q=macbook+pro+japanese+keyboard&tbm=isch">Macbook Pro has 2 additional modifier space type keys on the thinkpad</a>
-<a href="">Windows have</a>
-
-Only old thinkpad keyboards have a japanese model unfortunately.
-
-http://archives.miloush.net/michkap/archive/2005/04/16/408853.html
-
-<a href="https://www.ebay.com/itm/Lenovo-ThinkPad-8845-SK-8845-UltraNav-USB-Keyboard-Trackpoint-Koraen-JP-Europe/173318875358?hash=item285a9c28de%3Am%3Am-0eKe6fC9m1q8Nq2RFYtFg&var=472029616049&_sacat=0&_nkw=japanese+thinkpad+keyboard&_from=R40&rt=nc&_trksid=m570.l1313">Japanese Thinkpad Keyboard</a>
-
-Thinkpad ke.yboard issues http://bdm.cc/2016/06/lenovo-bluetooth-keyboard-repairs/
-
-<a href="https://www.ebay.com/itm/Lenovo-ThinkPad-compact-USB-keyboard-tracking-point-European-version-0B4790-/123136978948">ISO European 0B7220, 0B47190</a>
-United States 0B47190
-<a href="https://www.lenovo.com/jp/ja/deals/sbiz/sbiz-accessory/KEYBOARD-Japanese/p/0B47208">Japanese 0B47208</a>
-
-https://www.amazon.co.uk/Lenovo-Bluetooth-EBK-209A-Certified-Refurbished/dp/B07DW49P83/ref=pd_sbs_147_8?_encoding=UTF8&pd_rd_i=B07DW49P83&pd_rd_r=a31ca962-a25e-11e8-b1ab-a331edb8235c&pd_rd_w=shGSG&pd_rd_wg=OtNjj&pf_rd_i=desktop-dp-sims&pf_rd_m=A3P5ROKL5A1OLE&pf_rd_p=85d62760-2a0e-407d-aa36-f3c03afc01c3&pf_rd_r=A2DB1XY57EQQDD4PNCAC&pf_rd_s=desktop-dp-sims&pf_rd_t=40701&psc=1&refRID=A2DB1XY57EQQDD4PNCAC
-
-https://superuser.com/questions/38781
-
-https://superuser.com/q/10980
-
-https://commons.wikimedia.org/wiki/File:Physical_keyboard_layouts_comparison_ANSI_ISO_KS_ABNT_JIS.png
-
-Chicony FRU 39T7178
-ALPS FRU 39T7118
-NMB FRU 39T0958
-
+https://superuser.com/questions/38781 https://superuser.com/q/10980 https://commons.wikimedia.org/wiki/File:Physical_keyboard_layouts_comparison_ANSI_ISO_KS_ABNT_JIS.png
 <a href="http://kbdlayout.info/features/SGCAPS">SGCAP</a>
 
-JIS macbok pro sucks because of the fn key which can't be remaped.
-ISO macbook pro sucks because you can't hit Ctrl+Shift+t.
+JIS macbok pro sucks because of the fn key which can't be remaped and Ctrl+Shift+t.
 Basically the additional key on macbook pros is useless because there is no way to hit control+shift at the same time.
 Technically you could remap caps lock to control which kinda works.
-
-
-Native United States Dvorak Modified on Windows to install download <a href="./udrvkmod.zip">udrvkmod.zip</a>.  To edit the layout download <a href="./US Dvorak Modified Modified.klc">US Dvorak Modified Modified.klc</a>.
-
+<a href="./udrvkmod.zip">udrvkmod.zip</a> <a href="./US Dvorak Modified Modified.klc">US Dvorak Modified Modified.klc</a>
 <a href="https://askubuntu.com/questions/1071801/jis-keyboard-layout-keyboard-characters">JIS keycodes Ubuntu</a>
-<xmp>
-xmodmap -e "keycode 151 = z Z Z"
-xmodmap -e "keycode 52 = Shift_L Shift_L Shift_L"
-
-xmodmap -e "keycode 97 = a a a"
-xmodmap -e "keycode 132 = BackSpace BackSpace BackSpace"
-xmodmap -e "keycode 100 = b Henkan_Mode Henkan_Mode"
-xmodmap -e "keycode 101 = c Hiragana_Katakana Hiragana_Katakana"
-xmodmap -e "keycode 102 = a Hiragana_Katakana Hiragana_Katakana"
-echo xmodmap -e "keycode 62 = a a a"  this does not work
-
+<xmp>xmodmap -e "keycode 62 = a a a"  this does not work
 keycode 64 = Mode_switch
 
 ALTGR
@@ -139,65 +43,17 @@ RAlt Up:: AltGR := false
 	*SC030::Send {x}
         *+SC030::Send {X}
 #If
+3362178163  Password:5426 
+	
+Dvorak control/command Qwerty
+
+https://portfolium.com/entry/qwerty-shortcuts-for-dvorak
+https://gitlab.com/peytonhanel/keyboard-mods
+https://www.reddit.com/r/linuxquestions/comments/36qp6m/qwertydvorak_keyboard_layout/
+https://github.com/kentonv/dvorak-qwerty
+https://github.com/tbocek/dvorak
+https://msol.io/blog/tech/dvorak-qwerty-on-mac-windows-and-linux/
+https://askubuntu.com/questions/35803/dvorak-layout-with-qwerty-hotkeys-dvorak-qwerty-ctrl
+https://bugzilla.gnome.org/show_bug.cgi?id=162726
+https://stackoverflow.com/questions/22842638/dvorak-typers-how-do-you-handle-shortcuts-like-ctrl-c
 </xmp>
-Demo text  <li>b location sucks on qwerty.  You effectively need jxqz in that location</li>
- <li>c location sucks on Qwerty except k is actually more common on Dvorak and a similar location.  The bottom row should be used minimally.</li>
- <li>bigrams.  For example cr sucks on Qwerty and there is no easy way to fix it.</li>
- <li>G has no business being on the home row.</li>
- <li>I would have to move both W & E.  I really like the symbol locations above the left fingers in Dvorak because they are used during thought breaks.</li>
- <li>Bigrams screw up everything.  Dvorak makes heavy use of the pointing fingers and pinkies.  Because of this it doesn't score great on that metric https://colemakmods.github.io/mod-dh/compare.html</li></span>
-
-3362178163
-
-Password:5426 
-
-ctrl+u acq*u*ire
-ctrl+j *j*erk
-ctrl+k plun*k*
-ctrl+y newly tab
-ctrl+b 
-ctrl+p u*p*date
-
-
-space c
-x     z
-
-
-zcvfr
-
-p refresh page
-u fiund   
-
-
-j yank    c
-k paste   v
-; undo    z
-e refresh r
-i
-u find    f
-q save    s
-, closewindow w
-
-
-y yank    c
-p paste   v
-u undo    z
-e refresh r
-i find    f
-. save    s
-, closewindow w
-</code></pre>
-<pre style="font-size:20px;font-family:arial;">
-<span>`1234567890;=</span>
-<span>'.,pyfgcrl[]\</span>
-<span>aoeiuhtns-</span>
-<span>\zjqkfbmwv/</span>
-</pre>
-<p>Dvorakaltx needs alt+bottom f to produce x.</p>
-<script>(function(){
- var c = document.getElementsByTagName('pre')[0].children;
- for(var i=0;i<c.length-1;i++){
-   for(var j=0;j<i;j++)document.getElementsByTagName('pre')[0].insertBefore(document.createTextNode(" "),c[i]);
- }
- document.getElementsByTagName('pre')[0].insertBefore(document.createTextNode(' '),c[i]);
-})();</script>

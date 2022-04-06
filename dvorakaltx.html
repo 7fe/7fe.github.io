@@ -1,6 +1,6 @@
 <!doctype html>
-<title>Writer Dvorak keyboard layout</title>
-<h1>Writer Dvorak layout</h1>
+<title>Dvorakaltx keyboard layout</title>
+<h1>Dvorakaltx layout</h1>
 <script>
 function SwapImages(){
   var imgs = document.getElementsByTagName('img');
@@ -14,9 +14,8 @@ function SwapImages(){
   }
 }
 </script>
-<label onmouseover="SwapImages()"><input type=checkbox>AltGr(ctrl+alt)</label><br>
-<img src="https://limeb.github.io/writer-dvorak.png" style="width:100%;max-width:800px;display:block;">
-<img src="https://limeb.github.io/writer-dvorak2.png" style="width:100%;max-width:800px;display:none;">
+<img onmouseover="SwapImages()" onmouseout="SwapImages()" src="./writerdvorak.png" style="width:100%;max-width:800px;display:block;">
+<img src="./writer-dvorak2.png" style="width:100%;max-width:800px;display:none;">
 <p>The layout focuses on not changing symbol locations when on the same hand.
  This cuts down on confusion when switching between Qwerty and Dvorak.
  For example []=/-z are in the same locations as Qwerty unlike Dvorak.
@@ -66,12 +65,12 @@ function SwapImages(){
     <td><a href="dvorakaltx.klc">Windows.klc</a></td>
   </tr>
   <tr>
-    <td><code>wget -qO- http://limeb.github.io/xmodmap | xmodmap -</code></td>
-    <td><a href="http://limeb.github.io/xmodmap"></a></td>
+    <td><code>wget -qO- http://7fe.github.io/xmodmap | xmodmap -</code></td>
+    <td><a href="http://7fe.github.io/writerdvorak.xmodmap"></a></td>
   </tr>
   <tr>
     <td><code>Mac.keylayout</code></td>
-    <td><a href=#>Mac.keylayout</a></td>
+    <td><a href="DvorakModified.keylayout">Mac.keylayout</a></td>
   </tr>
 </table>
 <h4>Related Links</h4>
