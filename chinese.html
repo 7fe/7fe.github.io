@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang=en>
+<input type=text id=num onkeyup="n()">
+<input type=text id=chinese onkeyup="c()">
+<script>
+function n(){
+
+var num = document.getElementById('num');
+
+document.getElementById('chinese').value = 
+  num.value.replaceAll(/0/g,'零')
+  .replaceAll(/1/g,'一')
+  .replaceAll(/2/g,'二')
+  .replaceAll(/3/g,'三')
+  .replaceAll(/4/g,'四')
+  .replaceAll(/5/g,'五')
+  .replaceAll(/6/g,'六')
+  .replaceAll(/7/g,'七')
+  .replaceAll(/8/g,'八')
+  .replaceAll(/9/g,'九');
+}
+
+function c(){
+
+var chinese = document.getElementById('chinese');
+
+document.getElementById('num').value = 
+  chinese.value.replaceAll(/零/g,'0')
+  .replaceAll(/一/g,'1')
+  .replaceAll(/二/g,'2')
+  .replaceAll(/三/g,'3')
+  .replaceAll(/四/g,'4')
+  .replaceAll(/五/g,'5')
+  .replaceAll(/六/g,'6')
+  .replaceAll(/七/g,'7')
+  .replaceAll(/八/g,'8')
+  .replaceAll(/九/g,'9');
+}
+</script>
+<!--script>
+function n(i){
+document.getElementById('chinese').value = 
+  i.value.replaceAll(/0/g,'٠')
+  .replaceAll(/1/g,'١')
+  .replaceAll(/2/g,'٢')
+  .replaceAll(/3/g,'٣')
+  .replaceAll(/4/g,'٤')
+  .replaceAll(/5/g,'٥')
+  .replaceAll(/6/g,'٦')
+  .replaceAll(/7/g,'٧')
+  .replaceAll(/8/g,'٨')
+  .replaceAll(/9/g,'٩');
+}
+
+function c(i){
+document.getElementById('num').value = 
+  i.value.replaceAll(/٠/g,'0')
+  .replaceAll(/١/g,'1')
+  .replaceAll(/٢/g,'2')
+  .replaceAll(/٣/g,'3')
+  .replaceAll(/٤/g,'4')
+  .replaceAll(/٥/g,'5')
+  .replaceAll(/٦/g,'6')
+  .replaceAll(/٧/g,'7')
+  .replaceAll(/٨/g,'8')
+  .replaceAll(/٩/g,'9');
+}
+</script-->
+<!--
+#Hotstring c o
+#Hotstring EndChars  `t
+
+
+::ling::零
+::y::一
+::r::二
+::s::三
+::c::四
+::w::五
+::Five::五
+::woo::火
+::l::六
+::Six::六
+::q::七
+::Seven::七
+::b::八
+::Eight::八
+::j::九
+::Nine::九
+::shi::十
+::Ten::十
+::bai::百
+::qian::千
+
+Numpad0::零
+Numpad1::一
+Numpad2::二
+Numpad3::三
+Numpad4::四
+Numpad5::五
+Numpad6::六
+Numpad7::七
+Numpad8::八
+Numpad9::九
+
+-->
+
+0一二三V|一|二|三|V9
